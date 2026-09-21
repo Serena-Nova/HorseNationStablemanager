@@ -37,3 +37,26 @@ Bewust weggelaten om dit stap 1 behapbaar te houden — kan later alsnog toegevo
 - Alles wordt automatisch bewaard in de browser (localStorage) — geen account nodig.
 - Onderaan de Kladblok-tab: **Exporteer JSON** (neemt Kladblok + Stamboom-data mee) en
   **Importeer JSON** voor een back-up.
+
+## Dropbox-koppeling (sync tussen apparaten)
+Met de "Dropbox"-knop bovenin kun je je gegevens laten synchroniseren tussen bijvoorbeeld
+je telefoon en laptop. Dit gaat rechtstreeks tussen je browser en Dropbox — er is geen
+apart wachtwoord of server bij betrokken.
+
+**Eenmalig instellen:**
+1. Ga naar [dropbox.com/developers/apps](https://www.dropbox.com/developers/apps) en maak een nieuwe app aan.
+   - Kies **Scoped access**.
+   - Kies **App folder** (dan krijgt de app alleen toegang tot zijn eigen mapje in je Dropbox, niet je hele Dropbox).
+   - Geef 'm een naam, bijv. "Horse Nation Stalmanagement".
+2. Ga naar het tabblad **Permissions** van je nieuwe app en vink aan: `files.content.write` en `files.content.read`. Klik op Submit.
+3. Ga naar het tabblad **Settings**. Zoek "Redirect URIs" en voeg **exact** je GitHub Pages-adres toe, bijvoorbeeld:
+   `https://serena-nova.github.io/HorseNationStablemanager/`
+   (precies zoals in de adresbalk staat als je de app open hebt — geen slash te veel of te weinig).
+4. Kopieer de **App key** die bovenaan de Settings-pagina staat.
+5. Open de app, klik op "Dropbox" (bovenin), plak de App key, klik "Verbind met Dropbox".
+   Je logt eenmalig in bij Dropbox en keurt de toegang goed — daarna spring je terug naar de app.
+
+**Daarna:** elke wijziging wordt automatisch (na een paar seconden) naar Dropbox weggeschreven.
+Open je de app op een ander apparaat (met dezelfde App key ingevuld en verbonden), dan haalt
+die bij het openen automatisch de nieuwste versie op. Er is geen samenvoegen van losse
+wijzigingen — de nieuwste versie (hier of op Dropbox) "wint" in zijn geheel.
