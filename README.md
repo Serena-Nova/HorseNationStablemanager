@@ -48,7 +48,7 @@ apart wachtwoord of server bij betrokken.
    - Kies **Scoped access**.
    - Kies **App folder** (dan krijgt de app alleen toegang tot zijn eigen mapje in je Dropbox, niet je hele Dropbox).
    - Geef 'm een naam, bijv. "Horse Nation Stalmanagement".
-2. Ga naar het tabblad **Permissions** van je nieuwe app en vink aan: `files.content.write` en `files.content.read`. Klik op Submit.
+2. Ga naar het tabblad **Permissions** van je nieuwe app en vink aan: `files.content.write`, `files.content.read` en `files.metadata.read`. Klik op Submit.
 3. Ga naar het tabblad **Settings**. Zoek "Redirect URIs" en voeg **exact** je GitHub Pages-adres toe, bijvoorbeeld:
    `https://serena-nova.github.io/HorseNationStablemanager/`
    (precies zoals in de adresbalk staat als je de app open hebt — geen slash te veel of te weinig).
