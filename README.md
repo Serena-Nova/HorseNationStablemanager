@@ -11,11 +11,12 @@ Alles zit in één app, met vier tabbladen: **Kladblok**, **Stamboom**, **Predic
 ## De tabbladen
 - **Kladblok** — groepen, kleuren, status-iconen, vader/moeder, S/D/G. Nieuw per paard, onder "Predicaat & wedstrijden":
   - het **predicaat** (Ster, Keur, Elite, Preferent), met een badge achter de naam;
-  - de **leeftijd**: vul in wat het spel nu toont, de app telt daarna zelf door (1 jaar per week);
+  - de **geboortedatum** (of de leeftijd zoals het spel die nu toont); de app rekent de leeftijd zelf uit: na het opgroeien 3 jaar, daarna 1 jaar per week;
   - het **niveau per discipline** (Dressuur, Springen, Reining, Trail, Western Pleasure);
   - welke eisen het paard al haalt voor het **volgende predicaat**;
   - de lijst met **nakomelingen**, automatisch gevonden via vader en moeder. Met **+ Veulen toevoegen** voer je een veulen direct in (naam, geslacht, SDG, predicaat, geboortedatum); het komt als extern paard in de database met dit paard als vader of moeder. SDG en predicaat van een veulen pas je in de lijst meteen aan, met × koppel je een veulen los.
   Een 🔔 achter de naam betekent: klaar voor keuring.
+  Verwijder je een paard, subgroep of groep uit het Kladblok, dan blijven de paarden bewaard in de Stamboom (als externe paarden). Zo hoef je ze daar niet opnieuw in te voeren.
   Vink je **Fokbonus getraind** aan, dan kies je Western, Engels of Beide en worden de niveaus van die disciplines meteen op het hoogste niveau gezet. **Allround volledig getraind** zet alle disciplines op het hoogste niveau.
 - **Stamboom** — stamboom en inteelt-check. Ook externe paarden (bijv. verkochte veulens) kunnen hier een predicaat krijgen, zodat ze meetellen voor hun ouders.
 - **Predicaten** — overzicht van je stal: wie klaar is voor keuring (met een knop om het predicaat meteen toe te kennen), wie nog één eis mist (paarden met SALE niet), het Preferent-traject per paard met de stand van elk veulen, en een lijst van alle paarden.
