@@ -28,6 +28,9 @@ Alles zit in één app, met vier tabbladen: **Kladblok**, **Stamboom**, **Predic
 - **Exporteer back-up (JSON)** en **Importeer back-up** nemen ook de nieuwe velden mee.
 - De instellingen van het Trainingscentrum (methode, trainers, combo) worden alleen in de browser bewaard, niet in Dropbox.
 
+## Bevallingen
+Is de bevallingsdatum van een gedekte merrie voorbij (vanaf de dag erna), dan verschijnt bij het openen van de app een pop-up "Bevallen!". Per merrie kies je **Veulen invoeren** (naam, geslacht, SDG, vader en geboortedatum staan al klaar) of **Geen veulen invoeren**. In beide gevallen worden bij de merrie gedekt, echo en bevallingsdatum uitgezet. Met **Later** verdwijnt de pop-up tot je de app opnieuw opent.
+
 ## Delen met anderen
 - Nieuwe gebruikers beginnen met een lege stal (groepen "Mijn stal" en "Veulens"). Jouw eigen paarden zien zij niet: die staan in jouw browser en jouw Dropbox.
 - Iedereen die de link opent, heeft zijn eigen gegevens in zijn eigen browser.
