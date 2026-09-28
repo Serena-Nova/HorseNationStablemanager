@@ -9,7 +9,7 @@ Alles zit in één app, met vier tabbladen: **Kladblok**, **Stamboom**, **Predic
 3. Na een minuutje staat de nieuwe versie online op hetzelfde adres. Dropbox blijft gekoppeld, want het adres verandert niet.
 
 ## De tabbladen
-- **Kladblok** — groepen, kleuren, status-iconen, vader/moeder, S/D/G. Nieuw per paard, onder "Predicaat & wedstrijden":
+- **Kladblok** — groepen, kleuren, status-iconen, vader/moeder, S/D/G. Subgroepen verplaats je met ▲ ▼ binnen een groep, of met "⇄ naar…" naar een andere groep. Nieuw per paard, onder "Predicaat & wedstrijden":
   - het **predicaat** (Ster, Keur, Elite, Preferent), met een badge achter de naam;
   - de **geboortedatum** (of de leeftijd zoals het spel die nu toont); de app rekent de leeftijd zelf uit: na het opgroeien 3 jaar, daarna 1 jaar per week;
   - het **niveau per discipline** (Dressuur, Springen, Reining, Trail, Western Pleasure);
