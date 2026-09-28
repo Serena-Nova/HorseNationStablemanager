@@ -1,7 +1,7 @@
 # Horse Nation Stalmanagement
 
 Eén bestand (`index.html`) — geen build nodig, werkt direct via GitHub Pages.
-Alles zit in één app, met vier tabbladen: **Kladblok**, **Stamboom**, **Predicaten** en **Trainingscentrum**.
+Alles zit in één app, met vijf tabbladen: **Kladblok**, **Stamboom**, **Predicaten**, **Dracht** en **Trainingscentrum**.
 
 ## Zetten op GitHub Pages
 1. Vervang in je bestaande repository `index.html` (en `README.md`) door deze versie. Laat `.nojekyll` staan.
@@ -21,6 +21,9 @@ Alles zit in één app, met vier tabbladen: **Kladblok**, **Stamboom**, **Predic
 - **Stamboom** — stamboom en inteelt-check. Ook externe paarden (bijv. verkochte veulens) kunnen hier een predicaat krijgen, zodat ze meetellen voor hun ouders.
 - **Predicaten** — onderaan staat **Dekgeld**: een adviesprijs per hengst. Je vult in wat een hengst met een bepaalde SDG waard is en hoeveel procent de prijs per hele SDG verschilt; de app rekent alle prijzen van 10 tot 40 SDG uit. Per ras kun je eigen prijzen instellen, rassen zonder eigen prijzen gebruiken 'Standaard'. Toeslagen voor fokbonus en predicaat gelden voor alle rassen. Deze instellingen worden per browser bewaard. Bij elke hengst in het Kladblok zie je het advies en kun je je eigen dekgeld invullen.
 - **Predicaten** (verder) — overzicht van je stal: wie klaar is voor keuring (met een knop om het predicaat meteen toe te kennen), wie nog één eis mist (paarden met SALE niet), het Preferent-traject per paard met de stand van elk veulen, en een lijst van alle paarden.
+- **Dracht** — twee delen:
+  - **Drachtig**: alle merries met Gedekt of Echo positief, met bevallingsdatum (en hoeveel dagen nog), door wie ze gedekt zijn, de minimale SDG van het veulen (het gemiddelde van beide ouders, per letter als S, D en G bekend zijn), of moeder en vader fokbonus hebben, en het geslacht van het veulen als je dat weet. Sorteren kan op bevallingsdatum of SDG.
+  - **Dekhengsten**: een lijst met hengsten van andere spelers (naam, stal, ras, S/D/G, fokbonus, predicaat, dekgeld, notitie). Ze staan ook in de Stamboom en in de keuzelijst bij 'Gedekt met'. Kies een merrie en de app rekent per hengst de minimale SDG van het veulen uit.
 - **Trainingscentrum** — kosten, klikjes, planning, stalgroepen en fokken. Bij "Mijn paard" kun je een paard uit je stal kiezen; de niveaus komen dan uit het Kladblok.
 
 ## Werking
