@@ -19,7 +19,8 @@ Alles zit in één app, met vier tabbladen: **Kladblok**, **Stamboom**, **Predic
   Verwijder je een paard, subgroep of groep uit het Kladblok, dan blijven de paarden bewaard in de Stamboom (als externe paarden). Zo hoef je ze daar niet opnieuw in te voeren.
   Vink je **Fokbonus getraind** aan, dan kies je Western, Engels of Beide en worden de niveaus van die disciplines meteen op het hoogste niveau gezet. **Allround volledig getraind** zet alle disciplines op het hoogste niveau.
 - **Stamboom** — stamboom en inteelt-check. Ook externe paarden (bijv. verkochte veulens) kunnen hier een predicaat krijgen, zodat ze meetellen voor hun ouders.
-- **Predicaten** — overzicht van je stal: wie klaar is voor keuring (met een knop om het predicaat meteen toe te kennen), wie nog één eis mist (paarden met SALE niet), het Preferent-traject per paard met de stand van elk veulen, en een lijst van alle paarden.
+- **Predicaten** — onderaan staat **Dekgeld**: een adviesprijs per hengst. Je vult in wat een hengst met een bepaalde SDG waard is en hoeveel procent de prijs per hele SDG verschilt; de app rekent alle prijzen van 10 tot 40 SDG uit. Per ras kun je eigen prijzen instellen, rassen zonder eigen prijzen gebruiken 'Standaard'. Toeslagen voor fokbonus en predicaat gelden voor alle rassen. Deze instellingen worden per browser bewaard. Bij elke hengst in het Kladblok zie je het advies en kun je je eigen dekgeld invullen.
+- **Predicaten** (verder) — overzicht van je stal: wie klaar is voor keuring (met een knop om het predicaat meteen toe te kennen), wie nog één eis mist (paarden met SALE niet), het Preferent-traject per paard met de stand van elk veulen, en een lijst van alle paarden.
 - **Trainingscentrum** — kosten, klikjes, planning, stalgroepen en fokken. Bij "Mijn paard" kun je een paard uit je stal kiezen; de niveaus komen dan uit het Kladblok.
 
 ## Werking
