@@ -1221,6 +1221,12 @@ html, body {
  body.hn-sb-open .shell-savebar>*:not(.hn-sb-toggle):not(.shell-horse-count):not(input){display:inline-flex!important}
  body.hn-sb-open .shell-savebar{flex-wrap:wrap}
 }
+.hn-sec-flat{display:contents}
+.hn-flat-title{margin-top:6px;border-top:1px dashed var(--border);padding-top:10px}
+.hn-sec-flat>.hn-flat-title+.pred-edit{border-top:0;padding-top:0;margin-top:0}
+.edit-row.sdg3{flex-wrap:nowrap}
+.edit-row.sdg3>label{flex:1 1 0;min-width:0}
+.edit-row.sdg3 input{width:100%;min-width:0}
 </style>
 </head>
 <body>
@@ -1284,7 +1290,7 @@ function HnAddKid(props){var p=props.parent,all=props.all;var st=z.useState(!1),
   HnE("div",{className:"edit-actions"},HnE("button",{type:"button",className:"iconbtn",onClick:function(){setOpen(!1);setF(blank)}},"Annuleren"),HnE("button",{type:"button",className:"addbtn",disabled:!f.name.trim(),onClick:function(){hnAddChild(p,f,all);setF(Object.assign({},blank,{role:f.role}))}},"+ Toevoegen")))}
 function HnPredEdit(props){var e=props.horse,t=props.onChange,all=props.allHorses||[],ev=hnEval(e,all),age=hnAge(e);
  var setAge=function(v){t(Object.assign({},e,{leeftijd:v,leeftijdDatum:v===""?"":new Date().toISOString()}))};
- return HnE(z.Fragment,null,HnE(HnSec,{k:"pred",t:"Predicaat & wedstrijden",sum:[e.predicaat?HN_PRED[hnRank(e.predicaat)].name:"",age!==null?age.toFixed(1).replace(".",",")+" jr":""].filter(Boolean).join(" \u00b7 ")},HnE("div",{className:"pred-edit"},
+ return HnE(z.Fragment,null,HnE(HnSec,{k:"pred",t:"Predicaat & wedstrijden",ft:"Predicaat & wedstrijden",sum:[e.predicaat?HN_PRED[hnRank(e.predicaat)].name:"",age!==null?age.toFixed(1).replace(".",",")+" jr":""].filter(Boolean).join(" \u00b7 ")},HnE("div",{className:"pred-edit"},
   HnE("div",{className:"edit-row"},
    HnE("label",{className:"narrow"},"Predicaat",HnE("select",{value:e.predicaat||"",onChange:function(x){t(Object.assign({},e,{predicaat:x.target.value}))}},HnE("option",{value:""},"geen"),HN_PRED.map(function(P){return HnE("option",{key:P.id,value:P.id},P.name)}))),HnE("label",{className:"narrow"},"Premie",HnE("select",{value:String(e.premie||""),onChange:function(x){t(Object.assign({},e,{premie:x.target.value}))}},HnE("option",{value:""},"geen"),HnE("option",{value:"1"},"1e premie"),HnE("option",{value:"2"},"2e premie"),HnE("option",{value:"3"},"3e premie"))),
    HnE("label",{className:"narrow"},"Geboortedatum",HnE("input",{type:"date",value:e.geboortedatum||"",onChange:function(x){t(Object.assign({},e,{geboortedatum:x.target.value}))}})),e.geboortedatum?null:HnE("label",{className:"narrow"},"of leeftijd (jaar)",HnE("input",{type:"number",step:"0.1",min:"0",value:e.leeftijd===void 0||e.leeftijd===null?"":e.leeftijd,onChange:function(x){setAge(x.target.value)}}))),
@@ -1292,7 +1298,7 @@ function HnPredEdit(props){var e=props.horse,t=props.onChange,all=props.allHorse
   HnE("div",{className:"edit-row"},HN_DISC.map(function(d){return HnE(HnLevelSel,{key:d.id,horse:e,disc:d,onChange:t})})),
   HnE("div",{className:"ras-hint"},"Het niveau waarop het paard nu rijdt, per discipline."),
   ev.next?HnE("div",{className:"pred-next"+(ev.next.ok?" ready":"")},HnE("b",null,ev.next.ok?"\uD83D\uDD14 Klaar voor keuring: "+ev.next.P.name:"Op weg naar "+ev.next.P.name),HnE(HnChecklist,{item:ev.next}),ev.maxRank<3?HnE("div",{className:"ras-hint"},"Hoogst haalbaar met deze SDG: "+HN_PRED[ev.maxRank].name+"."):null):ev.blocked?HnE("div",{className:"pred-next stop"},HnE("b",null,"Eindstation"+(ev.rank>=0?": "+HN_PRED[ev.rank].name:"")),HnE("div",{className:"ras-hint"},"SDG "+ev.sdg.toFixed(1).replace(".",",")+" is te laag voor "+ev.blocked.name+" (vanaf "+ev.blocked.sdg+"). De SDG verandert niet meer, dus een hoger predicaat is voor dit paard niet haalbaar.")):HnE("div",{className:"pred-next ready"},HnE("b",null,"Hoogste predicaat behaald")),
-  )),e.gender==="H"?HnE(HnSec,{k:"dek",t:"Dekgeld"},HnE(HnDekLine,{horse:e,onChange:t})):null,HnE(HnSec,{k:"kids",t:"Nakomelingen",sum:String(ev.kids.length)},HnE("div",{className:"pred-kids"},ev.kids.length?HnE("ul",{className:"kid-list"},ev.kids.map(function(k){return HnE(HnKidRow,{key:k.id,kid:k,parent:e})})):HnE("div",{className:"ras-hint"},"Nog geen veulens. Voeg ze hieronder toe, of vul bij een paard deze naam in als vader of moeder."),HnE(HnAddKid,{parent:e,all:all}))))}
+  )),e.gender==="H"?HnE(HnSec,{k:"dek",t:"Dekgeld"},HnE(HnDekLine,{horse:e,onChange:t})):null,HnE(HnSec,{k:"kids",t:"Nakomelingen",ft:"Nakomelingen ("+ev.kids.length+")",sum:String(ev.kids.length)},HnE("div",{className:"pred-kids"},ev.kids.length?HnE("ul",{className:"kid-list"},ev.kids.map(function(k){return HnE(HnKidRow,{key:k.id,kid:k,parent:e})})):HnE("div",{className:"ras-hint"},"Nog geen veulens. Voeg ze hieronder toe, of vul bij een paard deze naam in als vader of moeder."),HnE(HnAddKid,{parent:e,all:all}))))}
 function hnAllHorses(groups,ext){return[].concat(groups.flatMap(function(g){return g.subgroups}).flatMap(function(s){return s.items}).filter(function(h){return h.kind==="horse"}).map(function(h){return Object.assign({},h,{inStal:!0})}),ext.map(function(h){return Object.assign({},h,{inStal:!1})}))}
 function hnReadyCount(groups,ext){var all=hnAllHorses(groups,ext);return all.filter(function(h){return h.inStal&&h.name&&hnEval(h,all).readyFor}).length}
 function HnPredTab(props){var groups=props.groups,setGroups=props.setGroups,ext=props.externalHorses,setExt=props.setExternalHorses;
@@ -1482,7 +1488,7 @@ function hnStopDracht(m){if(!confirm("Dracht van "+m.name+" uit het overzicht ha
 
 function HnSDGRow(props){var h=props.horse,t=props.onChange;var upd=function(k,v){var o=Object.assign({},h);o[k]=v;var s=parseFloat(o.sdgS),d=parseFloat(o.sdgD),g=parseFloat(o.sdgG);if(!isNaN(s)&&!isNaN(d)&&!isNaN(g))o.sdg=String(Math.round((s+d+g)*10)/10);t(o)};
  var inp=function(k,lab){return HnE("label",{className:"narrow"},lab,HnE("input",{type:"number",step:"0.1",value:h[k]===void 0||h[k]===null?"":h[k],onChange:function(e){upd(k,e.target.value)}}))};
- return HnE("div",null,HnE("div",{className:"edit-row"},inp("sdgS","Stap (S)"),inp("sdgD","Draf (D)"),inp("sdgG","Galop (G)")),HnE("div",{className:"ras-hint"},"Vul je S, D en G alle drie in, dan wordt de SDG hieronder vanzelf het totaal. Alleen het totaal invullen mag ook."))}
+ return HnE("div",null,HnE("div",{className:"edit-row sdg3"},inp("sdgS","Stap (S)"),inp("sdgD","Draf (D)"),inp("sdgG","Galop (G)")),HnE("div",{className:"ras-hint"},"Vul je S, D en G alle drie in, dan wordt de SDG hieronder vanzelf het totaal. Alleen het totaal invullen mag ook."))}
 
 function hnHorseItem(h,data){var base={kind:"horse",name:"",sdg:null,gender:"M",pedigree:"none",ras:"",status:"none",warnReasons:{training:!1,bonus:!1,dracht:!1},sale:!1,veiling:!1,handelaarbod:!1,fokbonus:!1,allround:!1,gedekt:!1,gedektMet:"",echoPositief:!1,bevallingsdatum:"",sireName:"",damName:"",stal:"",sdgS:"",sdgD:"",sdgG:"",note:"",predicaat:"",leeftijd:"",leeftijdDatum:"",geboortedatum:"",niveaus:{dres:0,spr:0,rei:0,tra:0,wp:0}};var it=Object.assign(base,h||{},data||{},{kind:"horse"});if(!it.id)it.id=M();delete it.uitStal;delete it.inStal;delete it.dekhengst;return it}
 function hnSubOptions(){var out=[];(HN_ACT.groups||[]).forEach(function(g){if(g.type!=="horses")return;g.subgroups.forEach(function(sg){out.push({key:g.id+"|"+sg.id,label:(g.name||"(naamloze groep)")+(sg.name?" \u203a "+sg.name:"")})})});return out}
@@ -1715,8 +1721,9 @@ function hnSetAllround(h){var prev={niveaus:Object.assign({},hnNiv(h)),fokbonus:
 function hnUnsetAllround(h){var o=Object.assign({},h,{allround:!1});var p=h.allPrev;if(p){o.niveaus=Object.assign({},p.niveaus);o.fokbonus=p.fokbonus;o.fokbonusType=p.fokbonusType;if(p.fokPrev)o.fokPrev=p.fokPrev;else delete o.fokPrev;delete o.allPrev}return o}
 
 var HN_SECOPEN=(function(){try{return JSON.parse(localStorage.getItem("hn-sec-open")||"{}")}catch(e){return{}}})();
-function HnSec(props){var k=props.k;var init=HN_SECOPEN[k]!==void 0?HN_SECOPEN[k]:!!props.open;var os=z.useState(init),open=os[0],setOpen=os[1];
- var kids=Array.prototype.slice.call(arguments).length>1?null:null;
+function hnUseMobile(){var mq=typeof window!=="undefined"&&window.matchMedia?window.matchMedia("(max-width: 600px)"):null;var ms=z.useState(mq?mq.matches:!1),m=ms[0],setM=ms[1];z.useEffect(function(){if(!mq)return;var f=function(){setM(mq.matches)};mq.addEventListener?mq.addEventListener("change",f):mq.addListener(f);return function(){mq.removeEventListener?mq.removeEventListener("change",f):mq.removeListener(f)}},[]);return m}
+function HnSec(props){var mobile=hnUseMobile();var k=props.k;var init=HN_SECOPEN[k]!==void 0?HN_SECOPEN[k]:!!props.open;var os=z.useState(init),open=os[0],setOpen=os[1];
+ if(!mobile)return HnE("div",{className:"hn-sec-flat"},props.ft?HnE("div",{className:"pred-edit-title hn-flat-title"},props.ft):null,props.children);
  return HnE("div",{className:"hn-sec"+(open?" open":"")},HnE("button",{type:"button",className:"hn-sec-head",onClick:function(){var v=!open;setOpen(v);HN_SECOPEN[k]=v;try{localStorage.setItem("hn-sec-open",JSON.stringify(HN_SECOPEN))}catch(e){}}},HnE("span",{className:"hn-sec-chev"},open?"\u25BE":"\u25B8"),HnE("span",{className:"hn-sec-title"},props.t),props.sum?HnE("span",{className:"hn-sec-sum"},props.sum):null),open?HnE("div",{className:"hn-sec-body"},props.children):null)}
 function HnSavebarToggle(){var os=z.useState(!1),open=os[0],setOpen=os[1];return HnE("button",{type:"button",className:"hn-sb-toggle",onClick:function(){var v=!open;setOpen(v);document.body.classList.toggle("hn-sb-open",v)}},open?"\u2715 Sluiten":"\u22EF Back-up & Dropbox")}
 (function(){if(typeof document==="undefined")return;var t=null;var label=function(){document.querySelectorAll("table.pred-kidtab").forEach(function(tb){var ths=Array.prototype.map.call(tb.querySelectorAll("thead th"),function(th){return th.textContent.trim()});tb.querySelectorAll("tbody tr").forEach(function(tr){Array.prototype.forEach.call(tr.children,function(td,i){if(ths[i]&&td.getAttribute("data-label")!==ths[i])td.setAttribute("data-label",ths[i])})})})};
