@@ -1743,11 +1743,12 @@ function hnParseTree(text){var lines=text.replace(/\r/g,"").split("\n"),nodes=[]
   stack.push(node);nodes.push(node)}
  if(!nodes.length)return null;var mn=Math.min.apply(null,nodes.map(function(n){return n.ind})),tops=nodes.filter(function(n){return n.ind===mn});
  return{type:"tree",nodes:nodes,root:tops.length===1?tops[0]:null,partial:tops.length>1}}
+function hnLvlIdx(d,t){var f=function(v){return String(v).toLowerCase().replace(/[^a-z0-9]/g,"")},q=f(t),k=d.levels.findIndex(function(n){return f(n)===q});if(k>=0)return k;var c=d.levels.map(function(n,i){return f(n).indexOf(q)===0&&q.length>2?i:-1}).filter(function(i){return i>=0});return c.length===1?c[0]:-1}
 function hnParseStal(text){var lines=text.replace(/\r/g,"").split("\n"),out=[];
  for(var i=0;i<lines.length;i++){var L=lines[i];if(/^\s*[*\-\u2022]/.test(L))continue;var m=L.match(/^\s*(.+?)\s*([\u2642\u2640])\s+(.*?)\s*S\s*([\d.,]+)\s*D\s*([\d.,]+)\s*G\s*([\d.,]+)/);if(!m)continue;
   var age=L.match(/(\d+(?:[.,]\d+)?)\s*jaar/),pl=(lines[i-1]||"").trim(),lv={},unk=[];
   for(var j=i+1;j<lines.length&&j<=i+4;j++){if(/[\u2642\u2640]/.test(lines[j]))break;var re=/(?:^|[\s\u00b7])(WP|[DSRTP])\s+([A-Za-z0-9-]+)\+(\d+)/g,x;
-   while((x=re.exec(lines[j]))){var id={D:"dres",S:"spr",R:"rei",T:"tra",P:"wp",WP:"wp"}[x[1]],d=HN_DISC.find(function(q){return q.id===id}),k=d?d.levels.findIndex(function(n){return Se(n)===Se(x[2])}):-1;if(k>=0)lv[id]=k;else unk.push(x[1]+" "+x[2])}}
+   while((x=re.exec(lines[j]))){var id={D:"dres",S:"spr",R:"rei",T:"tra",P:"wp",WP:"wp"}[x[1]],d=HN_DISC.find(function(q){return q.id===id}),k=d?hnLvlIdx(d,x[2]):-1;if(k>=0)lv[id]=k;else unk.push(x[1]+" "+x[2])}}
   out.push({name:m[1].trim(),gender:m[2]==="\u2642"?"H":"M",ras:m[3].trim(),S:hnNumP(m[4]),D:hnNumP(m[5]),G:hnNumP(m[6]),age:age?hnNumP(age[1]):null,lv:lv,unk:unk,pred:HN_PSYM[pl]||""})}
  return out.length?{type:"stal",rows:out}:null}
 function hnPlanTree(P,all,overwrite){var byHid={},byName={};all.forEach(function(h){if(h.hnid)byHid[String(h.hnid)]=h;var k=Se(h.name);if(k&&(!byName[k]||h.inStal&&!byName[k].inStal))byName[k]=h});
