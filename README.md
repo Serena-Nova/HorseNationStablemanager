@@ -1,7 +1,7 @@
 # Horse Nation Stalmanagement
 
 Eén bestand (`index.html`) — geen build nodig, werkt direct via GitHub Pages.
-Alles zit in één app, met tien tabbladen: **Vandaag**, **Kladblok**, **Stamboom**, **Predicaten**, **Dracht**, **Namen**, **Waarde**, **Teams**, **Stalplan** en **Trainingscentrum**.
+Alles zit in één app, met zes tabbladen: **Vandaag**, **Kladblok**, **Fokken** (met daaronder Dracht, Stamboom en Predicaten), **Stal** (met daaronder Stalplan, Teams en Waarde), **Namen** en **Trainingscentrum**. Bij Fokken en Stal onthoudt de app welk onderdeel je het laatst open had. Hieronder staan alle onderdelen beschreven.
 
 ## Zetten op GitHub Pages
 1. Vervang in je bestaande repository `index.html` (en `README.md`) door deze versie. Laat `.nojekyll` staan.
