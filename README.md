@@ -11,7 +11,7 @@ Alles zit in één app, met zes tabbladen: **Vandaag**, **Kladblok**, **Fokken**
 ## De tabbladen
 Bovenaan de app staat **📖 Uitleg**: een stappenplan voor nieuwe gebruikers (wat doe je eerst) en per tabblad waar het voor is, met knoppen om er meteen heen te gaan. Bij een lege app staat de uitleg open; je klapt hem dicht met Sluiten.
 - **Vandaag** — alles wat nu te doen is op één scherm: hoe vol stal en wei zijn, bevallingen (vandaag, morgen of al voorbij), merries met fokbonus die nog niet gedekt zijn (met de beste partner zonder familie, eigen of van buiten), paarden die klaar zijn voor keuring, verkoopherinneringen, paarden die volgens je stalplan weg kunnen, PowerHouse-paarden met het verkeerde beslag, en per ras de beste combinatie richting je SDG-doel. Lege onderdelen worden niet getoond.
-- **Kladblok** — groepen, kleuren, status-iconen, vader/moeder, S/D/G (Stap, Draf en Galop los; de SDG wordt dan vanzelf het totaal). Subgroepen verplaats je met ▲ ▼ binnen een groep, of met "⇄ naar…" naar een andere groep. Nieuw per paard, onder "Predicaat & wedstrijden":
+- **Kladblok** — groepen, kleuren, status-iconen, vader/moeder, S/D/G (Stap, Draf en Galop los; de SDG wordt dan vanzelf het totaal). Groepen verplaats je met ▲ ▼ naast de groepsnaam. Subgroepen verplaats je met ▲ ▼ binnen een groep, of met "⇄ naar…" naar een andere groep. Nieuw per paard, onder "Predicaat & wedstrijden":
   - het **predicaat** (Ster, Keur, Elite, Preferent), met een badge achter de naam, en de **premie** (1e, 2e, 3e);
   - de **geboortedatum** (of de leeftijd zoals het spel die nu toont); de app rekent de leeftijd zelf uit: na het opgroeien 3 jaar, daarna 1 jaar per week;
   - het **niveau per discipline** (Dressuur, Springen, Reining, Trail, Western Pleasure);
