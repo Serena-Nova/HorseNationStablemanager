@@ -1,7 +1,7 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-08c (staat ook onderaan in de app).
+Versie 2026-10-08d (staat ook onderaan in de app).
 
 Eén bestand (`index.html`) — geen build nodig, werkt direct via GitHub Pages.
 Alles zit in één app, met zes tabbladen: **Vandaag**, **Kladblok**, **Fokken** (met daaronder Dracht, Stamboom en Predicaten), **Stal** (met daaronder Stalplan, Teams en Waarde), **Namen** en **Trainingscentrum**. Bij Fokken en Stal onthoudt de app welk onderdeel je het laatst open had. Hieronder staan alle onderdelen beschreven.
@@ -14,6 +14,7 @@ Alles zit in één app, met zes tabbladen: **Vandaag**, **Kladblok**, **Fokken**
 ## De tabbladen
 Bovenaan de app staat **📖 Uitleg**: een stappenplan voor nieuwe gebruikers (wat doe je eerst) en per tabblad waar het voor is, met knoppen om er meteen heen te gaan. Bij een lege app staat de uitleg open; je klapt hem dicht met Sluiten.
 - **Vandaag** — alles wat nu te doen is op één scherm: hoe vol stal en wei zijn, bevallingen (vandaag, morgen of al voorbij), merries met fokbonus die nog niet gedekt zijn (met de beste partner zonder familie, eigen of van buiten), paarden die Reining, Trail en Western Pleasure alle drie op L3 of L2 hebben (merries: klaar om gedekt te worden; hengsten: klaar om te dekken, met advies binnenshuis houden, eerst eigen merries en dan buitenshuis met grens, of buitenshuis aanbieden, en het dekgeld-advies nu en met volle fokbonus; de volle fokbonus komt pas op L1), paarden zonder fokbonus die alle drie op L1 hebben (fokbonus binnen, met een knop om de fokbonus aan te zetten, ook voor allemaal tegelijk), paarden die klaar zijn voor keuring, verkoopherinneringen, paarden die volgens je stalplan weg kunnen, PowerHouse-paarden met het verkeerde beslag, en per ras de beste combinatie richting je SDG-doel. Lege onderdelen worden niet getoond.
+- **📋 HN Plakvlak** — één pagina voor alles wat je uit Horse Nation kopieert (Mijn stal, wedstrijduitslagen, de pagina van een eigen paard, stambomen en Merrie dekken), met per pagina waar je hem vindt en wat de app ermee doet. Het plakvak bij Fokken → Stamboom blijft er ook, voor stambomen.
 - **Trainen** — de vroegere "Wanneer trainen"-tracker, nu in de app. Per paard in training staan de disciplines die het traint (uit je stallijst), met de tijd tot de volgende wedstrijd van dat niveau, het percentage getraind (komt mee uit je geplakte stallijst; tussendoor aanpassen met − en +), ⏳/⚠/✓ en je inschrijftijd (📝). De discipline met de groene rand moet het eerst. Met "Nu trainen" zie je alleen wie nu iets moet; Vandaag toont bovenaan hoeveel paarden nu getraind kunnen worden. Staat je oude tracker op hetzelfde apparaat, dan kun je de percentages en inschrijftijden in één klik overnemen.
 - **Kladblok** — groepen, kleuren, status-iconen, vader/moeder, S/D/G (Stap, Draf en Galop los; de SDG wordt dan vanzelf het totaal). Groepen verplaats je met ▲ ▼ naast de groepsnaam. Subgroepen verplaats je met ▲ ▼ binnen een groep, of met "⇄ naar…" naar een andere groep. Nieuw per paard, onder "Predicaat & wedstrijden":
   - het **predicaat** (Ster, Keur, Elite, Preferent), met een badge achter de naam, en de **premie** (1e, 2e, 3e);
