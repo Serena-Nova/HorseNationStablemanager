@@ -1,7 +1,7 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-07c (staat ook onderaan in de app).
+Versie 2026-10-08a (staat ook onderaan in de app).
 
 Eén bestand (`index.html`) — geen build nodig, werkt direct via GitHub Pages.
 Alles zit in één app, met zes tabbladen: **Vandaag**, **Kladblok**, **Fokken** (met daaronder Dracht, Stamboom en Predicaten), **Stal** (met daaronder Stalplan, Teams en Waarde), **Namen** en **Trainingscentrum**. Bij Fokken en Stal onthoudt de app welk onderdeel je het laatst open had. Hieronder staan alle onderdelen beschreven.
