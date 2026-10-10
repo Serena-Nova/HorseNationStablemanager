@@ -2045,12 +2045,23 @@ function HnVandaagTab(props){var FB=hnUseFb();var groups=props.groups,ext=props.
  var li=function(k,a,b,cls){return HnE("li",{key:k,className:cls||""},a,b?HnE("div",{className:"pc-det"},b):null)};
  var dayTxt=function(n){return n<0?"was "+(-n)+" dag"+(n===-1?"":"en")+" geleden":n===0?"vandaag":"morgen"};
  var fbSec=FB?FB.vandaag(own,all,sec,li,nm):null;
- var nothing=!fbSec&&!birth.length&&!dek.length&&!keur.length&&!weg.length&&!verk.length&&!markt.length&&!shoeBad.length&&!A.stale.length&&!fokk.length&&!dekk.length&&!A.advice.some(function(a){return a.dek&&a.dek.stop});
+ var rmB=(function(){var D=7,bd={},nB=0;own.forEach(function(h){if(h.gender==="H"||!(h.gedekt||h.echoPositief)||!h.bevallingsdatum)return;var d=hnDays(h.bevallingsdatum);if(d===null||d>=D)return;if(d<0)d=0;(bd[d]=bd[d]||[]).push(h);nB++});if(!nB)return null;
+  var free0=sp.stal-A.stalN,cur=free0,rows=[],minF=free0;for(var d=0;d<D;d++){if(!bd[d])continue;cur-=bd[d].length;if(cur<minF)minF=cur;var dt=new Date(Date.parse(hnToday())+d*864e5);rows.push({d:d,lab:d===0?"vandaag":d===1?"morgen":dt.toLocaleDateString("nl-NL",{weekday:"short",day:"numeric",month:"numeric"}),L:bd[d],free:cur})}
+  var need=Math.max(0,-minF),weiFree=sp.wei-sp.nood-A.weiN,cand=A.advice.filter(function(a){return a.verdict==="weg"&&!a.h.sale}),dbt=A.advice.filter(function(a){return a.verdict==="twijfel"&&!a.h.sale});
+  var short=function(a){var t=(a.sell[0]||a.doubt[0]||"").split(/\.\s(?=[A-Z\u00c0-\u00dd])/)[0].replace(/\.$/,"");if(a.h.gender!=="H"&&(a.h.gedekt||a.h.echoPositief)&&a.h.bevallingsdatum&&a.h.bevallingsdatum>=hnToday())t+=" \u00b7 eerst bevallen ("+hnFmtDate(a.h.bevallingsdatum)+")";return t.length>110?t.slice(0,107)+"…":t};
+  var pick=cand.slice(0,Math.max(need+2,Math.min(5,cand.length))),pickD=pick.length<need?dbt.slice(0,need-pick.length+2):[];
+  return HnE("div",{className:"pred-card vd-card"},HnE("h3",{className:"pred-h",style:{marginTop:0}},"📦 Ruimte de komende dagen ("+nB+" veulen"+(nB===1?"":"s")+")"),
+   HnE("p",{className:"pc-det"},"Nu "+(free0>=0?free0+" plek"+(free0===1?"":"ken")+" vrij in de stal":(-free0)+" boven je plan in de stal")+(weiFree>0?", en "+weiFree+" vrij in de wei":"")+". Elk veulen neemt een stalplek in."),
+   HnE("table",{className:"pred-kidtab"},HnE("tbody",null,rows.map(function(r){return HnE("tr",{key:r.d},HnE("td",null,HnE("b",null,r.lab)),HnE("td",null,r.L.length+" × "+r.L.map(function(h){return h.name}).join(", ")),HnE("td",{className:r.free<0?"sp-over":""},r.free>=0?"daarna "+r.free+" vrij":"daarna "+(-r.free)+" te veel"))}))),
+   need?HnE("p",null,HnE("b",null,"Je moet "+need+" paard"+(need===1?"":"en")+" kwijt"),rows[0]&&rows.find(function(r){return r.free<0})?" vóór "+rows.find(function(r){return r.free<0}).lab:"",weiFree>0?" (of tijdelijk "+Math.min(weiFree,need)+" naar de wei).":"."):HnE("p",{className:"sp-k"},"✓ Past, met je huidige plek."),
+   pick.length||pickD.length?HnE("div",null,HnE("div",{className:"pc-det"},"Het eerst weg (uit je Stalplan, laagste eerst):"),HnE("ul",{className:"vd-list"},pick.map(function(a){return li(a.h.id,HnE("span",null,nm(a.h),HnE("span",{className:"pc-det"}," · "+(a.h.ras||"")+" · SDG "+hnF1(km(a.h)))),short(a)+(a.wacht?" · "+a.wacht:""))}).concat(pickD.map(function(a){return li(a.h.id,HnE("span",null,nm(a.h),HnE("span",{className:"pc-det"}," · twijfel · SDG "+hnF1(km(a.h)))),short(a))}))),props.p?HnE("button",{type:"button",className:"fok-btn sp-pb",onClick:function(){props.p("stalplan")}},"Naar Stalplan →"):null):null)})();
+ var nothing=!rmB&&!fbSec&&!birth.length&&!dek.length&&!keur.length&&!weg.length&&!verk.length&&!markt.length&&!shoeBad.length&&!A.stale.length&&!fokk.length&&!dekk.length&&!A.advice.some(function(a){return a.dek&&a.dek.stop});
  var trN=hnTReady(groups,hnNowMin());
  return HnE("div",{className:"pred-tab"},
   trN.length?HnE("div",{className:"pred-card vd-card tn-vd"},HnE("span",null,"\u23F3 ",HnE("b",null,trN.length+" paard"+(trN.length===1?"":"en")),(trN.length===1?" kan":" kunnen")+" nu getraind worden: "+trN.slice(0,6).map(function(h){return h.name}).join(", ")+(trN.length>6?" \u2026":"")),props.p?HnE("button",{type:"button",className:"fok-btn sp-pb",onClick:function(){props.p("trainen")}},"Naar Trainen \u2192"):null):null,
   HnE("div",{className:"sp-occ"},HnE("div",null,"Stal: ",HnE("b",{className:stalFree<0?"sp-over":""},A.stalN+" / "+sp.stal),stalFree>=0?HnE("span",{className:"pc-det"}," ("+stalFree+" vrij)"):null),HnE("div",null,"Wei: ",HnE("b",{className:A.weiN>sp.wei-sp.nood?"sp-over":""},A.weiN+" / "+(sp.wei-sp.nood)),HnE("span",{className:"pc-det"}," + "+sp.nood+" nood"))),
   stalFree<=1?HnE("p",{className:"sp-s"},stalFree<0?"Je stal zit "+(-stalFree)+" boven je plan.":"Je stal is bijna vol.",weg.length?" Bij \u2018Kan weg\u2019 hieronder staan paarden die plek kunnen maken.":""):null,
+  rmB,
   nothing?HnE("p",{className:"ras-hint"},"Niets dringends vandaag. \uD83C\uDF3F"):null,
   sec("\uD83C\uDF7C","Bevallingen",birth.map(function(x){return li(x.h.id,HnE("span",null,nm(x.h)," \u2013 "+dayTxt(x.d)," ",HnE(HnBirthBtn,{id:x.h.id})),x.h.gedektMet?"gedekt door "+x.h.gedektMet:"")})),
   fbSec,
@@ -2115,7 +2126,7 @@ function hnPlanKids(P,all){var sts=P.stal?[P.stal]:[],find=function(nm,own){var 
  var gone=[];if(P.gender==="H"){var hk2=[Se(pn)].concat(par?[Se(xt(par))]:[]),still=mine.map(function(r){return r.h.id});all.forEach(function(m){if(m.inStal&&m.gender!=="H"&&(m.gedekt||m.echoPositief)&&hk2.indexOf(Se(m.gedektMet||""))>=0&&m.bevallingsdatum&&m.bevallingsdatum>hnToday()&&still.indexOf(m.id)<0)gone.push({h:m,patch:{gedekt:!1,echoPositief:!1,bevallingsdatum:"",gedektMet:""}})})}
  var pp=null;if(par){var old=JSON.stringify(par.hnVerwacht||[]),nw=JSON.stringify(others);if(old!==nw)pp={hnVerwacht:others,hnVerwachtDatum:hnToday()}}
  return{par:par,pn:pn,rows:rows,mine:mine,others:others,pp:pp,gone:gone}}
-var HN_VERSION="2026-10-10i";
+var HN_VERSION="2026-10-10j";
 function hnTCS(){try{return JSON.parse(localStorage.getItem("hn-trainingscentrum-v1")||"{}")||{}}catch(e){return{}}}
 function hnWinst(){var o=(HN_ACT.names&&HN_ACT.names.stalplan&&HN_ACT.names.stalplan.winst)||{};return{snap:o.snap||null,log:Array.isArray(o.log)?o.log:[]}}
 var HN_WG={dres:"dres",spr:"spr",rei:"west",tra:"west",wp:"west"};
