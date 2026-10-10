@@ -1992,11 +1992,11 @@ function HnGoalView(props){var all=props.all,map=hnHorseMap(all),gm=hnGrpMap(pro
     top.length?HnE("ol",{className:"teams-list"},top.map(function(x,i){return HnE("li",{key:i},HnE("b",null,x.m.name)," \u00d7 ",HnE("b",null,x.s.name),x.ext?HnE("span",{className:"pc-det"}," (buiten"+(x.s.dekgeld?", "+hnMoney(+x.s.dekgeld):"")+")"):null,HnE("span",{className:"teams-sc"},hnF1(x.est.total)))})):null)}):HnE("p",{className:"ras-hint"},"Nog geen fokmerries met fokbonus en bekende SDG."))}
 var HN_TSLOT={spr:1,rei:2,tra:3,wp:4};
 function hnTOffset(id,r){if(id==="dres")return r<=4?r*25:125+(r-5)*5;return r*25+HN_TSLOT[id]*5}
-function hnTStatus(h,id,nowMin){var n=hnNiv(h),D=HN_DISC.find(function(d){return d.id===id}),r=n[id];if(r>=D.levels.length-1)return null;var off=hnTOffset(id,r),rem=((off-nowMin)%180+180)%180,pr=(h.trainPct||{})[id],pct=pr===void 0||pr===""||pr===null?null:+pr,sym=null,rolled=!1;
+function hnTStatus(h,id,nowMin){var n=hnNiv(h),D=HN_DISC.find(function(d){return d.id===id}),r=n[id],top=r>=D.levels.length-1;if(top&&!(Array.isArray(h.hnTrain)&&h.hnTrain.indexOf(id)>=0))return null;var off=hnTOffset(id,Math.min(r,D.levels.length-1)),rem=((off-nowMin)%180+180)%180,pr=(h.trainPct||{})[id],pct=pr===void 0||pr===""||pr===null?null:+pr,sym=null,rolled=!1;
  if(pct!==null&&!isNaN(pct)){if(pct>=80)sym="done";else{var need=Math.ceil((80-pct)/20)*2.5;if(rem<15){rem+=180;rolled=!0}sym=rem>=need?"train":"warn"}}
  var reg=(h.trainReg||{})[id]||"",rs=null;if(reg){var m=reg.match(/^(\d{1,2}):(\d{2})$/);if(m)rs=nowMin>=(+m[1])*60+(+m[2])?"exp":"ok"}
- return{id:id,lvl:r,lvlName:D.levels[r],rem:rem,pct:pct,sym:sym,rolled:rolled,reg:reg,rs:rs}}
-function hnTDiscs(h){var n=hnNiv(h),tr=Array.isArray(h.hnTrain)?h.hnTrain:null;return["dres","spr","rei","tra","wp"].filter(function(id){var D=HN_DISC.find(function(d){return d.id===id});if(n[id]>=D.levels.length-1)return!1;return tr?tr.indexOf(id)>=0:!0})}
+ return{id:id,top:top,lvl:r,lvlName:D.levels[Math.min(r,D.levels.length-1)],rem:rem,pct:pct,sym:sym,rolled:rolled,reg:reg,rs:rs}}
+function hnTDiscs(h){var n=hnNiv(h),tr=Array.isArray(h.hnTrain)?h.hnTrain:null;return["dres","spr","rei","tra","wp"].filter(function(id){var D=HN_DISC.find(function(d){return d.id===id});if(n[id]>=D.levels.length-1)return!!(tr&&tr.indexOf(id)>=0);return tr?tr.indexOf(id)>=0:!0})}
 function hnTHorses(groups){var LM=hnLocMap(groups);return hnAllHorses(groups,[]).filter(function(h){return LM[h.id]!=="wei"&&h.name&&h.name.trim()&&!h.sale&&hnTDiscs(h).length})}
 function hnNowMin(){var d=new Date();return d.getHours()*60+d.getMinutes()}
 function hnTReady(groups,nowMin){return hnTHorses(groups).filter(function(h){return hnTDiscs(h).some(function(id){var st=hnTStatus(h,id,nowMin);return st&&st.sym==="train"})})}
@@ -2006,7 +2006,7 @@ function HnTrainRow(props){var h=props.h,st=props.st,ns=z.useState(!1),ed=ns[0],
  var setReg=function(v){hnUpdate(h.id,function(o){var tr=Object.assign({},o.trainReg||{});if(v)tr[st.id]=v;else delete tr[st.id];return Object.assign({},o,{trainReg:tr})})};
  var setLvl=function(v){hnUpdate(h.id,function(o){var nv=Object.assign({},hnNiv(o));nv[st.id]=+v;return Object.assign({},o,{niveaus:nv})})};
  var cur=st.pct===null?0:st.pct,sym=st.sym==="done"?HnE("span",{className:"tn-sym tn-done",title:"80% of meer: mag meedoen"},"\u2713"):st.sym==="train"?HnE("span",{className:"tn-sym tn-train",title:"Nog tijd om naar 80% te trainen"},"\u23F3"):st.sym==="warn"?HnE("span",{className:"tn-sym tn-warn",title:"Wordt krap"},"\u26A0"):null;
- return HnE("div",{className:"tn-row"+(props.next?" tn-next":"")},HnE("div",{className:"tn-l"},HnE("b",null,HN_DSHORT[st.id]),HnE("span",{className:"pc-det"}," over "+hnFmtMin(st.rem)+(st.rolled?"*":"")),
+ return HnE("div",{className:"tn-row"+(props.next?" tn-next":"")},HnE("div",{className:"tn-l"},HnE("b",null,HN_DSHORT[st.id]),st.top?HnE("span",{className:"pc-det",title:"Hoogste niveau: alleen wedstrijden"}," \uD83C\uDFC6"):null,HnE("span",{className:"pc-det"}," over "+hnFmtMin(st.rem)+(st.rolled?"*":"")),
    HnE("select",{value:st.lvl,onChange:function(e){setLvl(e.target.value)}},D.levels.map(function(l,i){return HnE("option",{key:i,value:i},l)}))),
   HnE("div",{className:"tn-r"},HnE("button",{type:"button",className:"tn-b",onClick:function(){setPct(cur-5)}},"\u2212"),HnE("input",{type:"number",min:"0",max:"100",value:st.pct===null?"":st.pct,placeholder:"%",onChange:function(e){setPct(e.target.value)}}),HnE("button",{type:"button",className:"tn-b",onClick:function(){setPct(cur+5)}},"+"),sym,
    ed?HnE("span",{className:"tn-reg"},HnE("input",{type:"time",autoFocus:!0,value:st.reg,onChange:function(e){setReg(e.target.value)}}),HnE("button",{type:"button",className:"tn-b",onClick:function(){setReg("")}},"\u2715"),HnE("button",{type:"button",className:"tn-b",onClick:function(){setEd(!1)}},"\u2713")):
@@ -2146,7 +2146,7 @@ function hnPlanKids(P,all){var sts=P.stal?[P.stal]:[],find=function(nm,own){var 
  var gone=[];if(P.gender==="H"){var hk2=[Se(pn)].concat(par?[Se(xt(par))]:[]),still=mine.map(function(r){return r.h.id});all.forEach(function(m){if(m.inStal&&m.gender!=="H"&&(m.gedekt||m.echoPositief)&&hk2.indexOf(Se(m.gedektMet||""))>=0&&m.bevallingsdatum&&m.bevallingsdatum>hnToday()&&still.indexOf(m.id)<0)gone.push({h:m,patch:{gedekt:!1,echoPositief:!1,bevallingsdatum:"",gedektMet:""}})})}
  var pp=null;if(par){var old=JSON.stringify(par.hnVerwacht||[]),nw=JSON.stringify(others);if(old!==nw)pp={hnVerwacht:others,hnVerwachtDatum:hnToday()}}
  return{par:par,pn:pn,rows:rows,mine:mine,others:others,pp:pp,gone:gone}}
-var HN_VERSION="2026-10-10m";
+var HN_VERSION="2026-10-10n";
 function hnTCS(){try{return JSON.parse(localStorage.getItem("hn-trainingscentrum-v1")||"{}")||{}}catch(e){return{}}}
 function hnWinst(){var o=(HN_ACT.names&&HN_ACT.names.stalplan&&HN_ACT.names.stalplan.winst)||{};return{snap:o.snap||null,log:Array.isArray(o.log)?o.log:[]}}
 var HN_WG={dres:"dres",spr:"spr",rei:"west",tra:"west",wp:"west"};
