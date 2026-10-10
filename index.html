@@ -1923,7 +1923,7 @@ function hnStalAdvice(groups,ext,withMoney){var all=hnAllHorses(groups,ext),map=
    dek={mode:mode,lim:lim,out:out,born:bornOut,verw:verwOut,aan:aan,stop:stop,why:why,how:how,label:{binnen:"Alleen binnenshuis",grens:"Ter dekking, met grens","eerst-markt":"Eigen merries eerst, dan ter dekking, dan de markt","eerst-grens":"Eigen merries eerst, dan ter dekking met grens, dan weg","eerst-vrij":"Eigen merries eerst, dan vrij ter dekking, dan weg"}[mode]}}
   return{h:h,keep:keep,sell:sell,doubt:doubt,verdict:verdict,auto:auto,own:verdict!==auto,stale:verdict!==auto&&!!was&&was!==auto,info:info,wacht:wacht,kanaal:kanaal,dek:dek}});
  var order={weg:0,twijfel:1,houden:2};advice.sort(function(a,b){return order[a.verdict]-order[b.verdict]||(km(a.h)||0)-(km(b.h)||0)});
- var weiN=act.filter(isWei).length,wegA=advice.filter(function(a){return a.verdict==="weg"}),wegWei=wegA.filter(function(a){return isWei(a.h)}).length,wegStal=wegA.length-wegWei;
+ var weiN=own.filter(function(h){return hasLoc?LM[h.id]==="wei":isWei(h)}).length,wegA=advice.filter(function(a){return a.verdict==="weg"}),wegWei=wegA.filter(function(a){return isWei(a.h)}).length,wegStal=wegA.length-wegWei;
  return{wegWei:wegWei,wegStal:wegStal,stale:advice.filter(function(a){return a.stale}),all:all,map:map,gm:gm,sp:sp,own:own,sale:sale,act:act,rassen:rassen,byCat:byCat,advice:advice,weiN:weiN,stalN:own.length-weiN,phN:act.filter(function(h){return h._ph}).length,oplN:act.filter(function(h){return h._cat==="opl"}).length}}
 function HnStalplanTab(props){var A=hnStalAdvice(props.groups,props.externalHorses||[],!0),sp=A.sp,rassen=A.rassen,byCat=A.byCat,advice=A.advice;
  var os=z.useState(!1),showSet=os[0],setShowSet=os[1];
@@ -2146,7 +2146,7 @@ function hnPlanKids(P,all){var sts=P.stal?[P.stal]:[],find=function(nm,own){var 
  var gone=[];if(P.gender==="H"){var hk2=[Se(pn)].concat(par?[Se(xt(par))]:[]),still=mine.map(function(r){return r.h.id});all.forEach(function(m){if(m.inStal&&m.gender!=="H"&&(m.gedekt||m.echoPositief)&&hk2.indexOf(Se(m.gedektMet||""))>=0&&m.bevallingsdatum&&m.bevallingsdatum>hnToday()&&still.indexOf(m.id)<0)gone.push({h:m,patch:{gedekt:!1,echoPositief:!1,bevallingsdatum:"",gedektMet:""}})})}
  var pp=null;if(par){var old=JSON.stringify(par.hnVerwacht||[]),nw=JSON.stringify(others);if(old!==nw)pp={hnVerwacht:others,hnVerwachtDatum:hnToday()}}
  return{par:par,pn:pn,rows:rows,mine:mine,others:others,pp:pp,gone:gone}}
-var HN_VERSION="2026-10-10n";
+var HN_VERSION="2026-10-10o";
 function hnTCS(){try{return JSON.parse(localStorage.getItem("hn-trainingscentrum-v1")||"{}")||{}}catch(e){return{}}}
 function hnWinst(){var o=(HN_ACT.names&&HN_ACT.names.stalplan&&HN_ACT.names.stalplan.winst)||{};return{snap:o.snap||null,log:Array.isArray(o.log)?o.log:[]}}
 var HN_WG={dres:"dres",spr:"spr",rei:"west",tra:"west",wp:"west"};
