@@ -1,9 +1,13 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-11b (staat ook onderaan in de app).
+Versie 2026-10-11c (staat ook onderaan in de app).
 
-### Nieuw: de Engels-update van Horse Nation (2026-10-11a en b)
+### Nieuw in 2026-10-11c: route-advies voor de fokbonus
+- Bij elk paard in het Kladblok staat onder de fokbonus een **route-advies**: Western of Engels (Dressuur t/m M1 + Springen + Cross-country). De app kijkt eerst hoe ver het paard al is in elke route, en daarna naar de aanleg (gewogen SDG). Is het verschil heel klein, dan zegt de app dat beide even goed zijn.
+- Onder **Stal → Teams** staat het overzicht **Fokbonus-route per paard** voor alle paarden in je stal die de volle fokbonus nog niet hebben.
+
+### De Engels-update van Horse Nation (2026-10-11a en b)
 - **Cross-country** is er als zesde discipline (B-intro, B, L, M, Z): in het Kladblok, bij Trainen, in de uitslagen, bij het plakken van je stallijst en hengstenlijst, in Teams (Team Cross-country, met kalkoenen) en in het Trainingscentrum.
 - **Fokbonus volgens de nieuwe regels**: per ouder tellen de 3 beste volledige onderdelen. Dressuur t/m M1 is één onderdeel, dressuur t/m ZZ-Zwaar telt als twee. Bij elk paard zie je per letter (S, D, G) hoeveel procent van de fokbonus de niveaus opleveren. Routes voor de volle bonus: Western, Engels (Dressuur M1 + Springen + Cross-country) en Engels zwaar (Dressuur ZZ-Zwaar + Springen).
 - **Aanleg en Teams** rekenen met de verhoudingen van Stap, Draf en Galop uit de uitleg in het spel.
