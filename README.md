@@ -1,7 +1,10 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-11c (staat ook onderaan in de app).
+Versie 2026-10-11e (staat ook onderaan in de app). Het Trainingscentrum noemt nu ook de winstpunten van Cross-country bij Wedstrijden.
+
+### Nieuw in 2026-10-11d
+- Het Trainingscentrum rekent met de balkjes zoals ze in het spel staan: 2 op de eerste twee niveaus, daarna 3 en 4, en alleen op het hoogste niveau 5 (Dressuur: 2, 2, 3 en daarna 4 tot ZZ-Zwaar met 5). Gecontroleerd met schermafbeeldingen uit het spel.
 
 ### Nieuw in 2026-10-11c: route-advies voor de fokbonus
 - Bij elk paard in het Kladblok staat onder de fokbonus een **route-advies**: Western of Engels (Dressuur t/m M1 + Springen + Cross-country). De app kijkt eerst hoe ver het paard al is in elke route, en daarna naar de aanleg (gewogen SDG). Is het verschil heel klein, dan zegt de app dat beide even goed zijn.
@@ -13,7 +16,7 @@ Versie 2026-10-11c (staat ook onderaan in de app).
 - **Aanleg en Teams** rekenen met de verhoudingen van Stap, Draf en Galop uit de uitleg in het spel.
 - **Predicaten en dekklaar**: Cross-country telt mee (B voor Ster en om te mogen fokken, L voor Keur, M voor Elite, Z voor Preferent).
 - **Wedstrijdtijden**: per niveau Dressuur, Springen, Cross-country, Reining, Trail en Western Pleasure, elke 5 minuten.
-- **Trainingscentrum**: minder balkjes (2 op het laagste niveau, één erbij per promotie tot maximaal 4, alleen op het hoogste niveau 5), de 25 fokbonus-combinaties met hun percentages, en de nieuwe beloningen (combinatiebeloning één keer, allroundbeloning). Inschrijf- en prijzengeld voor Cross-country zijn nog geschat (gelijk aan Springen).
+- **Trainingscentrum**: minder balkjes (zie 2026-10-11d), de 25 fokbonus-combinaties met hun percentages, en de nieuwe beloningen (combinatiebeloning één keer, allroundbeloning). Inschrijf- en prijzengeld voor Cross-country zijn nog geschat (gelijk aan Springen).
 
 ## Zetten op GitHub Pages
 1. Vervang in je bestaande repository `index.html` (en `README.md`) door deze versie. Laat `.nojekyll` staan.
