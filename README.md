@@ -1,7 +1,19 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-12a (staat ook onderaan in de app).
+Versie 2026-10-12b (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-12b: harde regels in het Stalplan
+- **Geen twijfel meer.** Per ras zet de app de paarden per rol op een ranglijst met een streep: fokmerries, dekhengsten (wei) en opvolgers (jonge merries en hengsten in training). Volgorde: SDG; bij (bijna) gelijke SDG eerst fokbonus, daarna de jongste. Boven de streep: Houden. Eronder: Kan weg.
+- **Vaste plekken per ras** (aan te passen bij ⚙️ Stalplan aanpassen): Friezen 8 fokmerries, 4 dekhengsten, 3 opvolgers; Belgen 4 / 3 / 2; Tinkers 4 / 3 / 2; Percherons 4 / 2 / 1. Plus 10 veulenplekken. Stal: 20 + 8 + 10 = 38 van 40, wei: 12 dekhengsten.
+- **Vers bloed:** per ras 1 beschermde plek voor een stamboomloze of bijna stamboomloze merrie. Ze telt als een van je fokmerries.
+- **Lege plekken:** is er bij een ras een fokmerrie- of hengstplek vrij, dan vult de beste opvolger daarna die plek op (merries met ❌ of drachtig niet).
+- **Veulens:** een veulen is gewoon een opvolger. Komt het bij de beste opvolgers van zijn ras, dan blijft het en valt de laagste eruit. Zo niet, dan staat het meteen bij Kan weg.
+- **Opvolger klaar:** heeft een opvolger de fokbonus en is ze beter dan je laagste fokmerrie (of is er plek), dan zegt de app: zet 🔥. Bij hengsten: zet hem in je Weiland-groep.
+- **Weg na de bevalling:** een drachtige merrie onder de streep staat bij Kan weg, maar niet in de Kan weg-lijst van Vandaag. Haar plek telt in het plan al als vrij. Met **Status bijwerken** krijgen drachtige merries onder de streep ⚠️ en niet-drachtige fokmerries ❌.
+- **Dekken in rondes:** per ras een maximum dat tegelijk drachtig mag zijn (Friezen 4, Belgen 2, Tinkers 2, Percherons 2). De fokmerries zijn verdeeld over groep A, B (enz.), om en om op de ranglijst. Vandaag en Kan gedekt worden tonen alleen merries uit de huidige groep, zolang er ruimte is. Met de knop "Groep A is gedekt" ga je naar de volgende groep.
+- **Oude keuzes:** keuzes die je vastzette (📌) blijven staan. Het Stalplan toont welke afwijken van de streep, met een knop om ze terug te zetten.
+- De harde regels zet je uit bij ⚙️ Stalplan aanpassen; dan werkt het Stalplan weer zoals in 2026-10-12a.
 
 ### Nieuw in 2026-10-12a: overzicht per ras
 - Onder **Stal → Stalplan** staat **Per ras**: per ras het aantal paarden tegen je maximum, en per groep (fokmerries, dekhengsten, in opleiding, PowerHouse) de namen met geslacht en SDG.
