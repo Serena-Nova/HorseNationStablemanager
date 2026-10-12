@@ -1,7 +1,11 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-12b (staat ook onderaan in de app).
+Versie 2026-10-12c (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-12c: stamboom in de harde regels
+- **Maximaal één opvolger per moeder.** Staan er twee veulens van dezelfde merrie bij de beste opvolgers, dan blijft alleen de hoogste; de volgende uit een andere lijn schuift op. Dit geldt ook voor het vullen van lege plekken.
+- **Vrije dekhengsten eerst.** Een dekhengst die voor geen van je fokmerries van zijn ras vrij is (zonder inteelt, of binnen je Max. inteelt), staat onder de hengsten die dat wel zijn. Hij blijft alleen als er plek over is, als dekhengst voor anderen. Bij elke dekhengst staat voor hoeveel van je fokmerries hij vrij is. Heb je in Horse Nation de pagina Merrie dekken geplakt, dan gebruikt de app de inteelt van het spel.
 
 ### Nieuw in 2026-10-12b: harde regels in het Stalplan
 - **Geen twijfel meer.** Per ras zet de app de paarden per rol op een ranglijst met een streep: fokmerries, dekhengsten (wei) en opvolgers (jonge merries en hengsten in training). Volgorde: SDG; bij (bijna) gelijke SDG eerst fokbonus, daarna de jongste. Boven de streep: Houden. Eronder: Kan weg.
