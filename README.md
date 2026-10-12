@@ -1,7 +1,20 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-11e (staat ook onderaan in de app). Het Trainingscentrum noemt nu ook de winstpunten van Cross-country bij Wedstrijden.
+Versie 2026-10-12a (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-12a: overzicht per ras
+- Onder **Stal → Stalplan** staat **Per ras**: per ras het aantal paarden tegen je maximum, en per groep (fokmerries, dekhengsten, in opleiding, PowerHouse) de namen met geslacht en SDG.
+- Per ras stel je **Max. paarden** in (in het overzicht zelf of bij Stalplan aanpassen). Met de knoppen **inclusief / exclusief opleiding** kies je of paarden in opleiding meetellen. Ga je erover, dan kleurt het rood.
+
+### Eerder: 2026-10-11f
+
+### Nieuw in 2026-10-11f: dekklaar via elke fokbonus-route
+- **Dekklaar** betekent nu: in een van de volle routes nog 2 promoties tot de fokbonus, hetzelfde moment als Western L3. Western L3, Engels (Dressuur L1 + Springen M + Cross-country L) of Engels zwaar (Dressuur Z2 + Springen M).
+- **Vandaag** toont 'Merries klaar om gedekt te worden' en 'Hengsten klaar om te dekken' voor alle routes, met hoeveel promoties en dagen het nog is tot de volle fokbonus.
+- **Kladblok**: per paard staat onder het route-advies of het al dekklaar is, en anders welke route het dichtstbij is.
+- **Opfokken en tijd tot fokbonus** rekenen met de snelste volle route.
+- **Trainingscentrum → Fokken**: de tijd per generatie rekent met de snelste volle route (bijvoorbeeld '2 promoties voor het einde').
 
 ### Nieuw in 2026-10-11d
 - Het Trainingscentrum rekent met de balkjes zoals ze in het spel staan: 2 op de eerste twee niveaus, daarna 3 en 4, en alleen op het hoogste niveau 5 (Dressuur: 2, 2, 3 en daarna 4 tot ZZ-Zwaar met 5). Gecontroleerd met schermafbeeldingen uit het spel.
