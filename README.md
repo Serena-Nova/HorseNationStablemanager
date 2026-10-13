@@ -1,7 +1,40 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-13d (staat ook onderaan in de app).
+Versie 2026-10-13i (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-13i
+- **Stamboomloos aangeven in de Stamboom:** klik op een kaartje in de stamboom (of zoek het paard op); in het venster staat nu het veld **Stamboom** (normaal / stamboomloos / bijna stamboomloos). Het wordt meteen opgeslagen, ook voor paarden van buiten. Een stamboomloos paard telt als 100% vers bloed en verdwijnt uit "stamboom is leeg" bij Gegevens nakijken.
+- **Dubbel paard samenvoegen:** in hetzelfde venster heet het onderdeel nu "Dubbel paard samenvoegen". Het toont meteen paarden met een naam die erop lijkt (bijvoorbeeld 'Ares (Elske)' en 'Ares van Loki'); anders zoek je op naam of nummer. Met "Is hetzelfde paard: samenvoegen" blijft het paard met de meeste gegevens over en gaan ouders, nakomelingen en verwijzingen mee. Je kunt ook het paardnummer van het goede paard invullen: hoort dat nummer al bij een ander paard, dan biedt de app samenvoegen aan.
+- **Gegevens nakijken:** bij een paard met een lege of ontbrekende ouder staat nu "🔍 nakijken". Dat opent meteen het venster van die ouder (of van de lege plek) in de Stamboom.
+
+### Nieuw in 2026-10-13h
+- **Dekrondes schuiven vanzelf door:** zodra iedereen uit de huidige groep gedekt of drachtig is, toont de app de volgende groep. Met "Groep A overslaan" kun je zelf nog doorschuiven.
+- **🩺 Gegevens nakijken (Vandaag):** per paard wat ontbreekt of vreemd is: geen ras, geslacht of SDG; ouders niet ingevuld of niet in de database; een vader die als merrie staat (of andersom); een ouder met een lege stamboom (dan kan de inteelt niet goed berekend worden); gedekt zonder of met een verlopen bevallingsdatum; een dekhengst die niet in de database staat. Ook rasnamen die op elkaar lijken (zoals Fires/Friees en Belgische Trekpaard), met een knop om ze overal samen te voegen.
+- **Back-up-herinnering (Vandaag):** een seintje als Dropbox meer dan 3 dagen niet heeft gesynchroniseerd, of als Dropbox niet gekoppeld is en je laatste back-up ouder is dan 7 dagen (of er nog geen is).
+- **Teams:** Aanleg van alle paarden, Fokbonus-route per paard en Hoe zwaar telt S, D en G staan ingeklapt; de twee uitlegblokken zijn samengevoegd.
+- **Predicaten:** alle onderdelen zijn in te klappen (Eisen per predicaat, Klaar voor keuring, Bijna, Preferent-traject, Eindstation, Dekgeld-advies, Alle paarden).
+- **Opfokken zit nu in het Stalplan:** bij elke merrie staat "🍼 Fokken of weg?" met het volledige opfok-advies. Het losse tabblad Opfokken is uit het menu.
+- De vers-bloed-berekening herkent ouders nu ook als hun naam met stalnaam is geschreven, zoals "Aike (FTF's)".
+
+### Nieuw in 2026-10-13g
+- **Trainen:** bovenaan per paard een klein vakje met alleen de naam, de discipline die het nu moet trainen en de tijd tot de wedstrijd. Donkergroen = binnen 45 minuten, lichtgroen = later, oranje = krap. Tik op een vakje en je springt naar het volledige kaartje onderaan (met alle disciplines, percentage, niveau en inschrijftijd); met "↑ boven" ga je terug.
+- **Waarde:** op de telefoon staat elk paard op één regel met de Handelaar-schatting en de vraagprijs vanaf. Tik op een paard voor de volledige berekening bovenaan. De waarschuwing is ingeklapt. Op de computer blijft de tabel.
+- **Navigatie onderin (alleen telefoon):** een vaste balk met icoontjes voor Vandaag, Kladblok, Trainen, Fokken, Stal, Plakken en Trainingscentrum. Op de computer blijven de tabs bovenaan.
+- **Fokken → Dracht: Nu dekken.** Per ras de groep die aan de beurt is, hoeveel er drachtig zijn, en per merrie die nu mag de beste hengst zonder inteelt (eigen of van buiten, met dekgeld en het verwachte veulen).
+
+### Nieuw in 2026-10-13f
+- **Trainen:** per paard een kaartje met de naam en vierkante blokjes per discipline (Dr, Sp, Cr, Re, Tr, WP) met de tijd die nog over is. Donkergroen = eerst, lichtgroen = trainen, oranje = krap, ✓ = 80% of meer. Tik op een paard om percentage, niveau en inschrijftijd aan te passen.
+- **Kladblok:** elk paard op één regel (naam, SDG, ras, predicaat, geslacht). Een stipje laat zien wat het stalplan vindt: groen blijft, rood onder de streep, paars vers bloed. Filterknoppen bovenaan per ras en voor gedekt/drachtig, blijft, onder de streep en vers bloed; lege groepen verdwijnen zolang een filter aan staat. De knoppen van groepen en subgroepen (verplaatsen, type, plek, verwijderen) staan achter ⋯.
+- **⚙️ Instellingen** (bovenaan naast Back-up): geslacht als ♂/♀ of H/M, Kladblok compact aan/uit, stipje aan/uit. Gaat mee met Dropbox en de back-up.
+- **Opfokken** rekent nu met het stalplan: het advies noemt of ze boven of onder de streep staat, en een merrie met een vers-bloed-plek krijgt het advies om (dekklaar) te fokken in plaats van weg.
+
+### Nieuw in 2026-10-13e: overzichtelijker
+- **Vandaag:** elk blok is in te klappen met een teller in de kop. De app onthoudt per blok of je het open of dicht had. Lange blokken (Ruimte de komende dagen, Hengsten klaar om te dekken, Kan weg, Op weg naar 30) staan standaard dicht; Ruimte laat in de kop al zien of het past. Lange uitleg bij een regel staat achter "› meer".
+- **Trainen:** per paard één regel met de discipline die het eerst moet (niveau, tijd en %), en kleine labels voor de andere disciplines. Tik op een paard voor percentage, niveau en inschrijftijd. Met "Alles uitklappen" open je alles tegelijk.
+- **Fokken → Dracht:** per merrie een kaart: merrie × hengst, hoe lang nog (groen = vandaag, oranje = morgen), de minimale SDG van het veulen groot, ouders en fokbonus eronder. Hengst, datum, geslacht veulen en "uit overzicht" staan onder "Aanpassen".
+- **Fokken → Opfokken:** het advies staat bovenaan. Stamboom, de drie keuzes en de hengstenlijst staan ingeklapt onder "Meer info".
+- **Stal → Teams:** met ✏️ geef je een team je eigen naam (Enter om op te slaan, leeg = standaardnaam). De namen gaan mee met Dropbox en de back-up en worden ook in Vandaag gebruikt.
 
 ### Nieuw in 2026-10-13d
 - In het stalplan per ras staat bij elk paard ♂ of ♀, zodat je een verkeerd ingevuld geslacht meteen ziet. De app rekent met het geslacht uit het Kladblok.
