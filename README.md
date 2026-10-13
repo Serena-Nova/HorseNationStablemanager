@@ -1,7 +1,12 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-12c (staat ook onderaan in de app).
+Versie 2026-10-13a (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-13a: vervangers
+- Een opvolger die buiten de beste opvolgers valt, maar wel beter is dan je zwakste dekhengst (of fokmerrie) van zijn ras, blijft nu als **vervanger**. Elke vervanger hoort bij één paard dat hij vervangt: de beste vervanger tegen je zwakste, de volgende tegen de op-één-na-zwakste, enzovoort.
+- Bij de vervanger staat wie hij vervangt. Bij het paard dat vervangen wordt staat: gaat weg zodra de vervanger in de wei staat (of 🔥 heeft). Zo raak je je beste jonge paarden niet kwijt aan de opvolgerslimiet.
+- Ook hier geldt maximaal één per moeder.
 
 ### Nieuw in 2026-10-12c: stamboom in de harde regels
 - **Maximaal één opvolger per moeder.** Staan er twee veulens van dezelfde merrie bij de beste opvolgers, dan blijft alleen de hoogste; de volgende uit een andere lijn schuift op. Dit geldt ook voor het vullen van lege plekken.

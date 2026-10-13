@@ -1980,7 +1980,9 @@ function hnHard(act,sp,rassen,map,LIM){var TD=hnToday(),by={},R={};LIM=LIM||1e-9
   O.forEach(function(h){var dk=Se(h.damName||"");if(dk&&damUsed[dk]){h._sibOf=damUsed[dk];Or.push(h);return}if(Ok.length<T.o){Ok.push(h);if(dk)damUsed[dk]=h}else Or.push(h)});
   var freeM=Math.max(0,T.m-vers.length-Mk.length),freeH=Math.max(0,T.h-Hk.length),fill=[];
   Or.forEach(function(h){if(h._sibOf)return;var dk=Se(h.damName||"");if(dk&&damUsed[dk]){h._sibOf=damUsed[dk];return}var ok=!1;if(h.gender==="H"){if(freeH>0){freeH--;ok=!0}}else if(freeM>0&&h.status!=="cross"&&!hnPreg(h,TD)){freeM--;ok=!0}if(ok){fill.push(h);if(dk)damUsed[dk]=h}});
-  var Ow=Or.filter(function(h){return fill.indexOf(h)<0});
+  var repl=[],rmap={};["H","M"].forEach(function(g){var tg=(g==="H"?Hk:Mk).slice().sort(hnHardCmp).reverse(),cd=Or.filter(function(h){return fill.indexOf(h)<0&&!h._sibOf&&(g==="H"?h.gender==="H":h.gender!=="H"&&h.status!=="cross"&&!hnPreg(h,TD))});var j=0;
+   cd.forEach(function(h){if(j>=tg.length)return;var dk=Se(h.damName||"");if(dk&&damUsed[dk]){h._sibOf=damUsed[dk];return}if(hnHardCmp(h,tg[j])<0){repl.push(h);rmap[h.id]=tg[j];h._replTarget=tg[j].name;tg[j]._replBy=h;if(dk)damUsed[dk]=h;j++}})});
+  var Ow=Or.filter(function(h){return fill.indexOf(h)<0&&repl.indexOf(h)<0});
   var lowM=Mk.length?Mk[Mk.length-1]:null,lowH=Hk.length?Hk[Hk.length-1]:null,lowO=Ok.length?Ok[Ok.length-1]:null;
   var mFull=vers.length+Mk.length>=T.m,hFull=Hk.length>=T.h;
   vers.forEach(function(h){by[h.id]={v:"houden",t:"Vers bloed: beschermde plek ("+vers.length+" van "+T.v+" voor "+ras+"). "+(h._cat==="merrie"?"Telt als een van je "+T.m+" fokmerries.":"Krijgt een van je "+T.m+" fokmerrie-plekken: zet 🔥 zodra ze dekklaar is.")+" Gaat weg zodra een dochter van haar het overneemt."}});
@@ -1993,6 +1995,8 @@ function hnHard(act,sp,rassen,map,LIM){var TD=hnToday(),by={},R={};LIM=LIM||1e-9
     if(h.gender==="H"&&(!hFull||lowH&&hnHardCmp(h,lowH)<0))x.push("Fokbonus binnen"+(hFull?" en beter dan "+s(lowH):" en er is plek in de wei")+": zet hem in je Weiland-groep"+(hFull?", dan valt "+lowH.name+" onder de streep":"")+".")}
    by[h.id]={v:"houden",t:"Nr. "+(i+1)+" van je "+ras+"-opvolgers ("+T.o+" plekken).",x:x}});
   fill.forEach(function(h){by[h.id]={v:"houden",t:h.gender==="H"?"Vult een lege plek bij je "+ras+"-dekhengsten ("+Hk.length+" van "+T.h+"): naar de wei zodra hij fokbonus heeft.":"Vult een lege fokmerrie-plek bij je "+ras+" ("+(vers.length+Mk.length)+" van "+T.m+"): zet 🔥 zodra ze dekklaar is."}});
+  repl.forEach(function(h){var t=rmap[h.id];by[h.id]={v:"houden",t:"Vervanger: beter dan "+s(t)+", je zwakste "+ras+"-"+(h.gender==="H"?"dekhengst":"fokmerrie")+". Blijft als extra opvolger; "+(h.gender==="H"?"zet hem in je Weiland-groep zodra hij fokbonus heeft":"zet \uD83D\uDD25 zodra ze fokbonus heeft")+", dan valt "+t.name+" onder de streep."}});
+  [Hk,Mk].forEach(function(L){L.forEach(function(h){if(h._replBy&&by[h.id])by[h.id].x=(by[h.id].x||[]).concat(["Wordt vervangen door "+s(h._replBy)+" (opvolger): gaat weg zodra "+(h._replBy.gender==="H"?"die in de wei staat":"die \uD83D\uDD25 heeft")+". Dek of verkoop daar al op."])})});
   Ow.forEach(function(h){by[h.id]={v:"weg",t:h._sibOf?"Zelfde moeder als "+s(h._sibOf)+", die hoger staat: maximaal \u00e9\u00e9n opvolger per moeder, zodat je lijnen niet in elkaar lopen."+bev(h):"Komt niet bij je "+T.o+" beste "+ras+"-opvolgers"+(lowO?" (de laagste die blijft is "+s(lowO)+")":"")+"."+bev(h)}});
   warn.forEach(function(h){by[h.id]={v:"weg",t:"Staat op ⚠️ gaat weg na afronding."+bev(h)}});
   if(lowM)lowM._hardLow=1;
@@ -2000,7 +2004,7 @@ function hnHard(act,sp,rassen,map,LIM){var TD=hnToday(),by={},R={};LIM=LIM||1e-9
   var preg=L.filter(function(h){return hnPreg(h,TD)}),cur=((+(sp.ronde||{})[k]||0)%ng+ng)%ng,room=Math.max(0,d-preg.length);
   var allow=groups[cur].filter(function(h){return!hnPreg(h,TD)&&!h.gedekt&&!h.echoPositief}).slice(0,room);
   var last=preg.map(function(h){return h.bevallingsdatum}).filter(Boolean).sort().pop()||"";
-  R[ras]={k:k,T:T,vers:vers,Mk:Mk,Mo:Mo,Hk:Hk,Ho:Ho,Ok:Ok,fill:fill,Ow:Ow,warn:warn,groups:groups,cur:cur,ng:ng,preg:preg,room:room,allow:allow,last:last,d:d}});
+  R[ras]={k:k,T:T,vers:vers,Mk:Mk,Mo:Mo,Hk:Hk,Ho:Ho,Ok:Ok,fill:fill,repl:repl,Ow:Ow,warn:warn,groups:groups,cur:cur,ng:ng,preg:preg,room:room,allow:allow,last:last,d:d}});
  var allowIds={};Object.keys(R).forEach(function(r){R[r].allow.forEach(function(h){allowIds[h.id]=1})});
  var plan=rassen.reduce(function(a,r){var T=hnSPRas(sp,r);a.m+=T.m;a.o+=T.o;a.h+=T.h;a.d+=T.d;return a},{m:0,o:0,h:0,d:0});
  return{by:by,R:R,allowIds:allowIds,plan:plan}}
@@ -2013,14 +2017,14 @@ function HnHardBlock(props){var A=props.A,HD=A.hard,sp=A.sp;if(!HD)return null;v
  var marks={};A.advice.forEach(function(a){var h=a.h;if(a.verdict!=="weg"||h.gender==="H"||h.sale)return;if(hnPreg(h,TD)){if(h.status!=="warn")marks[h.id]={status:"warn"}}else if(h.status==="fire")marks[h.id]={status:"cross"}});
  var nMarks=Object.keys(marks).length;
  return HnE("div",{className:"pred-card ras-over"},HnE("h3",{className:"pred-h",style:{marginTop:0}},"📏 Harde regels"),
-  HnE("p",{className:"pc-det"},"Per ras een ranglijst met een streep. Volgorde: SDG, bij (bijna) gelijke SDG eerst fokbonus, daarna de jongste. Stamboom: maximaal \u00e9\u00e9n opvolger per moeder, en dekhengsten die voor geen van je fokmerries vrij zijn, staan onder de vrije hengsten. Boven de streep blijft, eronder gaat weg. Geen twijfel. Een veulen is gewoon een opvolger: komt het bij de beste opvolgers van zijn ras, dan blijft het, en valt de laagste eruit."),
+  HnE("p",{className:"pc-det"},"Per ras een ranglijst met een streep. Volgorde: SDG, bij (bijna) gelijke SDG eerst fokbonus, daarna de jongste. Een opvolger die beter is dan je zwakste dekhengst of fokmerrie blijft altijd, als vervanger. Stamboom: maximaal \u00e9\u00e9n opvolger per moeder, en dekhengsten die voor geen van je fokmerries vrij zijn, staan onder de vrije hengsten. Boven de streep blijft, eronder gaat weg. Geen twijfel. Een veulen is gewoon een opvolger: komt het bij de beste opvolgers van zijn ras, dan blijft het, en valt de laagste eruit."),
   HnE("p",{className:"ras-hint"},"Stal volgens plan: "+P.m+" fokmerries + "+P.o+" opvolgers + "+(+sp.vb||0)+" veulenplekken = "+stalPlan+" van "+sp.stal+(stalPlan<=sp.stal?" ("+(sp.stal-stalPlan)+" reserve).":" – "+(stalPlan-sp.stal)+" te veel.")+" Wei: "+P.h+" dekhengsten. Nu drachtig: "+pregAll+" (veulenplekken: "+(+sp.vb||0)+")."+(pregAll>(+sp.vb||0)?" Meer drachtig dan je veulenplekken: wacht met dekken tot er veulens geboren en beoordeeld zijn.":"")),
   A.rassen.map(function(r){var X=HD.R[r];if(!X)return null;var T=X.T,L=HN_RLET;
    return HnE("details",{key:r,className:"ras-blk",open:!0},HnE("summary",null,HnE("b",null,r),HnE("span",{className:"pc-det ras-sub"},"fokmerries "+(X.vers.length+X.Mk.length)+"/"+T.m+" · hengsten "+X.Hk.length+"/"+T.h+" · opvolgers "+X.Ok.length+"/"+T.o+" · drachtig "+X.preg.length+"/"+X.d)),
     HnE("div",{className:"ras-body"},
      HnE("div",null,HnE("b",null,"Fokmerries "),occ(X.vers.length+X.Mk.length,T.m),": "+nms(X.Mk)+(X.vers.length?" · vers bloed: "+nms(X.vers):"")),
      HnE("div",null,HnE("b",null,"Dekhengsten "),occ(X.Hk.length,T.h),": "+nms(X.Hk)),
-     HnE("div",null,HnE("b",null,"Opvolgers "),occ(X.Ok.length,T.o),": "+nms(X.Ok)+(X.fill.length?" · vult lege plek: "+nms(X.fill):"")),
+     HnE("div",null,HnE("b",null,"Opvolgers "),occ(X.Ok.length,T.o),": "+nms(X.Ok)+(X.fill.length?" · vult lege plek: "+nms(X.fill):"")+(X.repl.length?" · vervangers: "+X.repl.map(function(h){return h.name+" "+hnF1(km(h))+" (voor "+h._replTarget+")"}).join(", "):"")),
      X.Mo.length+X.Ho.length+X.Ow.length+X.warn.length?HnE("div",{className:"sp-s"},"Onder de streep: "+nms(X.Mo.concat(X.Ho,X.Ow,X.warn))):null,
      HnE("div",{className:"pc-det sp-kanaal"},HnE("b",null,"💞 Dekken in rondes: "),"max. "+X.d+" "+r+" tegelijk drachtig. "+X.groups.map(function(g,i){return"Groep "+L[i]+(i===X.cur?" (nu)":"")+": "+nms(g)}).join(" · ")+". ",
       X.preg.length>=X.d?"Nu "+X.preg.length+" drachtig: niet dekken"+(X.last?" tot na "+hnFmtDate(X.last):"")+".":X.allow.length?"Mag nu gedekt worden: "+X.allow.map(function(h){return h.name}).join(", ")+".":"Niemand uit groep "+L[X.cur]+" is nu te dekken.",
@@ -2262,7 +2266,7 @@ function hnPlanKids(P,all){var sts=P.stal?[P.stal]:[],find=function(nm,own){var 
  var gone=[];if(P.gender==="H"){var hk2=[Se(pn)].concat(par?[Se(xt(par))]:[]),still=mine.map(function(r){return r.h.id});all.forEach(function(m){if(m.inStal&&m.gender!=="H"&&(m.gedekt||m.echoPositief)&&hk2.indexOf(Se(m.gedektMet||""))>=0&&m.bevallingsdatum&&m.bevallingsdatum>hnToday()&&still.indexOf(m.id)<0)gone.push({h:m,patch:{gedekt:!1,echoPositief:!1,bevallingsdatum:"",gedektMet:""}})})}
  var pp=null;if(par){var old=JSON.stringify(par.hnVerwacht||[]),nw=JSON.stringify(others);if(old!==nw)pp={hnVerwacht:others,hnVerwachtDatum:hnToday()}}
  return{par:par,pn:pn,rows:rows,mine:mine,others:others,pp:pp,gone:gone}}
-var HN_VERSION="2026-10-12c";
+var HN_VERSION="2026-10-13a";
 function hnTCS(){try{return JSON.parse(localStorage.getItem("hn-trainingscentrum-v1")||"{}")||{}}catch(e){return{}}}
 function hnWinst(){var o=(HN_ACT.names&&HN_ACT.names.stalplan&&HN_ACT.names.stalplan.winst)||{};return{snap:o.snap||null,log:Array.isArray(o.log)?o.log:[]}}
 var HN_WG={dres:"dres",spr:"spr",xc:"xc",rei:"west",tra:"west",wp:"west"};
