@@ -1,7 +1,10 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-13c (staat ook onderaan in de app).
+Versie 2026-10-13d (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-13d
+- In het stalplan per ras staat bij elk paard ♂ of ♀, zodat je een verkeerd ingevuld geslacht meteen ziet. De app rekent met het geslacht uit het Kladblok.
 
 ### Nieuw in 2026-10-13c: overzichtelijker stalplan per ras
 - Bovenaan drie tegels: stal volgens plan, drachtig tegen je veulenplekken, en hoeveel paarden nu weg kunnen.
