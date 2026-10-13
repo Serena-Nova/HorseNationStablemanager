@@ -1,7 +1,13 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-13a (staat ook onderaan in de app).
+Versie 2026-10-13b (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-13b: vers bloed gemeten aan de stamboom
+- Bij elke merrie staat nu **% vers bloed**: welk deel van haar stamboom (4 generaties) verder nergens in je eigen paarden van dat ras voorkomt. Elke ouder telt voor de helft, elke grootouder voor een kwart, enzovoort. Een tak telt als niet vers zodra die voorouder ook bij een ander paard van jou (of in diens stamboom) zit. Haar eigen ouders en voorouders tellen daarbij niet als "ander paard", zodat een dochter de verse lijn van haar moeder meekrijgt. Haar eigen nakomelingen tellen ook niet mee.
+- Een stamboomloze merrie is 100% vers. Een paard zonder ingevulde ouders (en niet stamboomloos) krijgt geen percentage.
+- **Vers-bloed-plekken** gaan naar de merries met minstens het ingestelde percentage (standaard 25%, bij ⚙️ Stalplan aanpassen: "Vers bloed vanaf") die niet al op SDG een fokmerrie-plek halen. Daarbinnen telt SDG. Zo neemt een betere dochter de plek vanzelf over van een zwakkere verse merrie.
+- Friezen hebben nu standaard 2 vers-bloed-plekken (andere rassen 1). Ze tellen mee in je aantal fokmerries.
 
 ### Nieuw in 2026-10-13a: vervangers
 - Een opvolger die buiten de beste opvolgers valt, maar wel beter is dan je zwakste dekhengst (of fokmerrie) van zijn ras, blijft nu als **vervanger**. Elke vervanger hoort bij één paard dat hij vervangt: de beste vervanger tegen je zwakste, de volgende tegen de op-één-na-zwakste, enzovoort.
