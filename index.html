@@ -1286,6 +1286,52 @@ html, body {
 .edit-row.sdg3>label{flex:1 1 0;min-width:0}
 .edit-row.sdg3 input{width:100%;min-width:0}
 .ras-over{margin:10px 0}.ras-over-h{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:6px}.ras-over-tg{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.ras-blk{border-top:1px solid rgba(0,0,0,.08);padding:6px 0}.ras-blk>summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;list-style:revert}.ras-cnt{font-weight:600}.ras-sub{flex-basis:100%;padding-left:16px}.ras-body{padding:6px 0 4px 16px}.ras-part{margin:6px 0}.ras-part-h{font-weight:600;font-size:13px;margin-bottom:3px}.ras-nms{display:flex;flex-wrap:wrap;gap:4px 6px}.ras-nm{display:inline-block;padding:2px 8px;border-radius:999px;background:rgba(0,0,0,.05);font-size:13px}
+.hr-card{padding:12px}
+.hr-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.hr-tiles{display:flex;gap:6px}
+.hr-tile{background:#f3efe8;border-radius:8px;padding:4px 10px;text-align:center;min-width:64px}
+.hr-tile.bad{background:#f6dfdc;color:#b8352b}
+.hr-tv{font-weight:700;font-size:16px;line-height:1.2}
+.hr-tl{font-size:11px;color:var(--text-dim)}
+.hr-tile.bad .hr-tl{color:#b8352b}
+.hr-how{margin:4px 0 8px}.hr-how>summary{cursor:pointer;font-size:13px;color:var(--accent)}
+.hr-ras{border-top:1px solid var(--border);padding:8px 0 4px}
+.hr-ras>summary{cursor:pointer;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;list-style:none}
+.hr-ras>summary::-webkit-details-marker{display:none}
+.hr-ras>summary::before{content:"\25B8";color:var(--text-dim);font-size:12px}
+.hr-ras[open]>summary::before{content:"\25BE"}
+.hr-rn{font-size:16px}
+.hr-sum{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:13px;color:var(--text-dim)}
+.hr-cnt{display:inline-block;padding:0 6px;border-radius:6px;background:#eef3ee;color:#2f7d43;font-weight:600;font-size:12px}
+.hr-cnt.full{background:#e6efe6}
+.hr-cnt.over{background:#f6dfdc;color:#b8352b}
+.hr-body{padding:6px 0 0 4px}
+.hr-row{display:grid;grid-template-columns:110px 1fr;gap:6px;align-items:start;margin:6px 0}
+@media (max-width:480px){.hr-row{grid-template-columns:1fr}}
+.hr-lab{font-size:13px;font-weight:600;display:flex;gap:6px;align-items:center}
+.hr-chips{display:flex;flex-wrap:wrap;gap:4px}
+.hr-chip{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;background:#eef3ee;border:1px solid #d6e5d7;font-size:13px;max-width:100%}
+.hr-chip .hr-sdg{font-size:11px;color:var(--text-dim);font-variant-numeric:tabular-nums}
+.hr-chip .hr-tag{font-size:11px;color:var(--text-dim)}
+.hr-chip.hr-vers{background:#f1ebf6;border-color:#ddd0ea}
+.hr-chip.hr-fill{background:#fff;border-style:dashed;border-color:#b9cdb9}
+.hr-chip.hr-repl{background:#fbf3e6;border-color:#ecd6b3}
+.hr-chip.hr-weg{background:#fbeceb;border-color:#efc9c5}
+.hr-chip.hr-weg .hr-nm{color:#b8352b}
+.hr-chip.dim{opacity:.7}
+.hr-chip.hr-go{background:#e2f1e4;border-color:#8fc39a;font-weight:600}
+.hr-empty{font-size:12px;color:var(--text-dim)}
+.hr-dek{background:#f7f4ef;border-radius:8px;padding:8px 10px;margin:8px 0 4px}
+.hr-dek-h{margin-bottom:6px}
+.hr-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px;margin-bottom:6px}
+.hr-grp{border:1px solid var(--border);border-radius:8px;padding:6px;background:#fff;opacity:.75}
+.hr-grp.cur{opacity:1;border-color:var(--accent)}
+.hr-grp-h{font-size:12px;font-weight:600;margin-bottom:4px;color:var(--text-dim)}
+.hr-grp.cur .hr-grp-h{color:var(--accent)}
+.hr-note{font-size:13px;margin:4px 0}
+.hr-note.bad{color:#b8352b}.hr-note.good{color:#2f7d43}
+.hr-dek-h b{font-size:14px}.hr-dek-h{font-size:14px}.hr-pins,.hr-pins .pc-det{font-size:13px}.hr-card .hr-top h3{font-size:16px}
+.hr-foot{border-top:1px solid var(--border);padding-top:8px;margin-top:6px;display:flex;flex-direction:column;gap:6px}
 </style>
 </head>
 <body>
@@ -2018,28 +2064,36 @@ function hnHard(act,sp,rassen,map,LIM){var TD=hnToday(),by={},R={};LIM=LIM||1e-9
  return{by:by,R:R,allowIds:allowIds,plan:plan}}
 function hnHardNext(ras,k){var r=Object.assign({},hnSP().ronde||{});r[k]=(+r[k]||0)+1;hnSPSave({ronde:r})}
 function HnHardBlock(props){var A=props.A,HD=A.hard,sp=A.sp;if(!HD)return null;var TD=hnToday();
- var nms=function(L){return L.length?L.map(function(h){return h.name+" "+hnF1(km(h))}).join(", "):"geen"};
- var occ=function(n,t){return HnE("span",{className:n>t?"sp-over":""},n+" / "+t)};
- var P=HD.plan,stalPlan=P.m+P.o+(+sp.vb||0),pregAll=A.act.filter(function(h){return hnPreg(h,TD)}).length;
+ var chip=function(h,kind,tag){var preg=hnPreg(h,TD);return HnE("span",{key:h.id+(kind||""),className:"hr-chip"+(kind?" hr-"+kind:""),title:h.name},HnE("span",{className:"hr-nm"},h.name),HnE("span",{className:"hr-sdg"},hnF1(km(h))),preg?HnE("span",{className:"hr-tag",title:"drachtig"},"🤰"):null,tag?HnE("span",{className:"hr-tag"},tag):null)};
+ var cnt=function(n,t){return HnE("span",{className:"hr-cnt"+(n>t?" over":n===t?" full":"")},n+"/"+t)};
+ var row=function(label,n,t,chips,empty){return HnE("div",{className:"hr-row"},HnE("div",{className:"hr-lab"},label,t!==null?cnt(n,t):null),HnE("div",{className:"hr-chips"},chips.length?chips:HnE("span",{className:"hr-empty"},empty||"geen")))};
+ var P=HD.plan,vb=+sp.vb||0,stalPlan=P.m+P.o+vb,pregAll=A.act.filter(function(h){return hnPreg(h,TD)}).length,wegN=A.advice.filter(function(a){return a.verdict==="weg"&&!hnPreg(a.h,TD)}).length;
  var naBev=A.advice.filter(function(a){return a.verdict==="weg"&&hnPreg(a.h,TD)});
  var marks={};A.advice.forEach(function(a){var h=a.h;if(a.verdict!=="weg"||h.gender==="H"||h.sale)return;if(hnPreg(h,TD)){if(h.status!=="warn")marks[h.id]={status:"warn"}}else if(h.status==="fire")marks[h.id]={status:"cross"}});
- var nMarks=Object.keys(marks).length;
- return HnE("div",{className:"pred-card ras-over"},HnE("h3",{className:"pred-h",style:{marginTop:0}},"📏 Harde regels"),
-  HnE("p",{className:"pc-det"},"Per ras een ranglijst met een streep. Volgorde: SDG, bij (bijna) gelijke SDG eerst fokbonus, daarna de jongste. Een opvolger die beter is dan je zwakste dekhengst of fokmerrie blijft altijd, als vervanger. Stamboom: maximaal \u00e9\u00e9n opvolger per moeder, en dekhengsten die voor geen van je fokmerries vrij zijn, staan onder de vrije hengsten. Boven de streep blijft, eronder gaat weg. Geen twijfel. Een veulen is gewoon een opvolger: komt het bij de beste opvolgers van zijn ras, dan blijft het, en valt de laagste eruit."),
-  HnE("p",{className:"ras-hint"},"Stal volgens plan: "+P.m+" fokmerries + "+P.o+" opvolgers + "+(+sp.vb||0)+" veulenplekken = "+stalPlan+" van "+sp.stal+(stalPlan<=sp.stal?" ("+(sp.stal-stalPlan)+" reserve).":" – "+(stalPlan-sp.stal)+" te veel.")+" Wei: "+P.h+" dekhengsten. Nu drachtig: "+pregAll+" (veulenplekken: "+(+sp.vb||0)+")."+(pregAll>(+sp.vb||0)?" Meer drachtig dan je veulenplekken: wacht met dekken tot er veulens geboren en beoordeeld zijn.":"")),
+ var nMarks=Object.keys(marks).length,pins=A.advice.filter(function(a){return a.own});
+ var tile=function(lab,val,bad){return HnE("div",{className:"hr-tile"+(bad?" bad":"")},HnE("div",{className:"hr-tv"},val),HnE("div",{className:"hr-tl"},lab))};
+ return HnE("div",{className:"pred-card hr-card"},
+  HnE("div",{className:"hr-top"},HnE("h3",{className:"pred-h",style:{margin:0}},"📏 Stalplan per ras"),
+   HnE("div",{className:"hr-tiles"},tile("stal volgens plan",stalPlan+"/"+sp.stal,stalPlan>sp.stal),tile("drachtig",pregAll+"/"+vb,pregAll>vb),tile("kan nu weg",String(wegN),!1))),
+  pregAll>vb?HnE("div",{className:"hr-note bad"},"Meer drachtig dan veulenplekken: even niet dekken."):null,
+  HnE("details",{className:"hr-how"},HnE("summary",null,"Hoe werkt de streep?"),HnE("p",{className:"pc-det"},"Per ras en rol een ranglijst op SDG (bij gelijke SDG eerst fokbonus, dan de jongste). Wie in de plekken past blijft, de rest staat onder de streep. Een opvolger die beter is dan je zwakste dekhengst of fokmerrie blijft als vervanger. Maximaal één opvolger per moeder. Dekhengsten die voor geen van je fokmerries vrij zijn, staan onder de vrije. Vers bloed: merries met genoeg eigen bloed (% van hun stamboom dat verder nergens in je stal zit) krijgen een beschermde plek. Plan: "+P.m+" fokmerries + "+P.o+" opvolgers + "+vb+" veulenplekken in de stal, "+P.h+" dekhengsten in de wei.")),
   A.rassen.map(function(r){var X=HD.R[r];if(!X)return null;var T=X.T,L=HN_RLET;
-   return HnE("details",{key:r,className:"ras-blk",open:!0},HnE("summary",null,HnE("b",null,r),HnE("span",{className:"pc-det ras-sub"},"fokmerries "+(X.vers.length+X.Mk.length)+"/"+T.m+" · hengsten "+X.Hk.length+"/"+T.h+" · opvolgers "+X.Ok.length+"/"+T.o+" · drachtig "+X.preg.length+"/"+X.d)),
-    HnE("div",{className:"ras-body"},
-     HnE("div",null,HnE("b",null,"Fokmerries "),occ(X.vers.length+X.Mk.length,T.m),": "+nms(X.Mk)+(X.vers.length?" · vers bloed: "+X.vers.map(function(h){return h.name+" "+hnF1(km(h))+" ("+Math.round(h._fresh*100)+"% vers)"}).join(", "):"")),
-     HnE("div",null,HnE("b",null,"Dekhengsten "),occ(X.Hk.length,T.h),": "+nms(X.Hk)),
-     HnE("div",null,HnE("b",null,"Opvolgers "),occ(X.Ok.length,T.o),": "+nms(X.Ok)+(X.fill.length?" · vult lege plek: "+nms(X.fill):"")+(X.repl.length?" · vervangers: "+X.repl.map(function(h){return h.name+" "+hnF1(km(h))+" (voor "+h._replTarget+")"}).join(", "):"")),
-     X.Mo.length+X.Ho.length+X.Ow.length+X.warn.length?HnE("div",{className:"sp-s"},"Onder de streep: "+nms(X.Mo.concat(X.Ho,X.Ow,X.warn))):null,
-     HnE("div",{className:"pc-det sp-kanaal"},HnE("b",null,"💞 Dekken in rondes: "),"max. "+X.d+" "+r+" tegelijk drachtig. "+X.groups.map(function(g,i){return"Groep "+L[i]+(i===X.cur?" (nu)":"")+": "+nms(g)}).join(" · ")+". ",
-      X.preg.length>=X.d?"Nu "+X.preg.length+" drachtig: niet dekken"+(X.last?" tot na "+hnFmtDate(X.last):"")+".":X.allow.length?"Mag nu gedekt worden: "+X.allow.map(function(h){return h.name}).join(", ")+".":"Niemand uit groep "+L[X.cur]+" is nu te dekken.",
-      X.ng>1?HnE("div",null,HnE("button",{type:"button",className:"fok-btn sp-pb",onClick:function(){hnHardNext(r,X.k)}},"Groep "+L[X.cur]+" is gedekt → volgende is groep "+L[(X.cur+1)%X.ng])):null)))}),
-  naBev.length?HnE("p",{className:"ras-hint"},"Weg na de bevalling: "+naBev.map(function(a){return a.h.name+(a.h.bevallingsdatum?" ("+hnFmtDate(a.h.bevallingsdatum)+")":"")}).join(", ")+". Hun plek telt in het plan al als vrij."):null,
-  (function(){var pins=A.advice.filter(function(a){return a.own});if(!pins.length)return null;return HnE("div",null,HnE("p",{className:"ras-hint"},"\uD83D\uDCCC Je hebt "+pins.length+" keuze"+(pins.length===1?"":"s")+" zelf vastgezet (vaak nog van voor de harde regels), die afwijken van de streep: "+pins.map(function(a){return a.h.name+" ("+HN_VNAME[a.verdict]+", streep zegt "+HN_VNAME[a.auto]+")"}).join(", ")+"."),HnE("button",{type:"button",className:"fok-btn sp-pb",onClick:function(){var k=Object.assign({},sp.keuze);pins.forEach(function(a){delete k[a.h.id]});hnSPSave({keuze:k})}},"Deze "+pins.length+" terugzetten naar de streep"))})(),
-  nMarks&&props.setGroups?HnE("div",null,HnE("button",{type:"button",className:"fok-btn sp-pb",onClick:function(){hnApplyPatches(props,marks,[])}},"Status bijwerken bij "+nMarks+" merrie"+(nMarks===1?"":"s")+" onder de streep"),HnE("div",{className:"pc-det"},"Drachtig krijgt ⚠️ gaat weg na afronding, niet drachtig met 🔥 krijgt ❌ niet meer fokken.")):null)}
+   var under=X.Mo.concat(X.Ho,X.Ow,X.warn);
+   return HnE("details",{key:r,className:"hr-ras",open:!0},
+    HnE("summary",null,HnE("b",{className:"hr-rn"},r),HnE("span",{className:"hr-sum"},HnE("span",null,"♀ ",cnt(X.vers.length+X.Mk.length,T.m)),HnE("span",null,"♂ ",cnt(X.Hk.length,T.h)),HnE("span",null,"jong ",cnt(X.Ok.length,T.o)),HnE("span",null,"🤰 ",cnt(X.preg.length,X.d)),under.length?HnE("span",{className:"hr-cnt over"},under.length+" weg"):null)),
+    HnE("div",{className:"hr-body"},
+     row("Fokmerries",X.vers.length+X.Mk.length,T.m,X.Mk.map(function(h){return chip(h,"keep")}).concat(X.vers.map(function(h){return chip(h,"vers","🌱 "+Math.round(h._fresh*100)+"%")}))),
+     row("Dekhengsten",X.Hk.length,T.h,X.Hk.map(function(h){return chip(h,h._hNone?"keep dim":"keep",h._hNone?"niet vrij":null)})),
+     row("Opvolgers",X.Ok.length,T.o,X.Ok.map(function(h){return chip(h,"keep")}).concat(X.fill.map(function(h){return chip(h,"fill","lege plek")}),X.repl.map(function(h){return chip(h,"repl","→ "+h._replTarget)}))),
+     under.length?row("Onder de streep",0,null,under.map(function(h){return chip(h,"weg")})):null,
+     HnE("div",{className:"hr-dek"},HnE("div",{className:"hr-dek-h"},HnE("b",null,"💞 Dekken"),HnE("span",{className:"pc-det"}," max. "+X.d+" tegelijk drachtig")),
+      HnE("div",{className:"hr-groups"},X.groups.map(function(g,i){return HnE("div",{key:i,className:"hr-grp"+(i===X.cur?" cur":"")},HnE("div",{className:"hr-grp-h"},"Groep "+L[i]+(i===X.cur?" · nu":"")),HnE("div",{className:"hr-chips"},g.map(function(h){return chip(h,X.allow.indexOf(h)>=0?"go":"")})))})),
+      HnE("div",{className:"hr-note"+(X.preg.length>=X.d?" bad":X.allow.length?" good":"")},X.preg.length>=X.d?X.preg.length+" drachtig: niet dekken"+(X.last?" tot na "+hnFmtDate(X.last):"")+".":X.allow.length?"Nu dekken: "+X.allow.map(function(h){return h.name}).join(", ")+".":"Niemand uit groep "+L[X.cur]+" is nu te dekken."),
+      X.ng>1?HnE("button",{type:"button",className:"fok-btn sp-pb",onClick:function(){hnHardNext(r,X.k)}},"Groep "+L[X.cur]+" gedekt → groep "+L[(X.cur+1)%X.ng]):null)))}),
+  naBev.length||pins.length||nMarks&&props.setGroups?HnE("div",{className:"hr-foot"},
+   naBev.length?row("Weg na bevalling",0,null,naBev.map(function(a){return chip(a.h,"weg",a.h.bevallingsdatum?hnFmtDate(a.h.bevallingsdatum).slice(0,5):null)})):null,
+   pins.length?HnE("div",{className:"hr-pins"},HnE("span",{className:"pc-det"},"📌 Zelf vastgezet, anders dan de streep: "+pins.map(function(a){return a.h.name+" ("+HN_VNAME[a.verdict]+")"}).join(", ")+" "),HnE("button",{type:"button",className:"fok-btn sp-pb",onClick:function(){var k=Object.assign({},sp.keuze);pins.forEach(function(a){delete k[a.h.id]});hnSPSave({keuze:k})}},"Terug naar de streep")):null,
+   nMarks&&props.setGroups?HnE("div",null,HnE("button",{type:"button",className:"fok-btn sp-pb",title:"Drachtig onder de streep krijgt ⚠️, niet drachtig met 🔥 krijgt ❌",onClick:function(){hnApplyPatches(props,marks,[])}},"Status bijwerken ("+nMarks+")"),HnE("span",{className:"pc-det"}," ⚠️ voor drachtig, ❌ voor de rest")):null):null)}
 function HnStalplanTab(props){var A=hnStalAdvice(props.groups,props.externalHorses||[],!0),sp=A.sp,rassen=A.rassen,byCat=A.byCat,advice=A.advice;
  var os=z.useState(!1),showSet=os[0],setShowSet=os[1];
  var planM=rassen.reduce(function(s,r){return s+hnSPRas(sp,r).m},0),planH=rassen.reduce(function(s,r){return s+hnSPRas(sp,r).h},0),buffer=sp.stal-sp.ph-sp.opl-planM;
@@ -2274,7 +2328,7 @@ function hnPlanKids(P,all){var sts=P.stal?[P.stal]:[],find=function(nm,own){var 
  var gone=[];if(P.gender==="H"){var hk2=[Se(pn)].concat(par?[Se(xt(par))]:[]),still=mine.map(function(r){return r.h.id});all.forEach(function(m){if(m.inStal&&m.gender!=="H"&&(m.gedekt||m.echoPositief)&&hk2.indexOf(Se(m.gedektMet||""))>=0&&m.bevallingsdatum&&m.bevallingsdatum>hnToday()&&still.indexOf(m.id)<0)gone.push({h:m,patch:{gedekt:!1,echoPositief:!1,bevallingsdatum:"",gedektMet:""}})})}
  var pp=null;if(par){var old=JSON.stringify(par.hnVerwacht||[]),nw=JSON.stringify(others);if(old!==nw)pp={hnVerwacht:others,hnVerwachtDatum:hnToday()}}
  return{par:par,pn:pn,rows:rows,mine:mine,others:others,pp:pp,gone:gone}}
-var HN_VERSION="2026-10-13b";
+var HN_VERSION="2026-10-13c";
 function hnTCS(){try{return JSON.parse(localStorage.getItem("hn-trainingscentrum-v1")||"{}")||{}}catch(e){return{}}}
 function hnWinst(){var o=(HN_ACT.names&&HN_ACT.names.stalplan&&HN_ACT.names.stalplan.winst)||{};return{snap:o.snap||null,log:Array.isArray(o.log)?o.log:[]}}
 var HN_WG={dres:"dres",spr:"spr",xc:"xc",rei:"west",tra:"west",wp:"west"};
