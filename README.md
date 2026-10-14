@@ -1,7 +1,12 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-13i (staat ook onderaan in de app).
+Versie 2026-10-14a (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-14a: duidelijker wanneer een paard weggaat
+- Bij **Status** in het Kladblok kun je nu kiezen uit **⚠️ gaat weg na afronding** (algemeen), **⚠️ gaat weg na bevalling** en **⚠️ gaat weg na afronding training**.
+- Bij de twee nieuwe staat in de kop van het paard een klein label (*na bevalling* of *na training*). In het Stalplan en bij Vandaag staat de juiste tekst.
+- De app behandelt alle drie hetzelfde: het paard wordt niet meer gefokt en komt bij Kan weg.
 
 ### Nieuw in 2026-10-13i
 - **Stamboomloos aangeven in de Stamboom:** klik op een kaartje in de stamboom (of zoek het paard op); in het venster staat nu het veld **Stamboom** (normaal / stamboomloos / bijna stamboomloos). Het wordt meteen opgeslagen, ook voor paarden van buiten. Een stamboomloos paard telt als 100% vers bloed en verdwijnt uit "stamboom is leeg" bij Gegevens nakijken.
