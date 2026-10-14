@@ -1,7 +1,19 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-14a (staat ook onderaan in de app).
+Versie 2026-10-14b (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-14b: Instellingen voor iedereen
+- **⚙️ Instellingen** (rechts in het menu) is één pagina waar je de app op jouw manier van spelen instelt:
+  - **Functies die ik gebruik**: zet tabbladen en onderdelen uit die je niet gebruikt (Vandaag, Trainen, Plakvlak, Trainingscentrum, elk onderdeel van Fokken en Stal, en het route-advies bij elk paard). Ze verdwijnen uit het menu; je gegevens blijven bewaard.
+  - **Mijn stal**: stallen, wei, noodplekken, PowerHouse, opleiding, SDG-doel, max. inteelt, max. veulens buitenshuis, stamboomweging en de harde regels (de streep) met veulenplekken en vers bloed.
+  - **Rassen**: je hoofdras (staat overal bovenaan; automatisch het ras waar je de meeste paarden van hebt), en per ras het maximum, fokmerries, dekhengsten, opvolgers, max. drachtig en vers bloed. Kies of paarden in opleiding meetellen voor het maximum.
+  - **Groepen herkennen**: welke woorden in je Kladblok-groepsnamen betekenen PowerHouse, fokmerrie, dekhengst of verkoop. Standaard: power house; fokmerrie, broodmerrie; wei, weiland, dekhengst, dekker; sale, verkoop.
+  - **Weergave**, **Back-up & Dropbox** en **Uitleg** staan hier nu ook.
+- **Menu bovenaan** met de onderdelen (zoals Stalplan, Teams, Waarde) er direct onder. Scroll je naar beneden, dan schuift het menu weg; een klein stukje omhoog en het is er weer. De balk onderaan op de telefoon is weg.
+- **Rustiger bovenkant**: alleen de titel en het aantal paarden. Back-up en Dropbox zitten in Instellingen.
+- **Stalplan per ras**: één overzicht. Met de streep staat het totaal per ras (tegen je maximum) in de kop, en PowerHouse-paarden die niet in de fokdienst zitten staan erbij. Zonder de streep zie je het overzicht met namen per groep. ⚙️ Stalplan aanpassen opent Instellingen.
+- **Vangnet**: een paard zonder ingevulde redenen bij ⚠️ maakt de app niet meer leeg.
 
 ### Nieuw in 2026-10-14a: duidelijker wanneer een paard weggaat
 - Bij **Status** in het Kladblok kun je nu kiezen uit **⚠️ gaat weg na afronding** (algemeen), **⚠️ gaat weg na bevalling** en **⚠️ gaat weg na afronding training**.
