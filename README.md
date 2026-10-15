@@ -1,9 +1,21 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-15a (staat ook onderaan in de app).
+Versie 2026-10-15c (staat ook onderaan in de app).
 
-### Nieuw in 2026-10-15a
+### Nieuw in 2026-10-15c: opgeruimd en logischer
+- **Vandaag**: één lijst **💞 Kan gedekt worden** voor merries met fokbonus én merries die dekklaar zijn (2 promoties voor het einde van een fokbonus-route). Bij die laatste staat hoeveel promoties het nog is tot de volle fokbonus. Met de streep aan staan alleen merries die volgens je dekronde nu mogen.
+- **De streep**: jonge paarden die een lege plek innemen, staan nu bij Fokmerries of Dekhengsten met "komt erbij", en tellen daar mee (bijvoorbeeld ♂ 2+2/4). Bij Opvolgers staan alleen de echte opvolgers en de vervangers.
+- **Status bijwerken** (bij de streep) zet drachtige merries onder de streep op ⚠️ gaat weg na bevalling.
+- **Trainingscentrum**: de eigen instellingen daar heten nu **🔧 Aannames**, zodat ze niet verward worden met ⚙️ Instellingen van de app.
+- **Instellingen → Mijn stal**: met de streep aan staat bij PowerHouse en In opleiding dat ze alleen bovenaan meetellen.
+- **Startwaarden per ras**: nieuwe spelers beginnen voor elk ras met 3 fokmerries, 2 dekhengsten, 1 opvolger, 1 drachtig tegelijk en geen vers-bloedplek. Wie de app al gebruikte, houdt precies de aantallen die hij nu ziet.
+- Verouderde teksten bijgewerkt (back-upmelding en uitleg in het Stalplan wijzen nu naar Instellingen).
+
+### 2026-10-15b
+- **De streep (Stalplan)**: een lege plek bij je fokmerries of dekhengsten gaat nu eerst naar je beste jonge merrie of hengst. Daarna worden de opvolger-plekken verdeeld. Voorheen kregen de opvolgers voorrang en ging de lege plek naar een lager paard.
+
+### 2026-10-15a
 - **De streep (Stalplan)**: per moeder mag nu één dochter én één zoon als opvolger blijven. Een hengst als tweede veulen hoeft dus niet meer weg omdat zijn zus al opvolger is: hij kan een vrije dekhengst-plek innemen of een zwakkere dekhengst vervangen. Twee broers (of twee zussen) van dezelfde moeder blijft de regel: alleen de beste blijft.
 
 ### Nieuw in 2026-10-14b: Instellingen voor iedereen
