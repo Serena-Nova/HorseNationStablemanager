@@ -1,9 +1,19 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-15h (staat ook onderaan in de app).
+Versie 2026-10-15j (staat ook onderaan in de app).
 
-### Nieuw in 2026-10-15h: Preferent buiten de dekrondes
+### Nieuw in 2026-10-15j: opvullers en vervangers, geen opvolgers meer
+In het Stalplan (de streep) krijgt een jong paard dat blijft een van twee rollen, van hoog naar laag:
+- **Opvullers**: nemen een lege plek bij je fokmerries of dekhengsten in (‘→ lege plek fokmerrie’). De teller bij Fokmerries en Dekhengsten telt ze mee, bijvoorbeeld 7+1/8.
+- **Vervangers**: beter dan je zwakste fokmerrie of dekhengst en nemen straks diens plek over (‘→ Aelira’).
+Wie geen van beide is, staat onder de streep, met de reden erbij (geen lege plek en niet beter dan de zwakste). De opvolgerplekken zijn vervallen: het veld ‘Opvolgers’ per ras staat niet meer bij Instellingen, en ‘stal volgens plan’ is nu fokmerries + veulenplekken. Nakomelingen voor Preferent blijven gewoon in hun eigen rij.
+
+### 2026-10-15i: vervangers tellen als opvolger
+- Vervangers (jonge paarden die een zwakkere fokmerrie of dekhengst gaan vervangen) nemen nu ook een opvolgerplek in. Zijn er al evenveel of meer vervangers dan opvolgerplekken, dan krijgt een zwak jong paard geen opvolgerplek meer en staat het onder de streep. In 15f tot en met 15h kreeg bijvoorbeeld Azrek (21,2) ten onrechte een opvolgerplek.
+- De teller bij Opvolgers (en ‘jong’) telt de vervangers mee, bijvoorbeeld 4/3.
+
+### 2026-10-15h: Preferent buiten de dekrondes
 - Een paard **op weg naar Preferent** doet niet mee aan de dekrondes. Zodra ze dekklaar en niet drachtig is, staat ze bij ‘Kan gedekt worden’. Ze telt niet mee voor het maximum drachtig tegelijk.
 - Haar **nakomelingen die nog Elite moeten halen**, mogen ook buiten de rondes gedekt worden: voor Elite hebben ze zelf 2 nakomelingen met Ster nodig.
 - **Kleinkinderen**: de veulens van zo'n nakomeling blijven tot ze Ster hebben (zolang die nakomeling nog geen 2 Ster-veulens heeft).
