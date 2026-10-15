@@ -1,10 +1,26 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-15c (staat ook onderaan in de app).
+Versie 2026-10-15e (staat ook onderaan in de app).
 
-### Nieuw in 2026-10-15c: opgeruimd en logischer
-- **Vandaag**: één lijst **💞 Kan gedekt worden** voor merries met fokbonus én merries die dekklaar zijn (2 promoties voor het einde van een fokbonus-route). Bij die laatste staat hoeveel promoties het nog is tot de volle fokbonus. Met de streep aan staan alleen merries die volgens je dekronde nu mogen.
+### Nieuw in 2026-10-15e: de app op jouw manier van spelen
+Nieuw blok **⚙️ Instellingen → 🎯 Mijn spel**:
+- **Disciplines die ik train**: wat uit staat, verdwijnt uit Trainen en Teams (minstens één blijft aan).
+- **Fokbonus-routes die ik gebruik** (Western, Engels, Engels zwaar): het route-advies, de melding ‘kan gedekt worden’ en Opfokken kijken alleen naar deze routes. Een route met een discipline die uit staat, telt vanzelf niet mee.
+- **Melding ‘kan gedekt worden’ vanaf** staat nu hier (was Mijn stal).
+- **Speeltijd**: eerste wedstrijd en uren per dag. Bij Trainen krijgt een wedstrijd buiten je speeltijd een 🌙 en telt die niet als ‘nu trainen’. Het Trainingscentrum rekent met dezelfde tijden.
+
+Verder:
+- **🧩 Functies → Blokken op Vandaag**: zet elk blok op Vandaag aan of uit (bijvoorbeeld Klaar voor keuring of Verkopen).
+- **Max. inteelt** (Mijn stal) is nu ook je grens voor ‘gezond’ in de stamboom en bij ‘uitgefokt’. Op 0 blijft die grens 5%.
+
+### 2026-10-15d: zelf kiezen wanneer je dekt
+- **⚙️ Instellingen → Mijn spel → Melding ‘kan gedekt worden’ vanaf** (eerst bij Mijn stal): kies 2 promoties voor het einde (Western L3, Springen M, Cross L, Dressuur L1), 1 promotie voor het einde (Western L2, Springen Z, Cross M, Dressuur L2) of pas met volle fokbonus. Standaard is 2 promoties voor het einde.
+- Vandaag (Kan gedekt worden, Hengsten klaar om te dekken) en het route-advies bij elk paard volgen deze keuze.
+- Het Trainingscentrum neemt de keuze over bij ‘Trainen tot’ (tab Fokken).
+
+### 2026-10-15c: opgeruimd en logischer
+- **Vandaag**: één lijst **💞 Kan gedekt worden** voor merries met fokbonus én merries die dekklaar zijn (standaard 2 promoties voor het einde van een fokbonus-route). Bij die laatste staat hoeveel promoties het nog is tot de volle fokbonus. Met de streep aan staan alleen merries die volgens je dekronde nu mogen.
 - **De streep**: jonge paarden die een lege plek innemen, staan nu bij Fokmerries of Dekhengsten met "komt erbij", en tellen daar mee (bijvoorbeeld ♂ 2+2/4). Bij Opvolgers staan alleen de echte opvolgers en de vervangers.
 - **Status bijwerken** (bij de streep) zet drachtige merries onder de streep op ⚠️ gaat weg na bevalling.
 - **Trainingscentrum**: de eigen instellingen daar heten nu **🔧 Aannames**, zodat ze niet verward worden met ⚙️ Instellingen van de app.
