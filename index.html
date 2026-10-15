@@ -2236,6 +2236,7 @@ function hnFreshPct(h,others,map){var me="id:"+h.id;if(!h.sireName&&!h.damName)r
  var f=function(name,g,w,d){var k=hnAncKey(name,map,g);if(!k)return w;if(shared[k])return 0;var x=hnAncObj(name,map,g);if(!x||d>=4)return w;return f(x.sireName,"H",w/2,d+1)+f(x.damName,"M",w/2,d+1)};
  return f(h.sireName,"H",.5,1)+f(h.damName,"M",.5,1)}
 var HN_RLET="ABCDEFGH";
+function hnDamKey(h){var d=Se(h.damName||"");return d?d+"|"+(h.gender==="H"?"H":"M"):""}
 function hnHard(act,sp,rassen,map,LIM){var TD=hnToday(),by={},R={};LIM=LIM||1e-9;
  var s=function(h){var v=km(h);return h.name+" (SDG "+hnF1(v)+")"};
  var bev=function(h){return hnPreg(h,TD)?" Ze is drachtig: niet meer dekken, en weg na de bevalling"+(h.bevallingsdatum?" ("+hnFmtDate(h.bevallingsdatum)+")":"")+".":""};
@@ -2249,12 +2250,12 @@ function hnHard(act,sp,rassen,map,LIM){var TD=hnToday(),by={},R={};LIM=LIM||1e-9
   var poolM=rest.filter(function(h){return h._cat==="merrie"||isV(h)&&h.gender!=="H"});
   var H=rest.filter(function(h){return h._cat==="hengst"});H.forEach(function(h){var f=[];poolM.forEach(function(m){var c=null;try{c=hnCoi(h,m,map)}catch(e){}if(!c||c.F<=LIM)f.push(m.name)});h._hFree=f;h._hNone=poolM.length>0&&!f.length});
   H.sort(function(a,b){return(a._hNone?1:0)-(b._hNone?1:0)||hnHardCmp(a,b)});var Hk=H.slice(0,T.h),Ho=H.slice(T.h);
-  var O=rest.filter(function(h){return h._cat==="opl"&&!isV(h)}).sort(hnHardCmp),Ok=[],Or=[],damUsed={};
-  O.forEach(function(h){var dk=Se(h.damName||"");if(dk&&damUsed[dk]){h._sibOf=damUsed[dk];Or.push(h);return}if(Ok.length<T.o){Ok.push(h);if(dk)damUsed[dk]=h}else Or.push(h)});
+  L.forEach(function(h){delete h._sibOf;delete h._replTarget;delete h._replBy});var O=rest.filter(function(h){return h._cat==="opl"&&!isV(h)}).sort(hnHardCmp),Ok=[],Or=[],damUsed={};
+  O.forEach(function(h){var dk=hnDamKey(h);if(dk&&damUsed[dk]){h._sibOf=damUsed[dk];Or.push(h);return}if(Ok.length<T.o){Ok.push(h);if(dk)damUsed[dk]=h}else Or.push(h)});
   var freeM=Math.max(0,T.m-vers.length-Mk.length),freeH=Math.max(0,T.h-Hk.length),fill=[];
-  Or.forEach(function(h){if(h._sibOf)return;var dk=Se(h.damName||"");if(dk&&damUsed[dk]){h._sibOf=damUsed[dk];return}var ok=!1;if(h.gender==="H"){if(freeH>0){freeH--;ok=!0}}else if(freeM>0&&h.status!=="cross"&&!hnPreg(h,TD)){freeM--;ok=!0}if(ok){fill.push(h);if(dk)damUsed[dk]=h}});
+  Or.forEach(function(h){if(h._sibOf)return;var dk=hnDamKey(h);if(dk&&damUsed[dk]){h._sibOf=damUsed[dk];return}var ok=!1;if(h.gender==="H"){if(freeH>0){freeH--;ok=!0}}else if(freeM>0&&h.status!=="cross"&&!hnPreg(h,TD)){freeM--;ok=!0}if(ok){fill.push(h);if(dk)damUsed[dk]=h}});
   var repl=[],rmap={};["H","M"].forEach(function(g){var tg=(g==="H"?Hk:Mk).slice().sort(hnHardCmp).reverse(),cd=Or.filter(function(h){return fill.indexOf(h)<0&&!h._sibOf&&(g==="H"?h.gender==="H":h.gender!=="H"&&h.status!=="cross"&&!hnPreg(h,TD))});var j=0;
-   cd.forEach(function(h){if(j>=tg.length)return;var dk=Se(h.damName||"");if(dk&&damUsed[dk]){h._sibOf=damUsed[dk];return}if(hnHardCmp(h,tg[j])<0){repl.push(h);rmap[h.id]=tg[j];h._replTarget=tg[j].name;tg[j]._replBy=h;if(dk)damUsed[dk]=h;j++}})});
+   cd.forEach(function(h){if(j>=tg.length)return;var dk=hnDamKey(h);if(dk&&damUsed[dk]){h._sibOf=damUsed[dk];return}if(hnHardCmp(h,tg[j])<0){repl.push(h);rmap[h.id]=tg[j];h._replTarget=tg[j].name;tg[j]._replBy=h;if(dk)damUsed[dk]=h;j++}})});
   var Ow=Or.filter(function(h){return fill.indexOf(h)<0&&repl.indexOf(h)<0});
   var lowM=Mk.length?Mk[Mk.length-1]:null,lowH=Hk.length?Hk[Hk.length-1]:null,lowO=Ok.length?Ok[Ok.length-1]:null;
   var mFull=vers.length+Mk.length>=T.m,hFull=Hk.length>=T.h;
@@ -2270,7 +2271,7 @@ function hnHard(act,sp,rassen,map,LIM){var TD=hnToday(),by={},R={};LIM=LIM||1e-9
   fill.forEach(function(h){by[h.id]={v:"houden",t:h.gender==="H"?"Vult een lege plek bij je "+ras+"-dekhengsten ("+Hk.length+" van "+T.h+"): naar de wei zodra hij fokbonus heeft.":"Vult een lege fokmerrie-plek bij je "+ras+" ("+(vers.length+Mk.length)+" van "+T.m+"): zet 🔥 zodra ze dekklaar is."}});
   repl.forEach(function(h){var t=rmap[h.id];by[h.id]={v:"houden",t:"Vervanger: beter dan "+s(t)+", je zwakste "+ras+"-"+(h.gender==="H"?"dekhengst":"fokmerrie")+". Blijft als extra opvolger; "+(h.gender==="H"?"zet hem in je Weiland-groep zodra hij fokbonus heeft":"zet \uD83D\uDD25 zodra ze fokbonus heeft")+", dan valt "+t.name+" onder de streep."}});
   [Hk,Mk].forEach(function(L){L.forEach(function(h){if(h._replBy&&by[h.id])by[h.id].x=(by[h.id].x||[]).concat(["Wordt vervangen door "+s(h._replBy)+" (opvolger): gaat weg zodra "+(h._replBy.gender==="H"?"die in de wei staat":"die \uD83D\uDD25 heeft")+". Dek of verkoop daar al op."])})});
-  Ow.forEach(function(h){by[h.id]={v:"weg",t:h._sibOf?"Zelfde moeder als "+s(h._sibOf)+", die hoger staat: maximaal \u00e9\u00e9n opvolger per moeder, zodat je lijnen niet in elkaar lopen."+bev(h):"Komt niet bij je "+T.o+" beste "+ras+"-opvolgers"+(lowO?" (de laagste die blijft is "+s(lowO)+")":"")+"."+bev(h)}});
+  Ow.forEach(function(h){by[h.id]={v:"weg",t:h._sibOf?"Zelfde moeder als "+s(h._sibOf)+", die hoger staat: per moeder maximaal \u00e9\u00e9n "+(h.gender==="H"?"zoon":"dochter")+" als opvolger, zodat je lijnen niet in elkaar lopen."+bev(h):"Komt niet bij je "+T.o+" beste "+ras+"-opvolgers"+(lowO?" (de laagste die blijft is "+s(lowO)+")":"")+"."+bev(h)}});
   warn.forEach(function(h){by[h.id]={v:"weg",t:"Staat op ⚠️ "+hnWegTxt(h)+"."+bev(h)}});
   if(lowM)lowM._hardLow=1;
   var G=vers.filter(function(h){return h._cat==="merrie"}).concat(Mk).sort(hnHardCmp),d=Math.max(1,+T.d||1),ng=Math.max(1,Math.ceil(G.length/d)),groups=[];for(var g=0;g<ng;g++)groups.push([]);G.forEach(function(h,i){groups[i%ng].push(h)});
@@ -2391,7 +2392,7 @@ function HnHardBlock(props){var A=props.A,HD=A.hard,sp=A.sp;if(!HD)return null;v
   HnE("div",{className:"hr-top"},HnE("h3",{className:"pred-h",style:{margin:0}},"📏 Stalplan per ras"),
    HnE("div",{className:"hr-tiles"},tile("stal volgens plan",stalPlan+"/"+sp.stal,stalPlan>sp.stal),tile("drachtig",pregAll+"/"+vb,pregAll>vb),tile("kan nu weg",String(wegN),!1))),
   pregAll>vb?HnE("div",{className:"hr-note bad"},"Meer drachtig dan veulenplekken: even niet dekken."):null,
-  HnE("details",{className:"hr-how"},HnE("summary",null,"Hoe werkt de streep?"),HnE("p",{className:"pc-det"},"Per ras en rol een ranglijst op SDG (bij gelijke SDG eerst fokbonus, dan de jongste). Wie in de plekken past blijft, de rest staat onder de streep. Een opvolger die beter is dan je zwakste dekhengst of fokmerrie blijft als vervanger. Maximaal één opvolger per moeder. Dekhengsten die voor geen van je fokmerries vrij zijn, staan onder de vrije. Vers bloed: merries met genoeg eigen bloed (% van hun stamboom dat verder nergens in je stal zit) krijgen een beschermde plek. Plan: "+P.m+" fokmerries + "+P.o+" opvolgers + "+vb+" veulenplekken in de stal, "+P.h+" dekhengsten in de wei.")),
+  HnE("details",{className:"hr-how"},HnE("summary",null,"Hoe werkt de streep?"),HnE("p",{className:"pc-det"},"Per ras en rol een ranglijst op SDG (bij gelijke SDG eerst fokbonus, dan de jongste). Wie in de plekken past blijft, de rest staat onder de streep. Een opvolger die beter is dan je zwakste dekhengst of fokmerrie blijft als vervanger. Per moeder maximaal één dochter en één zoon als opvolger: een hengst kan dus een dekhengst-plek innemen naast zijn zus, maar twee broers (of twee zussen) van dezelfde moeder niet. Dekhengsten die voor geen van je fokmerries vrij zijn, staan onder de vrije. Vers bloed: merries met genoeg eigen bloed (% van hun stamboom dat verder nergens in je stal zit) krijgen een beschermde plek. Plan: "+P.m+" fokmerries + "+P.o+" opvolgers + "+vb+" veulenplekken in de stal, "+P.h+" dekhengsten in de wei.")),
   A.rassen.map(function(r){var X=HD.R[r];if(!X)return null;var T=X.T,L=HN_RLET;
    var under=X.Mo.concat(X.Ho,X.Ow,X.warn);
    return HnE("details",{key:r,className:"hr-ras",open:!0},
@@ -2651,7 +2652,7 @@ function hnPlanKids(P,all){var sts=P.stal?[P.stal]:[],find=function(nm,own){var 
  var gone=[];if(P.gender==="H"){var hk2=[Se(pn)].concat(par?[Se(xt(par))]:[]),still=mine.map(function(r){return r.h.id});all.forEach(function(m){if(m.inStal&&m.gender!=="H"&&(m.gedekt||m.echoPositief)&&hk2.indexOf(Se(m.gedektMet||""))>=0&&m.bevallingsdatum&&m.bevallingsdatum>hnToday()&&still.indexOf(m.id)<0)gone.push({h:m,patch:{gedekt:!1,echoPositief:!1,bevallingsdatum:"",gedektMet:""}})})}
  var pp=null;if(par){var old=JSON.stringify(par.hnVerwacht||[]),nw=JSON.stringify(others);if(old!==nw)pp={hnVerwacht:others,hnVerwachtDatum:hnToday()}}
  return{par:par,pn:pn,rows:rows,mine:mine,others:others,pp:pp,gone:gone}}
-var HN_VERSION="2026-10-14b";
+var HN_VERSION="2026-10-15a";
 function hnTCS(){try{return JSON.parse(localStorage.getItem("hn-trainingscentrum-v1")||"{}")||{}}catch(e){return{}}}
 function hnWinst(){var o=(HN_ACT.names&&HN_ACT.names.stalplan&&HN_ACT.names.stalplan.winst)||{};return{snap:o.snap||null,log:Array.isArray(o.log)?o.log:[]}}
 var HN_WG={dres:"dres",spr:"spr",xc:"xc",rei:"west",tra:"west",wp:"west"};

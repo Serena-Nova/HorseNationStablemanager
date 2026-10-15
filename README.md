@@ -1,7 +1,10 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-14b (staat ook onderaan in de app).
+Versie 2026-10-15a (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-15a
+- **De streep (Stalplan)**: per moeder mag nu één dochter én één zoon als opvolger blijven. Een hengst als tweede veulen hoeft dus niet meer weg omdat zijn zus al opvolger is: hij kan een vrije dekhengst-plek innemen of een zwakkere dekhengst vervangen. Twee broers (of twee zussen) van dezelfde moeder blijft de regel: alleen de beste blijft.
 
 ### Nieuw in 2026-10-14b: Instellingen voor iedereen
 - **⚙️ Instellingen** (rechts in het menu) is één pagina waar je de app op jouw manier van spelen instelt:
