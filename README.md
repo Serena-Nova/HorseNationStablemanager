@@ -1,9 +1,29 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-15e (staat ook onderaan in de app).
+Versie 2026-10-15h (staat ook onderaan in de app).
 
-### Nieuw in 2026-10-15e: de app op jouw manier van spelen
+### Nieuw in 2026-10-15h: Preferent buiten de dekrondes
+- Een paard **op weg naar Preferent** doet niet mee aan de dekrondes. Zodra ze dekklaar en niet drachtig is, staat ze bij ‘Kan gedekt worden’. Ze telt niet mee voor het maximum drachtig tegelijk.
+- Haar **nakomelingen die nog Elite moeten halen**, mogen ook buiten de rondes gedekt worden: voor Elite hebben ze zelf 2 nakomelingen met Ster nodig.
+- **Kleinkinderen**: de veulens van zo'n nakomeling blijven tot ze Ster hebben (zolang die nakomeling nog geen 2 Ster-veulens heeft).
+- Een dochter die al fokmerrie is, valt ook onder deze bescherming en zakt niet meer onder de streep.
+- In het Stalplan staat bij elk: ‘→ Elite’ of ‘→ Ster’, en onder Dekken wie er buiten de rondes nu gedekt kan worden.
+- In het Kladblok zie je per nakomeling zonder Elite hoeveel Ster-veulens die al heeft (bijv. Bijou 0/2 Ster).
+
+### 2026-10-15g: op weg naar Preferent
+- **Kladblok → Status & training → 🏆 Op weg naar Preferent**: vink dit aan bij een paard waarmee je Preferent wilt halen. Je ziet meteen hoeveel Elite-nakomelingen er al zijn (van de 3), welke nakomelingen nog geen Elite hebben en of het paard zelf al SDG 30 heeft.
+- **De streep**: zo'n paard houdt een vaste plek bij je fokmerries of dekhengsten (binnen je aantal) en wordt niet vervangen door een jong paard. Een vervanger neemt dan de volgende zwakste.
+- **Nakomelingen** van dat paard blijven bij jou tot ze Elite hebben (rij 🏆 Voor Preferent), ook als er al een broer of zus is. Ze komen bovenop je plan: in de stal zolang ze trainen, anders in de vrije wei. Met Elite mogen ze naar de markt (niet de Handelaar, daar krijgen ze nooit een predicaat).
+- Heeft het paard 3 Elite-nakomelingen, dan vervalt de bescherming van de rest. Met Preferent gaat het vinkje vanzelf uit.
+- Hersteld: het route-advies en ‘nog niet dekklaar’ staan nu ook in het Kladblok bij paarden zonder fokbonus (stond eerst alleen bij paarden mét fokbonus, waar het niets zei).
+
+### 2026-10-15f: de streep, beste jonge paarden eerst
+- Een jong paard dat beter is dan je zwakste fokmerrie of dekhengst, wordt nu eerst **vervanger**, van hoog naar laag. Pas daarna vullen de overige jonge paarden de opvolgerplekken. Voorheen kon de beste (bijvoorbeeld Chicha 19,2) gewoon opvolger blijven terwijl een lagere (Calciet 18,7) een fokmerrie verving.
+- Voorbeeld: Chicha 19,2 → vervangt Bronzite 15,9, Calciet 18,7 → vervangt Belinni 16,2.
+- Per moeder blijft het één zoon en één dochter.
+
+### 2026-10-15e: de app op jouw manier van spelen
 Nieuw blok **⚙️ Instellingen → 🎯 Mijn spel**:
 - **Disciplines die ik train**: wat uit staat, verdwijnt uit Trainen en Teams (minstens één blijft aan).
 - **Fokbonus-routes die ik gebruik** (Western, Engels, Engels zwaar): het route-advies, de melding ‘kan gedekt worden’ en Opfokken kijken alleen naar deze routes. Een route met een discipline die uit staat, telt vanzelf niet mee.
