@@ -1752,8 +1752,10 @@ function HnFokPct(props){return null}
 function hnRasOwn(r){return hnAllHorses(HN_ACT.groups||[],[]).filter(function(h){return h.name&&h.name.trim()&&!h.sale&&Se(h.ras)===Se(r)})}
 function hnRasPlanTot(sp,rassen){var M=0,H=0;rassen.forEach(function(r){var T=hnSPRas(sp,r);M+=+T.m||0;H+=+T.h||0});var stal=sp.hard?M+(+sp.vb||0):sp.ph+M+sp.opl;return{M:M,H:H,stal:stal}}
 function HnRasNow(props){var sp=props.sp,r=props.ras,L=hnRasOwn(r),T=hnSPRas(sp,r),mr=L.filter(function(h){return h.gender!=="H"}),hg=L.filter(function(h){return h.gender==="H"}),pr=mr.filter(function(h){return h.gedekt||h.echoPositief}).length,mx=+T.max||0,pl=(+T.m||0)+(+T.h||0);
- var st=mx&&L.length>mx?HnE("span",{className:"sp-over"}," \u00b7 "+(L.length-mx)+" boven je max"):mx?HnE("span",{className:"sp-k"}," \u00b7 past binnen max "+mx):null;
- return HnE("div",{className:"ras-now"},HnE("div",null,"Nu: ",HnE("b",null,L.length+" paard"+(L.length===1?"":"en"))," \u00b7 "+mr.length+" \u2640"+(pr?" ("+pr+" drachtig)":"")+" \u00b7 "+hg.length+" \u2642",st),HnE("div",{className:"pc-det"},"Plan: "+(+T.m||0)+" fokmerries + "+(+T.h||0)+" dekhengsten = "+pl+(L.length>pl?" \u00b7 "+(L.length-pl)+" jong of extra":"")))}
+ var A=null;try{A=hnAdviceCached()}catch(e){}var ids={};L.forEach(function(h){ids[h.id]=1});var weg=A&&A.advice?A.advice.filter(function(a){return ids[a.h.id]&&a.verdict==="weg"}).length:0;
+ var st=mx&&L.length>mx?HnE("span",{className:"sp-over"}," · "+(L.length-mx)+" boven je max"):mx?HnE("span",{className:"sp-k"}," · past binnen max "+mx):null;
+ var ex=L.length-pl,exT=ex>0?(weg>=ex?ex+" meer dan je plan: onder de streep (kunnen weg)":weg?ex+" meer dan je plan: "+weg+" onder de streep, "+(ex-weg)+" jong (blijft voorlopig)":ex+" meer dan je plan: jonge paarden die voorlopig blijven"):ex<0?(-ex)+" plek"+(ex===-1?"":"ken")+" nog vrij in je plan":"precies volgens plan";
+ return HnE("div",{className:"ras-now"},HnE("div",null,"Nu: ",HnE("b",null,L.length+" paard"+(L.length===1?"":"en"))," · "+mr.length+" merrie"+(mr.length===1?"":"s")+(pr?" ("+pr+" drachtig)":"")+" · "+hg.length+" hengst"+(hg.length===1?"":"en"),st),HnE("div",{className:"pc-det"},"Plan: "+(+T.m||0)+" fokmerries + "+(+T.h||0)+" dekhengsten = "+pl+" · "+exT+"."))}
 function HnRasTotals(props){var sp=props.sp,rassen=props.rassen,P=hnRasPlanTot(sp,rassen),s0=z.useState(P),P0=s0[0];var own=hnAllHorses(HN_ACT.groups||[],[]).filter(function(h){return h.name&&h.name.trim()&&!h.sale}).length;
  var d=function(a,b){var x=a-b;return x?HnE("span",{className:x>0?"sp-s":"sp-k"}," ("+(x>0?"+":"")+x+")"):null};var wei=Math.max(0,sp.wei-sp.nood);
  return HnE("div",{className:"ras-tot"},HnE("div",{className:"ras-tot-h"},"Totalen volgens je plan"),
@@ -2769,7 +2771,7 @@ function hnPlanKids(P,all){var sts=P.stal?[P.stal]:[],find=function(nm,own){var 
  var gone=[];if(P.gender==="H"){var hk2=[Se(pn)].concat(par?[Se(xt(par))]:[]),still=mine.map(function(r){return r.h.id});all.forEach(function(m){if(m.inStal&&m.gender!=="H"&&(m.gedekt||m.echoPositief)&&hk2.indexOf(Se(m.gedektMet||""))>=0&&m.bevallingsdatum&&m.bevallingsdatum>hnToday()&&still.indexOf(m.id)<0)gone.push({h:m,patch:{gedekt:!1,echoPositief:!1,bevallingsdatum:"",gedektMet:""}})})}
  var pp=null;if(par){var old=JSON.stringify(par.hnVerwacht||[]),nw=JSON.stringify(others);if(old!==nw)pp={hnVerwacht:others,hnVerwachtDatum:hnToday()}}
  return{par:par,pn:pn,rows:rows,mine:mine,others:others,pp:pp,gone:gone}}
-var HN_VERSION="2026-10-16i";
+var HN_VERSION="2026-10-16j";
 function hnTCS(){try{return JSON.parse(localStorage.getItem("hn-trainingscentrum-v1")||"{}")||{}}catch(e){return{}}}
 function hnWinst(){var o=(HN_ACT.names&&HN_ACT.names.stalplan&&HN_ACT.names.stalplan.winst)||{};return{snap:o.snap||null,log:Array.isArray(o.log)?o.log:[]}}
 var HN_WG={dres:"dres",spr:"spr",xc:"xc",rei:"west",tra:"west",wp:"west"};

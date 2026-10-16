@@ -1,7 +1,10 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-16i (staat ook onderaan in de app).
+Versie 2026-10-16j (staat ook onderaan in de app).
+
+### 2026-10-16j: duidelijker per ras
+- Bij elk ras staat nu in woorden wat er boven of onder je plan zit, bijvoorbeeld ‘2 meer dan je plan: 1 onder de streep, 1 jong (blijft voorlopig)’ of ‘3 plekken nog vrij in je plan’. ‘Merries’ en ‘hengsten’ staan er nu in woorden in plaats van met symbolen.
 
 ### 2026-10-16i: rassen met tellers en totalen
 - **⚙️ Instellingen → 🐴 Rassen**: bij elk ras staat nu hoeveel paarden je er hebt (merries, hengsten, drachtig), wat je plan is (fokmerries + dekhengsten) en of je binnen je max. blijft.
