@@ -1,7 +1,10 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-16d (staat ook onderaan in de app).
+Versie 2026-10-16e (staat ook onderaan in de app).
+
+### 2026-10-16e: veulen blijft bij de moeder na het plakken van je stal
+- Heb je bij ‘Bevallen’ een ander geslacht gekozen dan het veulen in het spel heeft, dan maakte het plakken van Mijn stal een tweede paard aan zonder ouders. Nu herkent de app het veulen aan de naam, neemt het geslacht uit het spel over en houdt het de vader en moeder.
 
 ### 2026-10-16d: fokbonus van dekhengsten van anderen
 - Kies je bij een dekhengst (Fokken → Dracht → Dekhengsten → bewerken) Western, Engels of Beide, dan zet de app ook zijn niveaus op die route.
