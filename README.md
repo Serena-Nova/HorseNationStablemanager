@@ -1,7 +1,10 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-16e (staat ook onderaan in de app).
+Versie 2026-10-16f (staat ook onderaan in de app).
+
+### 2026-10-16f: ouders weer bovenaan
+- In het paardkaartje staat **Ouders & stal** weer direct onder Basis (onder de SDG), vóór Training & fokbonus.
 
 ### 2026-10-16e: veulen blijft bij de moeder na het plakken van je stal
 - Heb je bij ‘Bevallen’ een ander geslacht gekozen dan het veulen in het spel heeft, dan maakte het plakken van Mijn stal een tweede paard aan zonder ouders. Nu herkent de app het veulen aan de naam, neemt het geslacht uit het spel over en houdt het de vader en moeder.
@@ -15,7 +18,7 @@ Versie 2026-10-16e (staat ook onderaan in de app).
 - Nieuw blok **Training & fokbonus** (staat bovenaan, meteen open): de fokbonus-check, de niveaus per discipline, ‘Snel invullen’ (Western, Engels, Engels zwaar, Alles), Allround, het route-advies en de aanleg. De niveaus staan dus niet meer onder Predicaat & wedstrijden.
 - **De fokbonus gaat vanzelf aan en uit.** Het vinkje ‘Fokbonus getraind’ is weg: haalt een paard 100% op Stap, Draf en Galop, dan staat de fokbonus aan; zet je een niveau terug, dan gaat hij uit. Ook bij het plakken van je stallijst en bij Trainen gaat hij vanzelf aan.
 - Paarden waarbij de fokbonus uit een eerdere versie nog aanstaat terwijl de niveaus het niet halen, krijgen een rood label ‘geen fokbonus!’. In het kaartje staat dan wat er mis is, met een knop ‘Fokbonus uitzetten’.
-- Nieuwe volgorde: Basis, Training & fokbonus, Dekking & dracht, Status, Predicaat & wedstrijden, Nakomelingen, Opfokken of weg?, Ouders & stal, Verkoop, Notitie. ‘Status’ bevat nu alleen SALE, veiling, Handelaar, de status en Preferent.
+- Nieuwe volgorde: Basis, Ouders & stal, Training & fokbonus, Dekking & dracht, Status, Predicaat & wedstrijden, Nakomelingen, Opfokken of weg?, Verkoop, Notitie. ‘Status’ bevat nu alleen SALE, veiling, Handelaar, de status en Preferent.
 
 **Kladblok-lijst**
 - Het ✅-icoontje is vervangen door het S·D·G-label (groen ‘SDG ✔’, geel bij een gemist onderdeel, rood als het niet klopt).
