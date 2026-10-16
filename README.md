@@ -1,7 +1,14 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-16g (staat ook onderaan in de app).
+Versie 2026-10-16i (staat ook onderaan in de app).
+
+### 2026-10-16i: rassen met tellers en totalen
+- **⚙️ Instellingen → 🐴 Rassen**: bij elk ras staat nu hoeveel paarden je er hebt (merries, hengsten, drachtig), wat je plan is (fokmerries + dekhengsten) en of je binnen je max. blijft.
+- Bovenaan blijft een vak **Totalen volgens je plan** in beeld: fokmerries, dekhengsten, stal volgens plan (van je aantal stallen) en hoeveel paarden je nu hebt. Pas je een getal aan, dan zie je meteen wat er verandert, met tussen haakjes het verschil sinds je de pagina opende.
+
+### 2026-10-16h: getallen in Instellingen
+- In de getalvakjes bij Instellingen (zoals Max. totaal per ras) kun je de 0 nu weghalen en een nieuw getal typen. Laat je een vakje leeg, dan wordt het weer 0.
 
 ### 2026-10-16g: dekking en dracht duidelijker
 - **🤰 Dekking & dracht** is een eigen blok met grote knoppen **Gedekt** en **Echo positief (drachtig)**, de knop Bevallen en een regel als ‘Drachtig van Orion · bevalt over 4 dagen’. Gedekt of drachtig: het blok staat open en kleurt mee. Bij hengsten staat het blok er niet.
