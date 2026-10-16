@@ -1,9 +1,40 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-15j (staat ook onderaan in de app).
+Versie 2026-10-16c (staat ook onderaan in de app).
 
-### Nieuw in 2026-10-15j: opvullers en vervangers, geen opvolgers meer
+### Nieuw in 2026-10-16b: rustiger en duidelijker
+**Paardkaartje**
+- Nieuw blok **Training & fokbonus** (staat bovenaan, meteen open): de fokbonus-check, de niveaus per discipline, ‘Snel invullen’ (Western, Engels, Engels zwaar, Alles), Allround, het route-advies en de aanleg. De niveaus staan dus niet meer onder Predicaat & wedstrijden.
+- **De fokbonus gaat vanzelf aan en uit.** Het vinkje ‘Fokbonus getraind’ is weg: haalt een paard 100% op Stap, Draf en Galop, dan staat de fokbonus aan; zet je een niveau terug, dan gaat hij uit. Ook bij het plakken van je stallijst en bij Trainen gaat hij vanzelf aan.
+- Paarden waarbij de fokbonus uit een eerdere versie nog aanstaat terwijl de niveaus het niet halen, krijgen een rood label ‘geen fokbonus!’. In het kaartje staat dan wat er mis is, met een knop ‘Fokbonus uitzetten’.
+- Nieuwe volgorde: Basis, Training & fokbonus, Dekking & dracht, Status, Predicaat & wedstrijden, Nakomelingen, Opfokken of weg?, Ouders & stal, Verkoop, Notitie. ‘Status’ bevat nu alleen SALE, veiling, Handelaar, de status en Preferent.
+
+**Kladblok-lijst**
+- Het ✅-icoontje is vervangen door het S·D·G-label (groen ‘SDG ✔’, geel bij een gemist onderdeel, rood als het niet klopt).
+- Legenda en Kleuren zitten samen onder één knop: **Legenda & kleuren**.
+
+**Minder dubbel**
+- Vandaag heeft nog één blok **💞 Dekken** (dekrondes, merries die gedekt kunnen worden en hengsten die klaar zijn), met een knop naar Fokken. ‘Fokbonus binnen’ is weg (gaat nu vanzelf) en ‘Op weg naar je SDG-doel’ staat alleen nog bij Fokken.
+- In het Stalplan staat bij de dekrondes alleen nog hoeveel er gedekt kunnen worden; de namen staan bij Fokken.
+- **Trainingscentrum** zit nu onder **Trainen** (Nu trainen · Trainingscentrum). Plakvlak blijft een eigen tabblad.
+- **Kladblok leegmaken** staat niet meer onder elke pagina, maar bij ⚙️ Instellingen → Back-up & Dropbox.
+
+**Fokbonus in procenten**
+- Bij Dracht, de dekhengsten en de dekplanner staat de fokbonus nu als ‘100% S·D·G’, of welk onderdeel lager zit (bijvoorbeeld ‘G 85%’), in plaats van alleen ja/nee.
+- Let op: blokken op Vandaag die je had uitgezet (Dekrondes, Kan gedekt worden, Hengsten klaar) zijn nu één blok ‘Dekken’; zet dat zo nodig opnieuw uit bij Instellingen.
+
+### 2026-10-16a: fokbonus-check per Stap, Draf en Galop
+Horse Nation kent 25 combinaties die je kunt rijden. Elke combinatie geeft combinatiegeld en XP, maar alleen op een onderdeel met 100% krijgt het paard de volle fokbonus. Dat ziet de app nu precies:
+- **Kladblok → Status & training → 🎯 Fokbonus-check**: per paard Stap, Draf en Galop in procenten, uitgerekend uit de niveaus. Je ziet welke combinatie meetelt en op welk onderdeel de 100% nog ontbreekt.
+- **Waarschuwing**: staat ‘Fokbonus getraind’ (of Allround) aan terwijl de niveaus geen 100% op alle drie halen, dan zegt de app dat meteen.
+- **Gericht trainen**: kies per paard welk onderdeel 100% moet worden (Stap, Draf, Galop of een combinatie). De app toont de combinaties die daar 100% op geven, met wat er nog getraind moet worden en een kostenschatting, het snelst haalbare bovenaan. Een onderdeel op 100% stijgt bij het fokken harder dan een onderdeel met een lager percentage.
+- **In de lijst** staat achter elk paard met een afgeronde combinatie een label: groen ‘SDG ✔’ bij de volle fokbonus, anders welk onderdeel nog onder de 100% zit (bijvoorbeeld ‘G 85%’). Rood als de fokbonus aanstaat maar niet klopt.
+- Onder de niveaus (Predicaat & wedstrijden) zie je direct S · D · G mee veranderen.
+- ‘Fokbonus binnen’ op Vandaag en het route-advies rekenen nu met dezelfde 25 combinaties.
+- Uitzetten kan bij ⚙️ Instellingen → Bij elk paard → Fokbonus-check.
+
+### 2026-10-15j: opvullers en vervangers, geen opvolgers meer
 In het Stalplan (de streep) krijgt een jong paard dat blijft een van twee rollen, van hoog naar laag:
 - **Opvullers**: nemen een lege plek bij je fokmerries of dekhengsten in (‘→ lege plek fokmerrie’). De teller bij Fokmerries en Dekhengsten telt ze mee, bijvoorbeeld 7+1/8.
 - **Vervangers**: beter dan je zwakste fokmerrie of dekhengst en nemen straks diens plek over (‘→ Aelira’).
