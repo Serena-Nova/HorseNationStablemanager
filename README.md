@@ -1,7 +1,11 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-16c (staat ook onderaan in de app).
+Versie 2026-10-16d (staat ook onderaan in de app).
+
+### 2026-10-16d: fokbonus van dekhengsten van anderen
+- Kies je bij een dekhengst (Fokken → Dracht → Dekhengsten → bewerken) Western, Engels of Beide, dan zet de app ook zijn niveaus op die route.
+- Een hengst waarbij je de fokbonus zelf hebt opgegeven, maar waarvan de niveaus onvolledig zijn, staat niet meer als ‘niveaus kloppen niet’ maar gewoon als ‘✅ Western’ (of Engels, Beide, ja).
 
 ### Nieuw in 2026-10-16b: rustiger en duidelijker
 **Paardkaartje**
