@@ -1,7 +1,11 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-16f (staat ook onderaan in de app).
+Versie 2026-10-16g (staat ook onderaan in de app).
+
+### 2026-10-16g: dekking en dracht duidelijker
+- **🤰 Dekking & dracht** is een eigen blok met grote knoppen **Gedekt** en **Echo positief (drachtig)**, de knop Bevallen en een regel als ‘Drachtig van Orion · bevalt over 4 dagen’. Gedekt of drachtig: het blok staat open en kleurt mee. Bij hengsten staat het blok er niet.
+- De keuze **Stalplan: Houden / Kan weg** staat nu bij **Status & stalplan** (naast SALE en Veiling), niet meer onder Training & fokbonus.
 
 ### 2026-10-16f: ouders weer bovenaan
 - In het paardkaartje staat **Ouders & stal** weer direct onder Basis (onder de SDG), vóór Training & fokbonus.
