@@ -1,7 +1,28 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-16j (staat ook onderaan in de app).
+Versie 2026-10-18c (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-18c: elke discipline een eigen PowerHouse-team
+- **Team Draf** is gesplitst in **Team Dressuur** en **Team Western Pleasure**. Er zijn nu zes teams: Dressuur, Western Pleasure, Springen, Cross-country, Reining en Trail. Beide Draf-teams houden aluminium ijzers als beste beslag.
+- Een paard dat in Dressuur én WP volledig getraind is, komt (net als bij Springen/Reining/Cross) in het team met de minste paarden en kan met de knop ‘→ naar …’ verplaatst worden.
+- Het Trainingspad rekent ook met de zes teams: een Dressuur-paard krijgt Engels zwaar, een WP-paard Western.
+- Had je Team Draf een eigen naam gegeven, geef die dan opnieuw bij Team Dressuur of Team Western Pleasure.
+
+### 2026-10-18b: Trainingspad richting de PowerHouse
+- **Stal → 🧭 Trainingspad** kiest de fokbonus-route nu zo dat het paard daarna meteen de PowerHouse in kan. De app kijkt in welk team het paard het sterkst is (Team Draf, Springen, Cross-country, Reining of Trail) en kiest een route die die discipline al op het hoogste niveau brengt. Na de fokbonus hoeft er dus niets meer vol getraind te worden.
+  - Team Dressuur: Engels zwaar (Dressuur t/m ZZ-Zwaar). Team Western Pleasure: Western.
+  - Team Springen: Engels of Engels zwaar. Team Cross-country: Engels. Team Reining en Team Trail: Western.
+- Per paard: zijn PowerHouse-team, de route, wat er nog getraind moet worden (bijvoorbeeld ‘Springen B → ZZ’), en een tweede keus als die bijna net zo goed is.
+- Is het verschil in aanleg duidelijk (0,05 of meer), dan gaat de sterkste discipline voor; anders de route met de minste promoties. Een paard dat al ver in een route is, blijft daarin.
+- Paarden met de fokbonus al binnen: of ze klaar zijn voor hun PowerHouse-team, of wat er nog vol moet.
+- Bij het paard in het Kladblok (Training & fokbonus) staat hetzelfde advies als ‘Trainingspad’.
+
+### 2026-10-18a: Trainingspad
+- Nieuw: **Stal → 🧭 Trainingspad**. Per paard zie je met welke fokbonus-route het het beste kan beginnen (Western, Engels of Engels zwaar), gegroepeerd per route, zodat je je trainingsgroepen kunt indelen.
+- Per paard: de drie disciplines waar het het sterkst in is, het advies (‘→ Begin met Engels’), hoeveel promoties er nog nodig zijn, de sterkste discipline in die route en welke route daarna komt.
+- Een paard dat al ergens mee bezig is, blijft bij die route (wat al getraind is telt eerst). Bij een jong paard beslist de aanleg; ligt het gemiddelde bijna gelijk, dan wint de route met zijn sterkste discipline.
+- Paarden met de fokbonus al binnen staan in een apart lijstje met hun sterkste discipline. Het oude blok ‘Fokbonus-route per paard’ onder Teams is hierdoor vervangen.
 
 ### 2026-10-16j: duidelijker per ras
 - Bij elk ras staat nu in woorden wat er boven of onder je plan zit, bijvoorbeeld ‘2 meer dan je plan: 1 onder de streep, 1 jong (blijft voorlopig)’ of ‘3 plekken nog vrij in je plan’. ‘Merries’ en ‘hengsten’ staan er nu in woorden in plaats van met symbolen.
