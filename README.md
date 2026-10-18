@@ -1,9 +1,21 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-18c (staat ook onderaan in de app).
+Versie 2026-10-18e (staat ook onderaan in de app).
 
-### Nieuw in 2026-10-18c: elke discipline een eigen PowerHouse-team
+### Nieuw in 2026-10-18e: elk team gevuld
+- De teamverdeling vult nu eerst **elk team met minstens 1 paard**, daarna waar het kan 2, en verdeelt de rest gelijk. Losse paarden worden niet meer samengevoegd: liever 1 paard in een team dan een leeg team.
+
+### 2026-10-18d: PowerHouse-teams gelijk verdeeld
+- **Stal → Teams** verdeelt je paarden nu zo gelijk mogelijk over de zes teams:
+  1. Eerst krijgt elk team minstens **2 paarden**, als er genoeg paarden zijn die in die discipline volledig getraind zijn.
+  2. Een paard staat liever niet alleen in een team: losse paarden worden bij elkaar gezet.
+  3. Daarna schuiven paarden van grote naar kleinere teams, zolang ze daar niet veel minder aanleg hebben (max. 0,30).
+- Bij een verplaatst paard staat ‘staat hier voor de verdeling (meeste aanleg in Team …)’. Een team met te weinig paarden zegt waarom.
+- **Zelf verplaatsen** met ‘→ naar …’ zet een paard vast (📌): de app schuift er dan niet meer mee. Met ‘📌 losmaken’ mag de app het weer verdelen. Elk paard kan nu naar elk team waarin het volledig getraind is.
+- **Trainingspad** zegt erbij als het voorgestelde team nog geen of maar 1 paard heeft.
+
+### 2026-10-18c: elke discipline een eigen PowerHouse-team
 - **Team Draf** is gesplitst in **Team Dressuur** en **Team Western Pleasure**. Er zijn nu zes teams: Dressuur, Western Pleasure, Springen, Cross-country, Reining en Trail. Beide Draf-teams houden aluminium ijzers als beste beslag.
 - Een paard dat in Dressuur én WP volledig getraind is, komt (net als bij Springen/Reining/Cross) in het team met de minste paarden en kan met de knop ‘→ naar …’ verplaatst worden.
 - Het Trainingspad rekent ook met de zes teams: een Dressuur-paard krijgt Engels zwaar, een WP-paard Western.
