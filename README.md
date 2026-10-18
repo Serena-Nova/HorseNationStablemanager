@@ -1,9 +1,13 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-18e (staat ook onderaan in de app).
+Versie 2026-10-18f (staat ook onderaan in de app).
 
-### Nieuw in 2026-10-18e: elk team gevuld
+### Nieuw in 2026-10-18f: Twijfel terug
+- In het **Kladblok** (bij het paard → Status & stalplan) kun je weer kiezen uit **Houden, Twijfel of Kan weg**, ook met de harde regels (de streep) aan. Paarden met Twijfel staan in het Stalplan in hun eigen groep ‘? Twijfel’.
+- Wil je Twijfel ook op de **Stalplan-pagina** kunnen kiezen: zet ⚙️ Instellingen → 🏠 Mijn stal → **Twijfel ook in het Stalplan** aan (staat standaard uit).
+
+### 2026-10-18e: elk team gevuld
 - De teamverdeling vult nu eerst **elk team met minstens 1 paard**, daarna waar het kan 2, en verdeelt de rest gelijk. Losse paarden worden niet meer samengevoegd: liever 1 paard in een team dan een leeg team.
 
 ### 2026-10-18d: PowerHouse-teams gelijk verdeeld
