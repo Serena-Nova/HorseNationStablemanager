@@ -1,7 +1,16 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-19c (staat ook onderaan in de app).
+Versie 2026-10-19e (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-19e: plakken van Mijn stal zet niets meer vanzelf op vol
+- Staat een discipline die een paard eerst trainde niet meer in je stallijst, dan zette de app die op het hoogste niveau. Dat klopte niet altijd. Nu **blijft het niveau staan**.
+- In het overzicht vóór ‘Opslaan’ zie je per paard ‘Niet meer in de lijst (niveau blijft staan). Echt af? Tik aan:’ met een knop per discipline (bijv. ‘Reining L3’). Tik je erop, dan wordt het ‘✓ Reining L1’ en zet de app alleen die op het hoogste niveau.
+- Wil je het oude gedrag (alles wat verdwijnt is klaar), zet dan het vinkje bovenaan de plak-opties aan. De app onthoudt die keuze.
+
+### 2026-10-19d: trainingspad duidelijker
+- Onder de knoppen bij **Trainingspad** staat nu wat de ★ betekent (advies van de app) en, als je iets anders kiest, hoe jouw keuze zich verhoudt: welk PowerHouse-team, welke discipline en hoeveel promoties nog, naast die van het advies.
+- De regel ‘🧭 Trainingspad’ volgt nu jouw keuze (met ‘jouw keuze’ of ‘advies’ erachter) en noemt het juiste team bij de discipline (eerder stond er soms een ander team dan de discipline).
 
 ### Nieuw in 2026-10-19c: trainingspad per paard
 - **Kladblok → paard → Training & fokbonus → Trainingspad**: kies **Automatisch**, **Western**, **Engels** of **Engels zwaar**. ★ staat bij het advies van het Trainingspad.
