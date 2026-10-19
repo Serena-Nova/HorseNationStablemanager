@@ -1773,7 +1773,7 @@ function hnPadAdvice(h){var a=hnAanleg(h);if(!a)return null;var n=hnNiv(h),f=hnF
  var routes=HN_ROUTES.filter(function(r){return hnRouteOn(r.id)});
  var opt=function(tm){var out=[];routes.forEach(function(r){var cov=tm.ds.filter(function(d){return(r.to[d]||0)>=hnTop(d)}).sort(function(x,y){return a[y]-a[x]});if(!cov.length)return;var ids=Object.keys(r.to),left=ids.map(function(id){return{id:id,k:Math.max(0,r.to[id]-n[id])}}),sum=left.reduce(function(x,y){return x+y.k},0),avg=ids.reduce(function(x,id){return x+a[id]},0)/ids.length;out.push({r:r,tm:tm,d:cov[0],sc:a[cov[0]],left:left.filter(function(x){return x.k}),sum:sum,avg:avg,done:sum===0})});
   return out};var cmp=function(x,y){var ds=x.sum-y.sum,dc=y.sc-x.sc;if(Math.abs(ds)>=3)return ds;if(Math.abs(dc)>=.05)return dc;return ds||dc||y.avg-x.avg};
- var team=T[0],O=[];T.filter(function(t){return t.sc>=team.sc-.05}).forEach(function(t){O=O.concat(opt(t))});O.sort(cmp);var best=O[0]||null,alt=best?O.find(function(x){return x.r.id!==best.r.id})||null:null,noRoute=!opt(team).length;
+ var team=T[0],O=[];T.filter(function(t){return t.sc>=team.sc-.25}).forEach(function(t){O=O.concat(opt(t))});O.sort(cmp);var best=O[0]||null,alt=best?O.find(function(x){return x.r.id!==best.r.id})||null:null,noRoute=!opt(team).length;
  if(!best){for(var i=1;i<T.length&&!best;i++){var o2=opt(T[i]).sort(cmp);if(o2.length){best=o2[0];alt=o2[1]||null}}}
  var t2=null,other=null;
  var phLeft=[];team.ds.forEach(function(d){});var phReady=team.ds.some(function(d){return n[d]>=hnTop(d)});
@@ -1808,12 +1808,12 @@ function HnPadTab(props){var all=hnAllHorses(props.groups,props.externalHorses||
   noA.length?HnE("p",{className:"ras-hint"},noA.length+" paard"+(noA.length===1?"":"en")+" zonder Stap, Draf en Galop: "+noA.slice(0,8).map(function(h){return h.name}).join(", ")+(noA.length>8?" …":"")+"."):null)}
 function HnFokPct(props){return null}
 function HnPadPick(props){var h=props.horse,t=props.onChange,P=null;try{P=hnPadAdvice(h)}catch(e){}var adv=P&&P.best?P.best:null,cur=h.pad||"";
- var opts=[["","Automatisch"]].concat(HN_ROUTES.filter(function(r){return hnRouteOn(r.id)||r.id===cur}).map(function(r){return[r.id,r.name]}));
+ var opts=[["",adv&&!(P&&P.done)?"Automatisch ("+adv.r.name+")":"Automatisch"]].concat(HN_ROUTES.filter(function(r){return hnRouteOn(r.id)||r.id===cur}).map(function(r){return[r.id,r.name]}));
  var PR=hnPadR(h),n=hnNiv(h),left=PR?Object.keys(PR.to).filter(function(id){return n[id]<PR.to[id]}):[],me=PR?hnPadFor(h,PR.id):null;
  var dt=function(o){return o&&o.tm?o.tm.t.name+" met "+HN_DSHORT[o.d]+" "+hnFmt2(o.sc):""};
  var cmp=PR&&adv&&adv.r.id!==PR.id?"Advies van de app is "+adv.r.name+" ("+dt(adv)+", nog "+adv.sum+" promotie"+(adv.sum===1?"":"s")+"). Jouw keuze "+PR.name+" geeft "+dt(me)+", nog "+me.sum+" promotie"+(me.sum===1?"":"s")+"."+(me.sc!==null&&adv.sc!==null&&me.sc>=adv.sc-.05?" Qua aanleg net zo goed"+(adv.sum<me.sum?"; "+adv.r.name+" is alleen "+(me.sum-adv.sum)+" promotie"+(me.sum-adv.sum===1?"":"s")+" korter, omdat het paard daar al verder in is.":"."):""):PR&&adv?"✓ Dit is ook het advies van de app.":"";
  return HnE("div",{className:"pad-pick"},HnE("div",{className:"fok-type"},HnE("span",null,"Trainingspad:"),opts.map(function(o){return HnE("button",{key:o[0]||"auto",type:"button",className:"fok-btn"+(cur===o[0]?" on":""),title:o[0]&&adv&&adv.r.id===o[0]?"Advies van de app":void 0,onClick:function(){var x=Object.assign({},h);if(o[0])x.pad=o[0];else delete x.pad;t(x)}},o[1]+(o[0]&&adv&&adv.r.id===o[0]?" ★":""))})),
-  HnE("div",{className:"ras-hint"},PR?(left.length?"Bij Trainen zie je alleen "+left.map(function(id){return HN_DSHORT[id]}).join(", ")+".":"Route "+PR.name+" is af: het paard staat niet meer bij Trainen.")+(cmp?" "+cmp:""):"Automatisch: bij Trainen zie je de disciplines die het paard in het spel traint."+(adv?" ★ = advies van de app: "+adv.r.name+" ("+dt(adv)+").":"")))}
+  HnE("div",{className:"ras-hint"},PR?(left.length?"Bij Trainen zie je alleen "+left.map(function(id){return HN_DSHORT[id]+" (tot "+HN_DISC.find(function(q){return q.id===id}).levels[PR.to[id]]+")"}).join(", ")+".":"Route "+PR.name+" is af: het paard staat niet meer bij Trainen.")+(cmp?" "+cmp:""):(adv&&!(P&&P.done)?"Automatisch volgt het advies van de app (\u2605): "+adv.r.name+" ("+dt(adv)+"). Bij Trainen zie je alleen "+Object.keys(adv.r.to).filter(function(id){return n[id]<adv.r.to[id]}).map(function(id){return HN_DSHORT[id]+" (tot "+HN_DISC.find(function(q){return q.id===id}).levels[adv.r.to[id]]+")"}).join(", ")+". Kies zelf een pad om het vast te zetten.":"Automatisch: de fokbonus is binnen, dus bij Trainen zie je de disciplines die het paard in het spel traint.")))}
 function hnRasOwn(r){return hnAllHorses(HN_ACT.groups||[],[]).filter(function(h){return h.name&&h.name.trim()&&!h.sale&&Se(h.ras)===Se(r)})}
 function hnRasPlanTot(sp,rassen){var M=0,H=0;rassen.forEach(function(r){var T=hnSPRas(sp,r);M+=+T.m||0;H+=+T.h||0});var stal=sp.hard?M+(+sp.vb||0):sp.ph+M+sp.opl;return{M:M,H:H,stal:stal}}
 function HnRasNow(props){var sp=props.sp,r=props.ras,L=hnRasOwn(r),T=hnSPRas(sp,r),mr=L.filter(function(h){return h.gender!=="H"}),hg=L.filter(function(h){return h.gender==="H"}),pr=mr.filter(function(h){return h.gedekt||h.echoPositief}).length,mx=+T.max||0,pl=(+T.m||0)+(+T.h||0);
@@ -2694,7 +2694,8 @@ function hnTStatus(h,id,nowMin){var n=hnNiv(h),D=HN_DISC.find(function(d){return
  var reg=(h.trainReg||{})[id]||"",rs=null;if(reg){var m=reg.match(/^(\d{1,2}):(\d{2})$/);if(m)rs=nowMin>=(+m[1])*60+(+m[2])?"exp":"ok"}
  var night=!hnInSpeel(nowMin+rem);if(night&&(sym==="train"||sym==="warn"))sym="night";return{id:id,top:top,lvl:r,lvlName:D.levels[Math.min(r,D.levels.length-1)],rem:rem,pct:pct,sym:sym,rolled:rolled,reg:reg,rs:rs,night:night}}
 function hnPadR(h){var p=h&&h.pad;return p?HN_ROUTES.find(function(r){return r.id===p})||null:null}
-function hnTDiscs(h){var n=hnNiv(h),tr=Array.isArray(h.hnTrain)?h.hnTrain:null,PR=hnPadR(h);return HN_DISC.map(function(d){return d.id}).filter(hnDiscOn).filter(function(id){return!PR||PR.to[id]!==void 0&&n[id]<PR.to[id]}).filter(function(id){if(PR)return!0;var D=HN_DISC.find(function(d){return d.id===id});if(n[id]>=D.levels.length-1)return!!(tr&&tr.indexOf(id)>=0);return tr?tr.indexOf(id)>=0:!0})}
+function hnPadAuto(h){if(!h||h.pad||h.allround)return null;try{var P=hnPadAdvice(h);return P&&!P.done&&P.best?P.best.r:null}catch(e){return null}}
+function hnTDiscs(h){var n=hnNiv(h),tr=Array.isArray(h.hnTrain)?h.hnTrain:null,PR=hnPadR(h)||hnPadAuto(h);return HN_DISC.map(function(d){return d.id}).filter(hnDiscOn).filter(function(id){return!PR||PR.to[id]!==void 0&&n[id]<PR.to[id]}).filter(function(id){if(PR)return!0;var D=HN_DISC.find(function(d){return d.id===id});if(n[id]>=D.levels.length-1)return!!(tr&&tr.indexOf(id)>=0);return tr?tr.indexOf(id)>=0:!0})}
 function hnTHorses(groups){var LM=hnLocMap(groups);return hnAllHorses(groups,[]).filter(function(h){return LM[h.id]!=="wei"&&h.name&&h.name.trim()&&!h.sale&&hnTDiscs(h).length})}
 function hnNowMin(){var d=new Date();return d.getHours()*60+d.getMinutes()}
 function hnTReady(groups,nowMin){return hnTHorses(groups).filter(function(h){return hnTDiscs(h).some(function(id){var st=hnTStatus(h,id,nowMin);return st&&st.sym==="train"})})}
@@ -2864,7 +2865,7 @@ function hnPlanKids(P,all){var sts=P.stal?[P.stal]:[],find=function(nm,own){var 
  var gone=[];if(P.gender==="H"){var hk2=[Se(pn)].concat(par?[Se(xt(par))]:[]),still=mine.map(function(r){return r.h.id});all.forEach(function(m){if(m.inStal&&m.gender!=="H"&&(m.gedekt||m.echoPositief)&&hk2.indexOf(Se(m.gedektMet||""))>=0&&m.bevallingsdatum&&m.bevallingsdatum>hnToday()&&still.indexOf(m.id)<0)gone.push({h:m,patch:{gedekt:!1,echoPositief:!1,bevallingsdatum:"",gedektMet:""}})})}
  var pp=null;if(par){var old=JSON.stringify(par.hnVerwacht||[]),nw=JSON.stringify(others);if(old!==nw)pp={hnVerwacht:others,hnVerwachtDatum:hnToday()}}
  return{par:par,pn:pn,rows:rows,mine:mine,others:others,pp:pp,gone:gone}}
-var HN_VERSION="2026-10-19f";
+var HN_VERSION="2026-10-19g";
 function hnTCS(){try{return JSON.parse(localStorage.getItem("hn-trainingscentrum-v1")||"{}")||{}}catch(e){return{}}}
 function hnWinst(){var o=(HN_ACT.names&&HN_ACT.names.stalplan&&HN_ACT.names.stalplan.winst)||{};return{snap:o.snap||null,log:Array.isArray(o.log)?o.log:[]}}
 var HN_WG={dres:"dres",spr:"spr",xc:"xc",rei:"west",tra:"west",wp:"west"};

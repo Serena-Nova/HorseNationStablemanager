@@ -1,7 +1,12 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-19f (staat ook onderaan in de app).
+Versie 2026-10-19g (staat ook onderaan in de app).
+
+### 2026-10-19g: Automatisch volgt het Trainingspad
+- **Trainingspad → Automatisch** volgt nu het advies van de app (de ★, zelfde als Stal → Trainingspad). Bij Trainen zie je dan alleen de disciplines van die route, met het doelniveau erbij: **Western** Reining, Trail en WP tot L1 · **Engels** Dressuur tot M1, Springen tot ZZ, Cross tot Z · **Engels zwaar** Dressuur tot ZZ-Zwaar, Springen tot ZZ. Is de fokbonus binnen, dan toont Automatisch weer wat het paard in het spel traint.
+- Een paard dat al ver in een route is, houdt die route in het advies zolang het verschil in aanleg klein is (tot 0,25). Eerder kon het advies wisselen naar een route waar het paard nog helemaal opnieuw moest beginnen.
+- Hele app nagelopen met een testset (alle tabbladen, subtabs, instellingen en paardkaartjes): geen fouten of lege waarden gevonden.
 
 ### 2026-10-19f: Kladblok op alfabet
 - In het **Kladblok** staan de paarden binnen elke groep nu op alfabet, net als in Horse Nation (hoofdletters en accenten tellen niet mee). Uitzetten kan bij ⚙️ Instellingen → 👁️ Weergave → **Paarden op alfabet**; dan geldt weer je eigen volgorde (slepen).
