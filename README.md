@@ -1,7 +1,10 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-19i (staat ook onderaan in de app).
+Versie 2026-10-19j (staat ook onderaan in de app).
+
+### 2026-10-19j: melding ‘zelfde naam’ klopt weer
+- De waarschuwing ‘Er is al een ander paard met de naam …’ komt alleen nog als de stal ook gelijk is, of als bij een van de twee nog geen stal (of stalnaam) is ingevuld. Twee paarden met dezelfde naam en een verschillende stal (bijv. Bastet van Nova en Bastet van Loki) geven geen melding meer.
 
 ### 2026-10-19i: slepen in het Kladblok
 - Slepen werkt weer zoals vroeger, ook met **Paarden op alfabet** aan: tijdens het slepen blijft de volgorde stil staan, zodat het paard onder je vinger blijft. Pas als je loslaat, schuift het naar zijn plek op alfabet in de nieuwe groep.
