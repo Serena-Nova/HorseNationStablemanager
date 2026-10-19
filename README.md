@@ -1,7 +1,12 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-19h (staat ook onderaan in de app).
+Versie 2026-10-19i (staat ook onderaan in de app).
+
+### 2026-10-19i: slepen in het Kladblok
+- Slepen werkt weer zoals vroeger, ook met **Paarden op alfabet** aan: tijdens het slepen blijft de volgorde stil staan, zodat het paard onder je vinger blijft. Pas als je loslaat, schuift het naar zijn plek op alfabet in de nieuwe groep.
+- Sleep je bij de boven- of onderkant van het scherm, dan scrollt de pagina mee, zodat je ook groepen kunt bereiken die buiten beeld staan.
+- Nieuw: bij het paard → **Status & stalplan → Naar groep**: kies de groep, en het paard staat er meteen in. Handig op de iPad.
 
 ### Nieuw in 2026-10-19h: paardenpagina plakken
 - In het **📋 Plakvlak** kun je nu de pagina van elk paard plakken (alles selecteren, kopiëren, plakken), ook van jonge paarden zonder nakomelingen en van paarden van anderen.
