@@ -1,9 +1,15 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-18f (staat ook onderaan in de app).
+Versie 2026-10-19a (staat ook onderaan in de app).
 
-### Nieuw in 2026-10-18f: Twijfel terug
+### Nieuw in 2026-10-19a: dekken houdt rekening met vervangers
+- **Merries die vervangen worden** (een jong paard neemt straks hun plek over) worden alleen nog gedekt als het veulen er is vóór de vervanger klaar is. Is de vervanger binnen een dracht (7 dagen) klaar met de fokbonus, dan slaat de dekronde de merrie over en gaat haar beurt naar de volgende merrie in de groep. Je ziet ‘Overgeslagen: … (wordt vervangen door …, die over ± N dagen klaar is)’ op Vandaag, in het Stalplan (↻ bij de merrie) en bij Fokken → Dracht. Is de vervanger later klaar, dan staat er dat ze nog één keer gedekt mag worden.
+- **Hengsten die vervangen worden**: is de vervanger binnen een dracht klaar, dan stelt de app hem niet meer voor als partner (dekdienst uitzetten). Hij blijft tot zijn laatste veulen er is, voor de hengstenpunten.
+- **Hengsten met veulens op komst** (bij je eigen merries of bij anderen, ‘verwacht’ op zijn pagina) staan niet bij ‘Kan weg’ zolang er nog een veulen komt, maar bij ‘Weg na bevalling / laatste veulen’ met de datum.
+- Hoe lang een vervanger nog nodig heeft, rekent de app uit met je Trainingscentrum-gegevens (net als bij ‘kan gedekt worden’).
+
+### 2026-10-18f: Twijfel terug
 - In het **Kladblok** (bij het paard → Status & stalplan) kun je weer kiezen uit **Houden, Twijfel of Kan weg**, ook met de harde regels (de streep) aan. Paarden met Twijfel staan in het Stalplan in hun eigen groep ‘? Twijfel’.
 - Wil je Twijfel ook op de **Stalplan-pagina** kunnen kiezen: zet ⚙️ Instellingen → 🏠 Mijn stal → **Twijfel ook in het Stalplan** aan (staat standaard uit).
 
