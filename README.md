@@ -1,7 +1,15 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-19g (staat ook onderaan in de app).
+Versie 2026-10-19h (staat ook onderaan in de app).
+
+### Nieuw in 2026-10-19h: paardenpagina plakken
+- In het **📋 Plakvlak** kun je nu de pagina van elk paard plakken (alles selecteren, kopiëren, plakken), ook van jonge paarden zonder nakomelingen en van paarden van anderen.
+- De app neemt over wat hij herkent: **S/D/G (exact)**, ras, geslacht, **geboortedatum**, **alle niveaus** (de fokbonus gaat vanzelf aan als de niveaus het halen), **predicaat** en **premie**, **beslag**, inteelt, de **eigen fokbonus** van het paard (bewaard voor latere metingen), **vader en moeder** plus voorouders uit de stamboom, en een **verwacht veulen** (drachtig, vader, bevallingsdatum, geslacht veulen).
+- Staat het paard nog niet in de app: een eigen paard (‘Eigenaar: Jij’) komt in je Kladblok in de groep ‘Nieuw uit Horse Nation’, een paard van een ander in je database.
+- Je ziet eerst wat er verandert; pas na ‘Opslaan’ wordt het bewaard.
+- Stamboom uit platte tekst (zoals op de iPad): de app haalt stalnamen er zelf af (bijv. ‘BRSHercules’ → Hercules, BRS; ‘Romulusvan Loki’ → Romulus, van Loki; ‘ProcyonNova’ → Procyon, Nova).
+- Heeft de pagina nakomelingen, dan werkt het zoals eerst (nakomelingen, dekkingen, verwacht) én wordt het paard zelf bijgewerkt.
 
 ### 2026-10-19g: Automatisch volgt het Trainingspad
 - **Trainingspad → Automatisch** volgt nu het advies van de app (de ★, zelfde als Stal → Trainingspad). Bij Trainen zie je dan alleen de disciplines van die route, met het doelniveau erbij: **Western** Reining, Trail en WP tot L1 · **Engels** Dressuur tot M1, Springen tot ZZ, Cross tot Z · **Engels zwaar** Dressuur tot ZZ-Zwaar, Springen tot ZZ. Is de fokbonus binnen, dan toont Automatisch weer wat het paard in het spel traint.
