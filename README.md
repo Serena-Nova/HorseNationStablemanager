@@ -1,9 +1,18 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-19a (staat ook onderaan in de app).
+Versie 2026-10-19c (staat ook onderaan in de app).
 
-### Nieuw in 2026-10-19a: dekken houdt rekening met vervangers
+### Nieuw in 2026-10-19c: trainingspad per paard
+- **Kladblok → paard → Training & fokbonus → Trainingspad**: kies **Automatisch**, **Western**, **Engels** of **Engels zwaar**. ★ staat bij het advies van het Trainingspad.
+- Met een gekozen pad zie je bij **Trainen** alleen de disciplines van die route die nog niet op het doelniveau staan (bijv. Engels: Dressuur tot M1, Springen en Cross). Is de route af, dan staat het paard niet meer bij Trainen. Automatisch werkt zoals voorheen (de disciplines die het paard in het spel traint).
+- **Stal → Trainingspad** groepeert paarden met een gekozen pad onder die route, toont ‘📌 Jij traint: …’ (met het advies erbij als dat anders is), en heeft knoppen ‘📌 Train via …’ om het pad meteen vast te zetten.
+
+### 2026-10-19b: Dekken op Vandaag overzichtelijker
+- Het blok **💞 Dekken** staat nu per ras: bovenaan de rasnaam met de dekronde (bijv. ‘groep A · 1/3 drachtig’, groen als er gedekt kan worden, rood als het vol zit), daaronder op één regel per merrie: naam, SDG → beste hengst · eigen of buiten met dekgeld · veulen ±.
+- Geen dubbele regels meer: de merrie staat niet meer los in de rondes én in de lijst. Overgeslagen merries (↻) en hengsten die klaar zijn om te dekken (🐎, tik voor het advies) staan bij hun eigen ras.
+
+### 2026-10-19a: dekken houdt rekening met vervangers
 - **Merries die vervangen worden** (een jong paard neemt straks hun plek over) worden alleen nog gedekt als het veulen er is vóór de vervanger klaar is. Is de vervanger binnen een dracht (7 dagen) klaar met de fokbonus, dan slaat de dekronde de merrie over en gaat haar beurt naar de volgende merrie in de groep. Je ziet ‘Overgeslagen: … (wordt vervangen door …, die over ± N dagen klaar is)’ op Vandaag, in het Stalplan (↻ bij de merrie) en bij Fokken → Dracht. Is de vervanger later klaar, dan staat er dat ze nog één keer gedekt mag worden.
 - **Hengsten die vervangen worden**: is de vervanger binnen een dracht klaar, dan stelt de app hem niet meer voor als partner (dekdienst uitzetten). Hij blijft tot zijn laatste veulen er is, voor de hengstenpunten.
 - **Hengsten met veulens op komst** (bij je eigen merries of bij anderen, ‘verwacht’ op zijn pagina) staan niet bij ‘Kan weg’ zolang er nog een veulen komt, maar bij ‘Weg na bevalling / laatste veulen’ met de datum.
