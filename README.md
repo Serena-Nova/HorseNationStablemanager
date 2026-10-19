@@ -1,7 +1,10 @@
 # Horse Nation Stalmanagement
 
 
-Versie 2026-10-19e (staat ook onderaan in de app).
+Versie 2026-10-19f (staat ook onderaan in de app).
+
+### 2026-10-19f: Kladblok op alfabet
+- In het **Kladblok** staan de paarden binnen elke groep nu op alfabet, net als in Horse Nation (hoofdletters en accenten tellen niet mee). Uitzetten kan bij ⚙️ Instellingen → 👁️ Weergave → **Paarden op alfabet**; dan geldt weer je eigen volgorde (slepen).
 
 ### Nieuw in 2026-10-19e: plakken van Mijn stal zet niets meer vanzelf op vol
 - Staat een discipline die een paard eerst trainde niet meer in je stallijst, dan zette de app die op het hoogste niveau. Dat klopte niet altijd. Nu **blijft het niveau staan**.
