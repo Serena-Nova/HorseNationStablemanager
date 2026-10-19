@@ -1,6 +1,17 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-19k
+
+- Nieuw: **Fokken → Dracht → 💰 Mijn dekhengsten**. Al je eigen dekhengsten op één pagina, per ras, met:
+  - het dekdienst-advies uit het Stalplan (alleen binnenshuis, ter dekking met grens, of eerst eigen merries en dan weg);
+  - hoeveel dekgeld je kunt vragen, of je eigen dekgeld als je dat invult;
+  - hoeveel veulens hij buitenshuis heeft (geboren + verwacht) en hoeveel dekkingen er nog over zijn tot de grens;
+  - het vinkje "Staat in Horse Nation ter dekking" en een rode melding als hij uit de dekdienst moet;
+  - filterknoppen: staat ter dekking, mag ter dekking, alleen binnenshuis, dekdienst uit.
+- Hengsten die nog geen dekhengst zijn staan eronder met hun dekgeld van nu.
+- De prijsregels voor dekgeld zijn van Predicaten naar deze pagina verhuisd.
+
 Versie 2026-10-19j (staat ook onderaan in de app).
 
 ### 2026-10-19j: melding ‘zelfde naam’ klopt weer
