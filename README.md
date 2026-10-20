@@ -1,6 +1,12 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-20a
+
+- **Veiligere Dropbox-sync.** Wil de app een versie uit Dropbox ophalen met veel minder paarden dan op dit apparaat (of Dropbox overschrijven met veel minder paarden), dan vraagt hij eerst wat je wilt. Niets wordt dan stilletjes overschreven.
+- **Reservekopieën op het apparaat zelf.** De app bewaart een kopie vóór elke keer dat hij iets uit Dropbox ophaalt, en een keer bij openen (hooguit om de 6 uur). De laatste 12 blijven bewaard. Terugzetten of downloaden kan bij Instellingen → Back-up & Dropbox → Reservekopieën op dit apparaat.
+- Bij het openen stuurt de app niets naar Dropbox voordat de eerste sync klaar is. Zo kan een oudere versie op een ander apparaat niet meer per ongeluk als "nieuwste" over je gegevens heen gaan.
+
 ## Versie 2026-10-19k
 
 - Nieuw: **Fokken → Dracht → 💰 Mijn dekhengsten**. Al je eigen dekhengsten op één pagina, per ras, met:
