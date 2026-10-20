@@ -1,6 +1,12 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-20b
+
+- Plak je de pagina van een paard dat nog niet in de app staat, dan komt het altijd in je **database**, ook als het van jou is. Het gaat niet meer vanzelf het Kladblok in.
+- In het Kladblok heet de knop nu **↩ paard uit database toevoegen**. Daarmee zoek je het paard op en zet je het in de subgroep waar je wilt. Je eigen paarden (eigenaar Jij) staan bovenaan.
+- Paarden die al in je Kladblok staan worden gewoon bijgewerkt, zoals altijd.
+
 ## Versie 2026-10-20a
 
 - **Veiligere Dropbox-sync.** Wil de app een versie uit Dropbox ophalen met veel minder paarden dan op dit apparaat (of Dropbox overschrijven met veel minder paarden), dan vraagt hij eerst wat je wilt. Niets wordt dan stilletjes overschreven.
