@@ -1,6 +1,25 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-21l
+
+- **🎯 Op weg naar 30 rekent de fokbonus mee** als je die met je wachtwoord hebt ontgrendeld. Je ziet dan de verwachte SDG van het veulen (≈) met het minimum erachter, en de volgorde en "nog … tot 30" gaan uit van die verwachting. Zonder wachtwoord blijft het minimum staan, zoals voor andere spelers.
+
+## Versie 2026-10-21k
+
+- **Nieuw: wie rijdt mee in de Teams.** Kies bij ⚙️ Instellingen → Mijn stal → PowerHouse-teams (of bovenaan Stal → Teams): **Merries en hengsten**, **Alleen merries** of **Alleen hengsten**. Gaan je hengsten de wei in, kies dan Alleen merries; dan verdeelt de app alleen je merries over de zes teams.
+- De keuze gaat mee met Dropbox en de back-up. Standaard staat hij op Merries en hengsten, zoals het was.
+
+## Versie 2026-10-21j: sneller
+
+- **Typen in het Kladblok is ongeveer 10× sneller.** Bij elke toets rekende de app het hele Stalplan opnieuw uit (inteelt, vers bloed, dekgroepen). Nu wacht hij tot je even stopt met typen, en rekent dan één keer. Meldingen zoals 💞 Dekklaar komen daardoor een halve tot hele seconde later bij.
+- Namen vergelijken (hoofdletters, accenten, spaties) gebeurt nu één keer per naam in plaats van duizenden keren. Openen en wisselen tussen tabbladen gaat daardoor 30 tot 60% sneller.
+- 9 stukjes code die nergens meer gebruikt werden, zijn weggehaald.
+
+## Versie 2026-10-21i
+
+- **Handleiding als PDF bij de app.** Bovenaan 📖 Uitleg staat een knop **📄 Volledige handleiding (PDF)**. Het bestand `handleiding.pdf` staat naast `index.html` in de repository, dus je kunt ook direct linken: `https://serena-nova.github.io/HorseNationStablemanager/handleiding.pdf`.
+
 ## Versie 2026-10-21h
 
 - **❌ Niet meer fokken = gaat weg.** Een paard met ❌ wordt niet meer gefokt en staat in het Stalplan bij Kan weg (onder de streep). Het telt niet meer als in opleiding.
