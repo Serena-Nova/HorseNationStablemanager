@@ -1,6 +1,14 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-21e
+
+- 📖 Uitleg: 🩺 Stamboom controleren staat bij **Fokken → Stamboom**, onder het plakvak daar.
+
+## Versie 2026-10-21d
+
+- 📖 Uitleg: bij Merrie dekken kies je het **ras** dat je wilt laten dekken en kopieer je de hele pagina (niet een merrie).
+
 ## Versie 2026-10-21c
 
 - De app opent nu op **Vandaag** in plaats van het Kladblok, zodat je meteen ziet wat er te doen is.
