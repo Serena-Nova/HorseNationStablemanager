@@ -1,6 +1,20 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-21g
+
+- **Status bepaalt de rol.** Bij elk paard staat **Status** nu bovenaan, direct onder Stal (fokker), met duidelijke keuzes: 🎓 In opleiding, 🔥 Fokmerrie (merries), ❤️ Dekhengst (hengsten), ❌ Niet meer fokken en ⚠️ Gaat weg. Onder de keuze staat wat het betekent voor het Stalplan.
+- Het Stalplan kijkt alleen nog naar de Status: een merrie is fokmerrie met 🔥, een hengst is dekhengst met ❤️, verder is een paard in opleiding. Groepsnamen met Fokmerrie, Wei of Dekhengst tellen niet meer mee. Alleen PowerHouse blijft via de groepsnaam werken.
+- Bij Instellingen → Groepen herkennen staat nu alleen nog het woord voor PowerHouse (en verkoop).
+
+## Versie 2026-10-21f
+
+- **Dekhengst = ❤️ Actief als dekhengst.** Een hengst telt in het Stalplan, de dekgroepen en het dekadvies alleen nog als dekhengst als hij in het Kladblok bij Status op ❤️ Actief als dekhengst staat. In welke groep hij staat (wei, weiland, dekhengst) maakt niet meer uit.
+- Een hengst zonder ❤️ telt als in opleiding, of als PowerHouse als hij in je PowerHouse-groep staat.
+- De adviezen zeggen nu "zet hem op ❤️ Actief als dekhengst" in plaats van "zet hem in je Weiland-groep".
+- Bij Nu dekken, Vandaag en Binnen of buiten stelt de app alleen eigen hengsten met ❤️ voor. In de Dekplanner zie je nog steeds al je eigen hengsten.
+- Bij Instellingen → Groepen herkennen is het woord voor dekhengsten weg; dat is niet meer nodig.
+
 ## Versie 2026-10-21e
 
 - 📖 Uitleg: 🩺 Stamboom controleren staat bij **Fokken → Stamboom**, onder het plakvak daar.
