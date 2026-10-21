@@ -1,6 +1,12 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-21h
+
+- **❌ Niet meer fokken = gaat weg.** Een paard met ❌ wordt niet meer gefokt en staat in het Stalplan bij Kan weg (onder de streep). Het telt niet meer als in opleiding.
+- **Nieuw: 🏆 Wedstrijdpaard (PowerHouse).** Een vinkje onder de Status, dat je naast de rol aanzet: een fokmerrie of dekhengst kan zo ook wedstrijdpaard zijn. Het paard telt dan voor de PowerHouse en de Teams, en krijgt 🏆 achter zijn naam in het Kladblok. Een groep met PowerHouse in de naam werkt ook nog.
+- Een merrie met 🏆 is ook fokmerrie (zoals je PowerHouse-merries altijd waren). Een hengst met 🏆 is alleen dekhengst als hij ook op ❤️ staat; anders telt hij alleen voor de PowerHouse.
+
 ## Versie 2026-10-21g
 
 - **Status bepaalt de rol.** Bij elk paard staat **Status** nu bovenaan, direct onder Stal (fokker), met duidelijke keuzes: 🎓 In opleiding, 🔥 Fokmerrie (merries), ❤️ Dekhengst (hengsten), ❌ Niet meer fokken en ⚠️ Gaat weg. Onder de keuze staat wat het betekent voor het Stalplan.
