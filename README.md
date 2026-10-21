@@ -1,6 +1,16 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-21n: fokbonus met wachtwoord werkt weer
+
+- Na het invoeren van je wachtwoord werd de app wit. In versie 2026-10-21j waren een paar kleine stukjes code weggehaald die alleen de (versleutelde) fokbonus-berekening gebruikt. Die staan er weer in.
+- Gaat er in de fokbonus-berekening ooit iets mis, dan blijft de app gewoon werken: op die plek staat dan "(fokbonus kon hier niet berekend worden)" en de rest van het scherm blijft staan.
+
+## Versie 2026-10-21m: nooit meer een wit scherm
+
+- **Veiligheidsscherm.** Loopt een scherm van de app vast op iets in je gegevens, dan krijg je geen wit scherm meer. Je ziet "Er ging iets mis", met knoppen om de app op een ander tabblad te openen (Kladblok, Stalplan, Fokken, Instellingen of Vandaag), de foutmelding om te kopiëren en door te sturen, en een knop voor een noodback-up van je gegevens.
+- **Altijd de nieuwste versie.** De app vraagt de browser om hem niet uit de cache te halen. Na een update hoef je de cache dan normaal niet meer te legen.
+
 ## Versie 2026-10-21l
 
 - **🎯 Op weg naar 30 rekent de fokbonus mee** als je die met je wachtwoord hebt ontgrendeld. Je ziet dan de verwachte SDG van het veulen (≈) met het minimum erachter, en de volgorde en "nog … tot 30" gaan uit van die verwachting. Zonder wachtwoord blijft het minimum staan, zoals voor andere spelers.
