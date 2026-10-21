@@ -1,6 +1,34 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-21b
+
+- Wordt een merrie vervangen en is de vervanger dekklaar, dan staat in de melding bovenaan het Kladblok wat er met de oude merrie gebeurt, bijvoorbeeld "Bloem (vervangt Cercis, die krijgt ❌)".
+- Eén tik op **🔥 zetten** geeft de vervanger 🔥 en de oude merrie meteen ❌ (niet meer dekken). Is de oude merrie nog drachtig, dan krijgt ze ⚠️ weg na bevalling. Zo heb je nooit te veel dekmerries.
+
+## Versie 2026-10-21a
+
+**Dekgroepen: altijd samen**
+- Een dekgroep wordt nu altijd samen gedekt, zodat de veulens op dezelfde dag komen. Kan één merrie uit de groep niet (nog drachtig, nog niet dekklaar, Gedekt staat nog aan), dan wacht de hele groep.
+- Is een andere groep wél helemaal klaar en is er plek, dan gaat die groep voor. De groep die wachtte blijft daarna als eerste aan de beurt.
+- Een vervanger die al dekklaar is, neemt in de groep meteen de plek over van de merrie die ze vervangt. De melding "… wordt overgeslagen" is weg.
+
+**Nu dekken overzichtelijker**
+- Bij Fokken → Dracht → 💞 Nu dekken staan alleen nog de merries die je nu kunt dekken, met de beste hengst.
+- Rassen die moeten wachten staan eronder op één regel, met de reden (bijv. "Groep A wacht op Fenna (drachtig tot 23-10)").
+- Nieuw: knop **✓ Gedekt** bij elke merrie. De app zet haar in je Kladblok op gedekt, met de hengst en de bevallingsdatum (vandaag + je draagtijd).
+
+**Dekklaar telt, niet de volle fokbonus**
+- Een vervanger, opvuller of vers-bloed-merrie telt voor de dekgroepen vanaf het moment dat ze dekklaar is (zoals ingesteld bij Instellingen → Mijn spel), niet pas bij de volle fokbonus.
+- In het Kladblok staat bovenaan een melding: **💞 Dekklaar → zet 🔥**, met een knop om 🔥 meteen te zetten. Bij het paard zelf zie je 💞 → 🔥. Merries die nu gedekt kunnen worden, krijgen 💞 dekken.
+- Dezelfde melding staat in Vandaag, bij Dekken.
+
+**Klikbare namen**
+- In het Stalplan, bij Nu dekken en in Vandaag kun je op een naam tikken. Je gaat dan naar het Kladblok, het paard gaat open en licht even op.
+
+**Dekplanner**
+- Kies een merrie, en tik bij de hengst op **✓ Gedekt met …**. De app zet de merrie in je Kladblok op gedekt met die hengst en rekent de bevallingsdatum uit.
+
 ## Versie 2026-10-20b
 
 - Plak je de pagina van een paard dat nog niet in de app staat, dan komt het altijd in je **database**, ook als het van jou is. Het gaat niet meer vanzelf het Kladblok in.
