@@ -1,6 +1,10 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-21c
+
+- De app opent nu op **Vandaag** in plaats van het Kladblok, zodat je meteen ziet wat er te doen is.
+
 ## Versie 2026-10-21b
 
 - Wordt een merrie vervangen en is de vervanger dekklaar, dan staat in de melding bovenaan het Kladblok wat er met de oude merrie gebeurt, bijvoorbeeld "Bloem (vervangt Cercis, die krijgt ❌)".
