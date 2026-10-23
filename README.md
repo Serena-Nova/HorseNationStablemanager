@@ -1,6 +1,17 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-23h: niet te lang wachten op een vervanger
+
+- Nieuwe instelling bij ⚙️ Instellingen → Mijn stal: **Max. wachten op vervanger** (standaard 2 dagen). Wordt een fokmerrie vervangen door een jong paard dat binnen die tijd dekklaar is, dan wacht haar dekgroep daarop en neemt de vervanger haar plek over. Duurt het langer, dan wordt de oude merrie nog één keer gedekt en neemt de vervanger daarna haar plek over. Zo staat een hele groep nooit dagenlang stil voor één merrie.
+- Eerder wachtte de groep tot een hele dracht (7 dagen) lang.
+- Voor hengsten blijft het zoals het was: wordt een dekhengst vervangen door een hengst die binnen een dracht klaar is, dan stelt de app hem niet meer voor.
+
+## Versie 2026-10-23g: rust na bevalling
+
+- Nieuwe instelling bij ⚙️ Instellingen → Mijn stal: **Rust na bevalling** (standaard 2 dagen, halve dagen mag ook). Een merrie die net bevallen is, kan in die tijd niet gedekt worden. Haar dekgroep wacht dan, met de reden erbij: "Groep A wacht op Tilly (rust na bevalling tot 24-10 08:57)".
+- De app onthoudt het moment van bevallen zodra je de bevalling afhandelt (Veulen invoeren of Geen veulen invoeren). Voor bevallingen van vóór deze versie weet de app het moment niet, dus daar telt nog geen rust.
+
 ## Versie 2026-10-23f
 
 - Het veld heet nu **Stalnaam fokker**: de stalnaam van wie het paard gefokt heeft. De eigenaar kan iemand anders zijn; die staat er (bij paarden van anderen) klein onder.
