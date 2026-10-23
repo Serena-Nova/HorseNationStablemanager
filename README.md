@@ -1,6 +1,16 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-23b: verdelen alleen over disciplines die een paard echt kan
+
+- Elk paard gaat naar de discipline waar het de meeste aanleg voor heeft. Alleen als het een andere discipline bijna even goed kan (hoogstens 0,30 minder aanleg), schuift de app het daarheen om teams te vullen of gelijk te verdelen. Eerder kon een paard voor een leeg team ook naar een discipline waar het duidelijk minder goed in was; dat gebeurt niet meer (een team blijft dan liever leeg).
+- Het Trainingspad (Automatisch) volgt deze verdeling op basis van aanleg, ook als je bij Teams "alleen volledig getrainde disciplines" aan hebt. Zo wijst het advies naar het team waar het paard uiteindelijk het beste past.
+
+## Versie 2026-10-23a: Trainingspad volgt de Teams
+
+- Zet de Teams-pagina een paard voor een gelijke verdeling in een ander team dan waar het de meeste aanleg voor heeft, dan past het **Trainingspad (Automatisch)** zich daar nu op aan. Voorbeeld: staat een merrie bij Team Reining, dan wordt het advies Western in plaats van Engels. Bij het paard staat waarom ("Dit volgt je indeling bij Stal → Teams…"), met wat de meeste aanleg zou zijn.
+- De verdeling zelf blijft hetzelfde: eerst elk team gevuld, daarna zo gelijk mogelijk. Heb je zelf een pad gekozen, dan blijft dat staan.
+
 ## Versie 2026-10-21n: fokbonus met wachtwoord werkt weer
 
 - Na het invoeren van je wachtwoord werd de app wit. In versie 2026-10-21j waren een paar kleine stukjes code weggehaald die alleen de (versleutelde) fokbonus-berekening gebruikt. Die staan er weer in.
