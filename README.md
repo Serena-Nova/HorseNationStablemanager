@@ -1,6 +1,14 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-23c: rustiger op de telefoon
+
+- **Meldingen in het Kladblok:** bij "💞 Dekklaar → zet 🔥" staat nu één paard per regel, zonder losse komma's. De namen bij "Nu dekken" lopen netjes door.
+- **Namen niet meer afgekapt:** in het Kladblok krijgt de naam op de telefoon voorrang. Het ras-afkorting valt op een smal scherm weg (het filter en de kleuren laten het ras al zien) en "💞 dekken" wordt alleen 💞.
+- **Teams:** in plaats van vijf knoppen "→ naar …" per paard is er één keuzelijst **Verplaatsen naar…**, met de aanleg per discipline erbij. Het beslag staat één keer bovenaan elk team ("Ander beslag nodig: …" of "✓ Beslag klopt bij iedereen"). "kan ook" toont alleen nog disciplines die het paard bijna even goed kan.
+- **Dekken op Vandaag:** de knop ✓ Gedekt staat op dezelfde regel als de naam; de hengst staat er kleiner onder.
+- **Lange uitleg:** op de telefoon zie je aan "meer ▾" dat er meer tekst is. Tik erop om alles te lezen.
+
 ## Versie 2026-10-23b: verdelen alleen over disciplines die een paard echt kan
 
 - Elk paard gaat naar de discipline waar het de meeste aanleg voor heeft. Alleen als het een andere discipline bijna even goed kan (hoogstens 0,30 minder aanleg), schuift de app het daarheen om teams te vullen of gelijk te verdelen. Eerder kon een paard voor een leeg team ook naar een discipline waar het duidelijk minder goed in was; dat gebeurt niet meer (een team blijft dan liever leeg).
