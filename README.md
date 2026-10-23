@@ -1,6 +1,16 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-23f
+
+- Het veld heet nu **Stalnaam fokker**: de stalnaam van wie het paard gefokt heeft. De eigenaar kan iemand anders zijn; die staat er (bij paarden van anderen) klein onder.
+
+## Versie 2026-10-23e: één Stalnaam
+
+- Bij een paard in het Kladblok staat nog maar één veld: **Stalnaam** (onder de ouders), zoals de naam in Horse Nation vóór of achter de paardnaam staat, bijv. Nova of van Loki. Het aparte veld bij Beslag en het veld "Stal (fokker)" zijn samengevoegd.
+- Had je eerder alleen "Stal (fokker)" ingevuld, dan is dat automatisch je Stalnaam geworden.
+- De eigenaar die de app uit het spel haalt (bij paarden van anderen, bijv. van Merrie dekken) wordt nog steeds bewaard en staat er klein onder ("Eigenaar volgens het spel: …").
+
 ## Versie 2026-10-23d
 
 - **Stalplan zegt duidelijker hoe je plekken verdeeld zijn.** Staat bij een ras "Vers bloed (beschermd)" op 1 of meer, dan gaat één van je fokmerrie-plekken naar een merrie met vers bloed. Het Stalplan zegt nu bijvoorbeeld: "je hebt 4 plekken, waarvan 1 voor vers bloed (Dioptaas) en 3 op SDG", met de tip om Vers bloed op 0 te zetten als je dat niet wilt. Eerder stond er "er zijn 3 plekken", wat leek alsof je instelling van 4 niet gevolgd werd.
