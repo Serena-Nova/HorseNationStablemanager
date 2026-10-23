@@ -1,6 +1,12 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-23d
+
+- **Stalplan zegt duidelijker hoe je plekken verdeeld zijn.** Staat bij een ras "Vers bloed (beschermd)" op 1 of meer, dan gaat één van je fokmerrie-plekken naar een merrie met vers bloed. Het Stalplan zegt nu bijvoorbeeld: "je hebt 4 plekken, waarvan 1 voor vers bloed (Dioptaas) en 3 op SDG", met de tip om Vers bloed op 0 te zetten als je dat niet wilt. Eerder stond er "er zijn 3 plekken", wat leek alsof je instelling van 4 niet gevolgd werd.
+- **Max. inteelt geldt nu ook bij Nu dekken, Vandaag, Binnen of buiten en Op weg naar 30.** Heb je bij Instellingen een maximum inteelt ingesteld (bijv. 5%), dan stelt de app daar ook hengsten voor die familie zijn maar binnen dat maximum blijven. Bij 0% blijft het zoals het was: geen familie.
+- Dekgeld-advies op Vandaag gebruikt nu dezelfde "Max. veulens buitenshuis" als het Stalplan.
+
 ## Versie 2026-10-23c: rustiger op de telefoon
 
 - **Meldingen in het Kladblok:** bij "💞 Dekklaar → zet 🔥" staat nu één paard per regel, zonder losse komma's. De namen bij "Nu dekken" lopen netjes door.
