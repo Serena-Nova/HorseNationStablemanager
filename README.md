@@ -1,12 +1,13 @@
 # Horse Nation Stalmanagement
 
 
-## Versie 2026-10-24c: sorteren per subgroep
+## Versie 2026-10-24e: sorteren per groep
 
-- Naast de naam van elke subgroep in het Kladblok staat nu een keuzelijstje: **Eigen volgorde**, **SDG** (hoogste bovenaan) of **A–Z**. Je kunt dit per subgroep anders instellen, bijvoorbeeld je veulens op SDG en je fokmerries op naam.
+- Naast de naam van elke groep in het Kladblok (naast het aantal paarden) staat nu een knopje om te sorteren. Tik erop om te wisselen: **⇅ Eigen** → **↓ SDG** (hoogste bovenaan) → **↓ A–Z** → weer Eigen.
+- Alle subgroepen in die groep volgen wat je voor de groep kiest. Het keuzelijstje per subgroep uit versie 2026-10-24c is weg.
 - Paarden zonder SDG staan bij SDG-sortering onderaan.
-- Je eigen sleepvolgorde blijft bewaard. Kies je weer "Eigen volgorde", dan staan de paarden terug zoals jij ze had gezet.
-- De instelling **Paarden op alfabet** bij ⚙️ Instellingen bepaalt de standaard voor subgroepen waar je zelf nog niets hebt gekozen.
+- Je eigen sleepvolgorde blijft bewaard. Kies je weer "Eigen", dan staan de paarden terug zoals jij ze had gezet.
+- De instelling **Paarden op alfabet** bij ⚙️ Instellingen is weg. Groepen waar je nog niets hebt gekozen staan op A–Z.
 
 ## Versie 2026-10-24b: veulens direct in je Kladblok
 
