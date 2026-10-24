@@ -1,6 +1,14 @@
 # Horse Nation Stalmanagement
 
 
+## Versie 2026-10-24b: veulens direct in je Kladblok
+
+- **Bevallen → Veulen invoeren** vraagt nu meer gegevens: **S, D en G los** (de app rekent de totale SDG zelf uit), de **Stalnaam fokker**, de geboortedatum en de vader.
+- **Het veulen komt direct in je Kladblok.** Kies bij "Zet in Kladblok bij" in welke subgroep het moet komen. De app stelt een groep met "veulen" in de naam voor en onthoudt je laatste keuze. Wil je het veulen alleen in de database, kies dan "Niet in Kladblok".
+- **Ouders kloppen meteen.** Het veulen krijgt de merrie als moeder en de dekhengst als vader, en staat bij allebei als nakomeling. Bij Vader kun je kiezen uit de hengsten in je database. Staat de vader er nog niet in, dan zie je een waarschuwing.
+- De app onthoudt de stalnaam die je het laatst invulde, zodat je die niet steeds opnieuw hoeft te typen.
+- De link naar de handleiding verwijst naar het nieuwe adres (serena563.github.io).
+
 ## Versie 2026-10-23h: niet te lang wachten op een vervanger
 
 - Nieuwe instelling bij ⚙️ Instellingen → Mijn stal: **Max. wachten op vervanger** (standaard 2 dagen). Wordt een fokmerrie vervangen door een jong paard dat binnen die tijd dekklaar is, dan wacht haar dekgroep daarop en neemt de vervanger haar plek over. Duurt het langer, dan wordt de oude merrie nog één keer gedekt en neemt de vervanger daarna haar plek over. Zo staat een hele groep nooit dagenlang stil voor één merrie.
