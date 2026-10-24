@@ -73,7 +73,7 @@
 
 ## Versie 2026-10-21i
 
-- **Handleiding als PDF bij de app.** Bovenaan 📖 Uitleg staat een knop **📄 Volledige handleiding (PDF)**. Het bestand `handleiding.pdf` staat naast `index.html` in de repository, dus je kunt ook direct linken: `https://serena-nova.github.io/HorseNationStablemanager/handleiding.pdf`.
+- **Handleiding als PDF bij de app.** Bovenaan 📖 Uitleg staat een knop **📄 Volledige handleiding (PDF)**. Het bestand `handleiding.pdf` staat naast `index.html` in de repository, dus je kunt ook direct linken: `https://serena563.github.io/HorseNationStablemanager/handleiding.pdf`.
 
 ## Versie 2026-10-21h
 
